@@ -136,6 +136,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="CCharacter.cpp" />
+    <ClCompile Include="CDigimon.cpp" />
     <ClCompile Include="CGame.cpp" />
     <ClCompile Include="CObj.cpp" />
     <ClCompile Include="CPlayer.cpp" />
@@ -155,6 +156,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CCharacter.h" />
+    <ClInclude Include="CDigimon.h" />
     <ClInclude Include="CGame.h" />
     <ClInclude Include="CObj.h" />
     <ClInclude Include="CPlayer.h" />

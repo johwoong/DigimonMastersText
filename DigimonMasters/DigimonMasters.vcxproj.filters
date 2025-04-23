@@ -66,6 +66,9 @@
     <ClCompile Include="MapDart.cpp">
       <Filter>소스 파일\Map</Filter>
     </ClCompile>
+    <ClCompile Include="CDigimon.cpp">
+      <Filter>소스 파일\Obj\Character</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -106,6 +109,9 @@
     </ClInclude>
     <ClInclude Include="MapDart.h">
       <Filter>소스 파일\Map</Filter>
+    </ClInclude>
+    <ClInclude Include="CDigimon.h">
+      <Filter>소스 파일\Obj\Character</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

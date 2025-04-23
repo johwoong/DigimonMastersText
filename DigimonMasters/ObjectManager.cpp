@@ -1,6 +1,7 @@
 #include "pch.h"
 #include "ObjectManager.h"
 #include "CPlayer.h"
+#include "CDigimon.h"
 DEFINITION_SINGLE(ObjectManager)
 
 ObjectManager::ObjectManager()
@@ -16,6 +17,7 @@ ObjectManager::~ObjectManager()
 
 bool ObjectManager::Init()
 {
+	CDigimon* pDigimon = (CDigimon*)CreateObject("Digimon", OT_DIGIMON);
 	return true;
 }
 
@@ -28,6 +30,7 @@ CObj* ObjectManager::CreateObject(const string& strKey, OBJECT_TYPE eType)
 		pObj = new CPlayer;
 		break;
 	case OT_DIGIMON:
+		pObj = new CDigimon;
 		break;
 	case OT_ENEMYDIGIMON:
 		break;
@@ -47,7 +50,12 @@ CObj* ObjectManager::CreateObject(const string& strKey, OBJECT_TYPE eType)
 
 CObj* ObjectManager::FindObject(const string& strKey)
 {
-	return nullptr;
+	unordered_map<string, CObj*>::iterator iter = m_mapObj.find(strKey);
+
+	if (iter == m_mapObj.end())
+		return nullptr;
+
+	return iter->second;
 }
 
 CObj* ObjectManager::CloneObject(const string& strKey)

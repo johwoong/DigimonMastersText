@@ -1,5 +1,7 @@
 #pragma once
 #include "CCharacter.h"
+#include "CDigimon.h"
+#include "Skill.h"
 class CPlayer :
     public CCharacter
 {
@@ -10,8 +12,10 @@ private:
 private:
     int iTaymer;
     string m_strTayName;
-    class Skill* skill;
+    Skill* p_skill;
     TAYMER m_tType;
+    CDigimon* p_digimon;
+    bool isDigimon;
 
 private:
     friend class ObjectManager;
@@ -23,6 +27,12 @@ public:
 public:
     void SetTaymerTypeAndName(TAYMER eType, string strName) { m_tType = eType; m_strTayName = strName; }
     string GetTaymerName() { return m_strTayName; }
+    void SetDigimon(CDigimon* digimon);
+    CDigimon* GetDigimon() { return p_digimon; }
+    bool GetIsDigimon() { return isDigimon; }
+    void SetIsDigimon(bool isDigimon) { this->isDigimon = isDigimon; }
+    Skill* GetSkill() { return p_skill; };
+    void SetSkill(Skill* skill);
 
 };
 

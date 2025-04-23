@@ -12,6 +12,7 @@ CCharacter::~CCharacter()
 
 CCharacter::CCharacter(const CCharacter& character) : CObj(character)
 {
+	m_tInfo = character.m_tInfo;
 }
 
 

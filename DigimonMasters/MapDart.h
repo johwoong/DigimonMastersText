@@ -26,5 +26,7 @@ public:
 
 private:
 	int OutputMenu();
+	void SelectDigimon();
+	virtual int OutputMap();
 };
 
