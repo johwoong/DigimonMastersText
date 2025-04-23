@@ -12,10 +12,10 @@ private:
 private:
     int iTaymer;
     string m_strTayName;
-    Skill* p_skill;
     TAYMER m_tType;
     CDigimon* p_digimon;
     bool isDigimon;
+    Skill* p_skill;
 
 private:
     friend class ObjectManager;
@@ -26,12 +26,12 @@ public:
     virtual CPlayer* Clone();
 public:
     void SetTaymerTypeAndName(TAYMER eType, string strName) { m_tType = eType; m_strTayName = strName; }
-    string GetTaymerName() { return m_strTayName; }
+    string GetTaymerName() const { return m_strTayName; }
     void SetDigimon(CDigimon* digimon);
     CDigimon* GetDigimon() { return p_digimon; }
-    bool GetIsDigimon() { return isDigimon; }
+    bool GetIsDigimon() const { return isDigimon; }
     void SetIsDigimon(bool isDigimon) { this->isDigimon = isDigimon; }
-    Skill* GetSkill() { return p_skill; };
+    Skill* GetSkill() const { return p_skill; }
     void SetSkill(Skill* skill);
 
 };

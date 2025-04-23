@@ -1,5 +1,6 @@
 #pragma once
 #include "CCharacter.h"
+#include "Skill.h"
 class CDigimon : public CCharacter
 {
 private:
@@ -33,7 +34,7 @@ private:
 	ATTRIBUTE m_aType;
 
 public:
-	string GetDigName() { return m_strDigName; }
+	string GetDigName() const { return m_strDigName; }
 
 public:
 	void SetDigName(string digName);

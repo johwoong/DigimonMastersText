@@ -13,6 +13,7 @@ CObj::CObj(const CObj& obj)
 
 CObj::~CObj()
 {
+
 }
 
 bool CObj::Init()

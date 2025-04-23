@@ -3,7 +3,6 @@
 
 CDigimon::CDigimon() : m_strDigName(""), m_eType(EV_NONE), m_aType(AT_NONE)
 {
-
 }
 
 CDigimon::CDigimon(const CDigimon& digimon) : CCharacter(digimon)
@@ -42,6 +41,7 @@ void CDigimon::Render()
 {
 
 }
+
 
 CDigimon* CDigimon::Clone()
 {
