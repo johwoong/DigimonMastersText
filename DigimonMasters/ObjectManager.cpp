@@ -18,6 +18,7 @@ ObjectManager::~ObjectManager()
 bool ObjectManager::Init()
 {
 	CDigimon* pDigimon = (CDigimon*)CreateObject("Digimon", OT_DIGIMON);
+	pDigimon = (CDigimon*)CreateObject("EnemyDigimon", OT_ENEMYDIGIMON);
 	return true;
 }
 
@@ -33,6 +34,7 @@ CObj* ObjectManager::CreateObject(const string& strKey, OBJECT_TYPE eType)
 		pObj = new CDigimon;
 		break;
 	case OT_ENEMYDIGIMON:
+		pObj = new CDigimon;
 		break;
 	case OT_NPC:
 		break;
@@ -60,7 +62,11 @@ CObj* ObjectManager::FindObject(const string& strKey)
 
 CObj* ObjectManager::CloneObject(const string& strKey)
 {
-	return nullptr;
+	CObj* pOrigin = FindObject(strKey);
+
+	if (!pOrigin)
+		return nullptr;
+	return pOrigin->Clone();
 }
 
 CObj* ObjectManager::CloneObject(OBJECT_TYPE eType)

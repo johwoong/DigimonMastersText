@@ -27,6 +27,7 @@ void CPlayer::Render()
 	cout << "[테이머 정보]" << endl;
 	cout << "이름 : " << GetName() << "\t테이머 : " << GetTaymerName() << endl;
 	cout << "체력 : " << m_tInfo.iHp << "\tDS : " << m_tInfo.iDs << endl;
+	cout << "레벨 : " << m_tInfo.iLevel << "\t경험치 : " << m_tInfo.iExp << endl;
 	cout << "스킬 : " << GetSkill()->GetSkillName() << "\t패시브 스킬 : " << GetSkill()->GetFasiveSkillName() << endl;
 }
 

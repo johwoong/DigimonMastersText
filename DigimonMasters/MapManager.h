@@ -11,6 +11,9 @@ private:
 	bool CreateMap(MAP_TYPE eType);
 
 public:
+	const vector<Map*>& GetMapList() const { return m_vecMap; }
+
+public:
 	DECLARE_SINGLE(MapManager)
 };
 

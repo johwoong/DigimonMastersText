@@ -1,6 +1,8 @@
 #include "pch.h"
 #include "MapManager.h"
 #include "MapDart.h"
+#include "MapStart.h"
+#include "MapWest.h"
 
 DEFINITION_SINGLE(MapManager)
 
@@ -17,6 +19,10 @@ MapManager::~MapManager()
 bool MapManager::Init()
 {
 	if (!CreateMap(MT_DART))
+		return false;
+	if (!CreateMap(MT_START))
+		return false;
+	if (!CreateMap(MT_SAND))
 		return false;
 	return true;
 }
@@ -35,10 +41,12 @@ bool MapManager::CreateMap(MAP_TYPE eType)
 		pMap = new MapDart;
 		break;
 	case MT_START:
+		pMap = new MapStart;
 		break;
 	case MT_SNOW:
 		break;
 	case MT_SAND:
+		pMap = new MapWest;
 		break;
 	}
 

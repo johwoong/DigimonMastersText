@@ -1,113 +1,90 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\Git\\DigimonMastersText\\",
+  "WorkspaceRootPath": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMasters\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{86F87C37-9C3A-41CA-848F-EC0798572D67}|DigimonMasters\\DigimonMasters.vcxproj|C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\Git\\DigimonMastersText\\DigimonMasters\\CGame.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{86F87C37-9C3A-41CA-848F-EC0798572D67}|DigimonMasters\\DigimonMasters.vcxproj|solutionrelative:DigimonMasters\\CGame.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{86F87C37-9C3A-41CA-848F-EC0798572D67}|DigimonMasters\\DigimonMasters.vcxproj|C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMasters\\DigimonMasters\\MapStart.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{86F87C37-9C3A-41CA-848F-EC0798572D67}|DigimonMasters\\DigimonMasters.vcxproj|solutionrelative:DigimonMasters\\MapStart.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{86F87C37-9C3A-41CA-848F-EC0798572D67}|DigimonMasters\\DigimonMasters.vcxproj|C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\Git\\DigimonMastersText\\DigimonMasters\\CPlayer.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{86F87C37-9C3A-41CA-848F-EC0798572D67}|DigimonMasters\\DigimonMasters.vcxproj|solutionrelative:DigimonMasters\\CPlayer.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{86F87C37-9C3A-41CA-848F-EC0798572D67}|DigimonMasters\\DigimonMasters.vcxproj|C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\Git\\DigimonMastersText\\DigimonMasters\\CPlayer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{86F87C37-9C3A-41CA-848F-EC0798572D67}|DigimonMasters\\DigimonMasters.vcxproj|solutionrelative:DigimonMasters\\CPlayer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{86F87C37-9C3A-41CA-848F-EC0798572D67}|DigimonMasters\\DigimonMasters.vcxproj|C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\Git\\DigimonMastersText\\DigimonMasters\\CCharacter.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{86F87C37-9C3A-41CA-848F-EC0798572D67}|DigimonMasters\\DigimonMasters.vcxproj|C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMasters\\DigimonMasters\\CCharacter.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{86F87C37-9C3A-41CA-848F-EC0798572D67}|DigimonMasters\\DigimonMasters.vcxproj|solutionrelative:DigimonMasters\\CCharacter.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{86F87C37-9C3A-41CA-848F-EC0798572D67}|DigimonMasters\\DigimonMasters.vcxproj|C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\Git\\DigimonMastersText\\DigimonMasters\\Map.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{86F87C37-9C3A-41CA-848F-EC0798572D67}|DigimonMasters\\DigimonMasters.vcxproj|solutionrelative:DigimonMasters\\Map.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{86F87C37-9C3A-41CA-848F-EC0798572D67}|DigimonMasters\\DigimonMasters.vcxproj|C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\Git\\DigimonMastersText\\DigimonMasters\\Skill.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{86F87C37-9C3A-41CA-848F-EC0798572D67}|DigimonMasters\\DigimonMasters.vcxproj|solutionrelative:DigimonMasters\\Skill.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{86F87C37-9C3A-41CA-848F-EC0798572D67}|DigimonMasters\\DigimonMasters.vcxproj|C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\Git\\DigimonMastersText\\DigimonMasters\\CDigimon.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{86F87C37-9C3A-41CA-848F-EC0798572D67}|DigimonMasters\\DigimonMasters.vcxproj|solutionrelative:DigimonMasters\\CDigimon.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{86F87C37-9C3A-41CA-848F-EC0798572D67}|DigimonMasters\\DigimonMasters.vcxproj|C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\Git\\DigimonMastersText\\DigimonMasters\\CGame.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{86F87C37-9C3A-41CA-848F-EC0798572D67}|DigimonMasters\\DigimonMasters.vcxproj|solutionrelative:DigimonMasters\\CGame.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.43.34808\\include\\xstring||{3B902123-F8A7-4915-9F01-361F908088D0}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{86F87C37-9C3A-41CA-848F-EC0798572D67}|DigimonMasters\\DigimonMasters.vcxproj|C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\Git\\DigimonMastersText\\DigimonMasters\\CDigimon.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{86F87C37-9C3A-41CA-848F-EC0798572D67}|DigimonMasters\\DigimonMasters.vcxproj|solutionrelative:DigimonMasters\\CDigimon.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{86F87C37-9C3A-41CA-848F-EC0798572D67}|DigimonMasters\\DigimonMasters.vcxproj|C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\Git\\DigimonMastersText\\DigimonMasters\\CCharacter.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{86F87C37-9C3A-41CA-848F-EC0798572D67}|DigimonMasters\\DigimonMasters.vcxproj|C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMasters\\DigimonMasters\\CCharacter.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{86F87C37-9C3A-41CA-848F-EC0798572D67}|DigimonMasters\\DigimonMasters.vcxproj|solutionrelative:DigimonMasters\\CCharacter.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{86F87C37-9C3A-41CA-848F-EC0798572D67}|DigimonMasters\\DigimonMasters.vcxproj|C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\Git\\DigimonMastersText\\DigimonMasters\\Skill.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{86F87C37-9C3A-41CA-848F-EC0798572D67}|DigimonMasters\\DigimonMasters.vcxproj|solutionrelative:DigimonMasters\\Skill.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{86F87C37-9C3A-41CA-848F-EC0798572D67}|DigimonMasters\\DigimonMasters.vcxproj|C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMasters\\DigimonMasters\\CPlayer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{86F87C37-9C3A-41CA-848F-EC0798572D67}|DigimonMasters\\DigimonMasters.vcxproj|solutionrelative:DigimonMasters\\CPlayer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{86F87C37-9C3A-41CA-848F-EC0798572D67}|DigimonMasters\\DigimonMasters.vcxproj|C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\Git\\DigimonMastersText\\DigimonMasters\\DigimonMasters.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{86F87C37-9C3A-41CA-848F-EC0798572D67}|DigimonMasters\\DigimonMasters.vcxproj|solutionrelative:DigimonMasters\\DigimonMasters.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{86F87C37-9C3A-41CA-848F-EC0798572D67}|DigimonMasters\\DigimonMasters.vcxproj|C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMasters\\DigimonMasters\\CDigimon.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{86F87C37-9C3A-41CA-848F-EC0798572D67}|DigimonMasters\\DigimonMasters.vcxproj|solutionrelative:DigimonMasters\\CDigimon.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{86F87C37-9C3A-41CA-848F-EC0798572D67}|DigimonMasters\\DigimonMasters.vcxproj|C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\Git\\DigimonMastersText\\DigimonMasters\\MapManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{86F87C37-9C3A-41CA-848F-EC0798572D67}|DigimonMasters\\DigimonMasters.vcxproj|solutionrelative:DigimonMasters\\MapManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{86F87C37-9C3A-41CA-848F-EC0798572D67}|DigimonMasters\\DigimonMasters.vcxproj|C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMasters\\DigimonMasters\\CDigimon.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{86F87C37-9C3A-41CA-848F-EC0798572D67}|DigimonMasters\\DigimonMasters.vcxproj|solutionrelative:DigimonMasters\\CDigimon.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{86F87C37-9C3A-41CA-848F-EC0798572D67}|DigimonMasters\\DigimonMasters.vcxproj|C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\Git\\DigimonMastersText\\DigimonMasters\\define.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{86F87C37-9C3A-41CA-848F-EC0798572D67}|DigimonMasters\\DigimonMasters.vcxproj|solutionrelative:DigimonMasters\\define.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{86F87C37-9C3A-41CA-848F-EC0798572D67}|DigimonMasters\\DigimonMasters.vcxproj|C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMasters\\DigimonMasters\\CPlayer.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{86F87C37-9C3A-41CA-848F-EC0798572D67}|DigimonMasters\\DigimonMasters.vcxproj|solutionrelative:DigimonMasters\\CPlayer.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{86F87C37-9C3A-41CA-848F-EC0798572D67}|DigimonMasters\\DigimonMasters.vcxproj|C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\Git\\DigimonMastersText\\DigimonMasters\\CObj.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{86F87C37-9C3A-41CA-848F-EC0798572D67}|DigimonMasters\\DigimonMasters.vcxproj|solutionrelative:DigimonMasters\\CObj.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{86F87C37-9C3A-41CA-848F-EC0798572D67}|DigimonMasters\\DigimonMasters.vcxproj|C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\Git\\DigimonMastersText\\DigimonMasters\\MapDart.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{86F87C37-9C3A-41CA-848F-EC0798572D67}|DigimonMasters\\DigimonMasters.vcxproj|C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMasters\\DigimonMasters\\MapDart.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{86F87C37-9C3A-41CA-848F-EC0798572D67}|DigimonMasters\\DigimonMasters.vcxproj|solutionrelative:DigimonMasters\\MapDart.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{86F87C37-9C3A-41CA-848F-EC0798572D67}|DigimonMasters\\DigimonMasters.vcxproj|C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\Git\\DigimonMastersText\\DigimonMasters\\ObjectManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{86F87C37-9C3A-41CA-848F-EC0798572D67}|DigimonMasters\\DigimonMasters.vcxproj|solutionrelative:DigimonMasters\\ObjectManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{86F87C37-9C3A-41CA-848F-EC0798572D67}|DigimonMasters\\DigimonMasters.vcxproj|C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMasters\\DigimonMasters\\MapManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{86F87C37-9C3A-41CA-848F-EC0798572D67}|DigimonMasters\\DigimonMasters.vcxproj|solutionrelative:DigimonMasters\\MapManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{86F87C37-9C3A-41CA-848F-EC0798572D67}|DigimonMasters\\DigimonMasters.vcxproj|C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\Git\\DigimonMastersText\\DigimonMasters\\ObjectManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{86F87C37-9C3A-41CA-848F-EC0798572D67}|DigimonMasters\\DigimonMasters.vcxproj|C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMasters\\DigimonMasters\\Map.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{86F87C37-9C3A-41CA-848F-EC0798572D67}|DigimonMasters\\DigimonMasters.vcxproj|solutionrelative:DigimonMasters\\Map.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86F87C37-9C3A-41CA-848F-EC0798572D67}|DigimonMasters\\DigimonMasters.vcxproj|C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMasters\\DigimonMasters\\MapWest.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{86F87C37-9C3A-41CA-848F-EC0798572D67}|DigimonMasters\\DigimonMasters.vcxproj|solutionrelative:DigimonMasters\\MapWest.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86F87C37-9C3A-41CA-848F-EC0798572D67}|DigimonMasters\\DigimonMasters.vcxproj|C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMasters\\DigimonMasters\\MapWest.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{86F87C37-9C3A-41CA-848F-EC0798572D67}|DigimonMasters\\DigimonMasters.vcxproj|solutionrelative:DigimonMasters\\MapWest.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86F87C37-9C3A-41CA-848F-EC0798572D67}|DigimonMasters\\DigimonMasters.vcxproj|C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMasters\\DigimonMasters\\MapStart.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{86F87C37-9C3A-41CA-848F-EC0798572D67}|DigimonMasters\\DigimonMasters.vcxproj|solutionrelative:DigimonMasters\\MapStart.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86F87C37-9C3A-41CA-848F-EC0798572D67}|DigimonMasters\\DigimonMasters.vcxproj|C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMasters\\DigimonMasters\\ObjectManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{86F87C37-9C3A-41CA-848F-EC0798572D67}|DigimonMasters\\DigimonMasters.vcxproj|solutionrelative:DigimonMasters\\ObjectManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{86F87C37-9C3A-41CA-848F-EC0798572D67}|DigimonMasters\\DigimonMasters.vcxproj|C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\Git\\DigimonMastersText\\DigimonMasters\\MapManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{86F87C37-9C3A-41CA-848F-EC0798572D67}|DigimonMasters\\DigimonMasters.vcxproj|solutionrelative:DigimonMasters\\MapManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{86F87C37-9C3A-41CA-848F-EC0798572D67}|DigimonMasters\\DigimonMasters.vcxproj|C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMasters\\DigimonMasters\\ObjectManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{86F87C37-9C3A-41CA-848F-EC0798572D67}|DigimonMasters\\DigimonMasters.vcxproj|solutionrelative:DigimonMasters\\ObjectManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{86F87C37-9C3A-41CA-848F-EC0798572D67}|DigimonMasters\\DigimonMasters.vcxproj|C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\Git\\DigimonMastersText\\DigimonMasters\\MapDart.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{86F87C37-9C3A-41CA-848F-EC0798572D67}|DigimonMasters\\DigimonMasters.vcxproj|C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMasters\\DigimonMasters\\MapDart.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{86F87C37-9C3A-41CA-848F-EC0798572D67}|DigimonMasters\\DigimonMasters.vcxproj|solutionrelative:DigimonMasters\\MapDart.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{86F87C37-9C3A-41CA-848F-EC0798572D67}|DigimonMasters\\DigimonMasters.vcxproj|C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\Git\\DigimonMastersText\\DigimonMasters\\Map.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{86F87C37-9C3A-41CA-848F-EC0798572D67}|DigimonMasters\\DigimonMasters.vcxproj|C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMasters\\DigimonMasters\\Map.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{86F87C37-9C3A-41CA-848F-EC0798572D67}|DigimonMasters\\DigimonMasters.vcxproj|solutionrelative:DigimonMasters\\Map.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{86F87C37-9C3A-41CA-848F-EC0798572D67}|DigimonMasters\\DigimonMasters.vcxproj|C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\Git\\DigimonMastersText\\DigimonMasters\\CObj.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{86F87C37-9C3A-41CA-848F-EC0798572D67}|DigimonMasters\\DigimonMasters.vcxproj|solutionrelative:DigimonMasters\\CObj.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{86F87C37-9C3A-41CA-848F-EC0798572D67}|DigimonMasters\\DigimonMasters.vcxproj|C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMasters\\DigimonMasters\\Skill.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{86F87C37-9C3A-41CA-848F-EC0798572D67}|DigimonMasters\\DigimonMasters.vcxproj|solutionrelative:DigimonMasters\\Skill.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{86F87C37-9C3A-41CA-848F-EC0798572D67}|DigimonMasters\\DigimonMasters.vcxproj|C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\Git\\DigimonMastersText\\DigimonMasters\\SkillManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{86F87C37-9C3A-41CA-848F-EC0798572D67}|DigimonMasters\\DigimonMasters.vcxproj|solutionrelative:DigimonMasters\\SkillManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{86F87C37-9C3A-41CA-848F-EC0798572D67}|DigimonMasters\\DigimonMasters.vcxproj|C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMasters\\DigimonMasters\\Skill.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{86F87C37-9C3A-41CA-848F-EC0798572D67}|DigimonMasters\\DigimonMasters.vcxproj|solutionrelative:DigimonMasters\\Skill.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{86F87C37-9C3A-41CA-848F-EC0798572D67}|DigimonMasters\\DigimonMasters.vcxproj|C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\Git\\DigimonMastersText\\DigimonMasters\\SkillManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{86F87C37-9C3A-41CA-848F-EC0798572D67}|DigimonMasters\\DigimonMasters.vcxproj|solutionrelative:DigimonMasters\\SkillManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{86F87C37-9C3A-41CA-848F-EC0798572D67}|DigimonMasters\\DigimonMasters.vcxproj|C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMasters\\DigimonMasters\\MapManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{86F87C37-9C3A-41CA-848F-EC0798572D67}|DigimonMasters\\DigimonMasters.vcxproj|solutionrelative:DigimonMasters\\MapManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{86F87C37-9C3A-41CA-848F-EC0798572D67}|DigimonMasters\\DigimonMasters.vcxproj|C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\Git\\DigimonMastersText\\DigimonMasters\\pch.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{86F87C37-9C3A-41CA-848F-EC0798572D67}|DigimonMasters\\DigimonMasters.vcxproj|C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMasters\\DigimonMasters\\pch.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{86F87C37-9C3A-41CA-848F-EC0798572D67}|DigimonMasters\\DigimonMasters.vcxproj|solutionrelative:DigimonMasters\\pch.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{86F87C37-9C3A-41CA-848F-EC0798572D67}|DigimonMasters\\DigimonMasters.vcxproj|C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\Git\\DigimonMastersText\\DigimonMasters\\flags.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{86F87C37-9C3A-41CA-848F-EC0798572D67}|DigimonMasters\\DigimonMasters.vcxproj|solutionrelative:DigimonMasters\\flags.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -116,357 +93,287 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 158,
-          "SelectedChildIndex": 11,
+          "DockedWidth": 175,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Map.cpp",
-              "DocumentMoniker": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\Git\\DigimonMastersText\\DigimonMasters\\Map.cpp",
-              "RelativeDocumentMoniker": "DigimonMasters\\Map.cpp",
-              "ToolTip": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\Git\\DigimonMastersText\\DigimonMasters\\Map.cpp",
-              "RelativeToolTip": "DigimonMasters\\Map.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-04-22T08:13:16.996Z",
-              "IsPinned": true,
+              "DocumentIndex": 1,
+              "Title": "CCharacter.h",
+              "DocumentMoniker": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMasters\\DigimonMasters\\CCharacter.h",
+              "RelativeDocumentMoniker": "DigimonMasters\\CCharacter.h",
+              "ToolTip": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMasters\\DigimonMasters\\CCharacter.h",
+              "RelativeToolTip": "DigimonMasters\\CCharacter.h",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAACQAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-04-24T10:05:18.949Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "Skill.cpp",
-              "DocumentMoniker": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\Git\\DigimonMastersText\\DigimonMasters\\Skill.cpp",
-              "RelativeDocumentMoniker": "DigimonMasters\\Skill.cpp",
-              "ToolTip": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\Git\\DigimonMastersText\\DigimonMasters\\Skill.cpp",
-              "RelativeToolTip": "DigimonMasters\\Skill.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-04-23T03:12:36.691Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "CGame.h",
-              "DocumentMoniker": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\Git\\DigimonMastersText\\DigimonMasters\\CGame.h",
-              "RelativeDocumentMoniker": "DigimonMasters\\CGame.h",
-              "ToolTip": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\Git\\DigimonMastersText\\DigimonMasters\\CGame.h",
-              "RelativeToolTip": "DigimonMasters\\CGame.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-22T07:08:01.006Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
               "Title": "CDigimon.h",
-              "DocumentMoniker": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\Git\\DigimonMastersText\\DigimonMasters\\CDigimon.h",
+              "DocumentMoniker": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMasters\\DigimonMasters\\CDigimon.h",
               "RelativeDocumentMoniker": "DigimonMasters\\CDigimon.h",
-              "ToolTip": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\Git\\DigimonMastersText\\DigimonMasters\\CDigimon.h",
+              "ToolTip": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMasters\\DigimonMasters\\CDigimon.h",
               "RelativeToolTip": "DigimonMasters\\CDigimon.h",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAACcAAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAACcAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-22T13:43:32.734Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CPlayer.h",
-              "DocumentMoniker": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\Git\\DigimonMastersText\\DigimonMasters\\CPlayer.h",
-              "RelativeDocumentMoniker": "DigimonMasters\\CPlayer.h",
-              "ToolTip": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\Git\\DigimonMastersText\\DigimonMasters\\CPlayer.h",
-              "RelativeToolTip": "DigimonMasters\\CPlayer.h",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAsAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-22T07:07:19.103Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "CCharacter.h",
-              "DocumentMoniker": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\Git\\DigimonMastersText\\DigimonMasters\\CCharacter.h",
-              "RelativeDocumentMoniker": "DigimonMasters\\CCharacter.h",
-              "ToolTip": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\Git\\DigimonMastersText\\DigimonMasters\\CCharacter.h",
-              "RelativeToolTip": "DigimonMasters\\CCharacter.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-22T07:07:55.603Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Skill.h",
-              "DocumentMoniker": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\Git\\DigimonMastersText\\DigimonMasters\\Skill.h",
-              "RelativeDocumentMoniker": "DigimonMasters\\Skill.h",
-              "ToolTip": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\Git\\DigimonMastersText\\DigimonMasters\\Skill.h",
-              "RelativeToolTip": "DigimonMasters\\Skill.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-23T03:12:36.019Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "CCharacter.cpp",
-              "DocumentMoniker": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\Git\\DigimonMastersText\\DigimonMasters\\CCharacter.cpp",
-              "RelativeDocumentMoniker": "DigimonMasters\\CCharacter.cpp",
-              "ToolTip": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\Git\\DigimonMastersText\\DigimonMasters\\CCharacter.cpp",
-              "RelativeToolTip": "DigimonMasters\\CCharacter.cpp",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-04-22T07:07:56.231Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "MapManager.h",
-              "DocumentMoniker": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\Git\\DigimonMastersText\\DigimonMasters\\MapManager.h",
-              "RelativeDocumentMoniker": "DigimonMasters\\MapManager.h",
-              "ToolTip": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\Git\\DigimonMastersText\\DigimonMasters\\MapManager.h",
-              "RelativeToolTip": "DigimonMasters\\MapManager.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-22T07:49:00.748Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "xstring",
-              "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.43.34808\\include\\xstring",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.43.34808\\include\\xstring",
-              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.43.34808\\include\\xstring",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.43.34808\\include\\xstring",
-              "ViewState": "AgIAAJoBAAAAAAAAAAD4v7IBAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-04-23T03:34:24.019Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CPlayer.cpp",
-              "DocumentMoniker": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\Git\\DigimonMastersText\\DigimonMasters\\CPlayer.cpp",
-              "RelativeDocumentMoniker": "DigimonMasters\\CPlayer.cpp",
-              "ToolTip": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\Git\\DigimonMastersText\\DigimonMasters\\CPlayer.cpp",
-              "RelativeToolTip": "DigimonMasters\\CPlayer.cpp",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAQAAAB6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-04-22T07:07:35.773Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CGame.cpp",
-              "DocumentMoniker": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\Git\\DigimonMastersText\\DigimonMasters\\CGame.cpp",
-              "RelativeDocumentMoniker": "DigimonMasters\\CGame.cpp",
-              "ToolTip": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\Git\\DigimonMastersText\\DigimonMasters\\CGame.cpp",
-              "RelativeToolTip": "DigimonMasters\\CGame.cpp",
-              "ViewState": "AgIAAEQAAAAAAAAAAAD4v1UAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-04-22T07:08:01.535Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "define.h",
-              "DocumentMoniker": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\Git\\DigimonMastersText\\DigimonMasters\\define.h",
-              "RelativeDocumentMoniker": "DigimonMasters\\define.h",
-              "ToolTip": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\Git\\DigimonMastersText\\DigimonMasters\\define.h",
-              "RelativeToolTip": "DigimonMasters\\define.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-23T03:27:02.603Z",
+              "WhenOpened": "2025-04-24T10:17:03.62Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "CDigimon.cpp",
-              "DocumentMoniker": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\Git\\DigimonMastersText\\DigimonMasters\\CDigimon.cpp",
-              "RelativeDocumentMoniker": "DigimonMasters\\CDigimon.cpp",
-              "ToolTip": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\Git\\DigimonMastersText\\DigimonMasters\\CDigimon.cpp",
-              "RelativeToolTip": "DigimonMasters\\CDigimon.cpp",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABMAAAApAAAAAAAAAA==",
+              "Title": "Map.cpp",
+              "DocumentMoniker": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMasters\\DigimonMasters\\Map.cpp",
+              "RelativeDocumentMoniker": "DigimonMasters\\Map.cpp",
+              "ToolTip": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMasters\\DigimonMasters\\Map.cpp",
+              "RelativeToolTip": "DigimonMasters\\Map.cpp",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-04-22T13:44:01.403Z",
+              "WhenOpened": "2025-04-24T10:11:20.192Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 12,
-              "Title": "DigimonMasters.cpp",
-              "DocumentMoniker": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\Git\\DigimonMastersText\\DigimonMasters\\DigimonMasters.cpp",
-              "RelativeDocumentMoniker": "DigimonMasters\\DigimonMasters.cpp",
-              "ToolTip": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\Git\\DigimonMastersText\\DigimonMasters\\DigimonMasters.cpp",
-              "RelativeToolTip": "DigimonMasters\\DigimonMasters.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Title": "MapStart.h",
+              "DocumentMoniker": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMasters\\DigimonMasters\\MapStart.h",
+              "RelativeDocumentMoniker": "DigimonMasters\\MapStart.h",
+              "ToolTip": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMasters\\DigimonMasters\\MapStart.h",
+              "RelativeToolTip": "DigimonMasters\\MapStart.h",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA0AAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-04-24T10:13:41.614Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ObjectManager.h",
+              "DocumentMoniker": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMasters\\DigimonMasters\\ObjectManager.h",
+              "RelativeDocumentMoniker": "DigimonMasters\\ObjectManager.h",
+              "ToolTip": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMasters\\DigimonMasters\\ObjectManager.h",
+              "RelativeToolTip": "DigimonMasters\\ObjectManager.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-04-24T11:24:41.06Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ObjectManager.cpp",
+              "DocumentMoniker": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMasters\\DigimonMasters\\ObjectManager.cpp",
+              "RelativeDocumentMoniker": "DigimonMasters\\ObjectManager.cpp",
+              "ToolTip": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMasters\\DigimonMasters\\ObjectManager.cpp",
+              "RelativeToolTip": "DigimonMasters\\ObjectManager.cpp",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-04-22T07:46:35.076Z",
+              "WhenOpened": "2025-04-24T11:24:39.193Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 16,
-              "Title": "MapDart.cpp",
-              "DocumentMoniker": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\Git\\DigimonMastersText\\DigimonMasters\\MapDart.cpp",
-              "RelativeDocumentMoniker": "DigimonMasters\\MapDart.cpp",
-              "ToolTip": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\Git\\DigimonMastersText\\DigimonMasters\\MapDart.cpp",
-              "RelativeToolTip": "DigimonMasters\\MapDart.cpp",
-              "ViewState": "AgIAACEAAAAAAAAAAAD4vzMAAAAAAAAAAAAAAA==",
+              "Title": "Map.h",
+              "DocumentMoniker": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMasters\\DigimonMasters\\Map.h",
+              "RelativeDocumentMoniker": "DigimonMasters\\Map.h",
+              "ToolTip": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMasters\\DigimonMasters\\Map.h",
+              "RelativeToolTip": "DigimonMasters\\Map.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-04-24T10:11:21.876Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "MapDart.h",
+              "DocumentMoniker": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMasters\\DigimonMasters\\MapDart.h",
+              "RelativeDocumentMoniker": "DigimonMasters\\MapDart.h",
+              "ToolTip": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMasters\\DigimonMasters\\MapDart.h",
+              "RelativeToolTip": "DigimonMasters\\MapDart.h",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAACAAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-04-24T10:11:58.935Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Skill.h",
+              "DocumentMoniker": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMasters\\DigimonMasters\\Skill.h",
+              "RelativeDocumentMoniker": "DigimonMasters\\Skill.h",
+              "ToolTip": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMasters\\DigimonMasters\\Skill.h",
+              "RelativeToolTip": "DigimonMasters\\Skill.h",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAAA8AAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-04-24T10:56:14.891Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 267,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CCharacter.cpp",
+              "DocumentMoniker": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMasters\\DigimonMasters\\CCharacter.cpp",
+              "RelativeDocumentMoniker": "DigimonMasters\\CCharacter.cpp",
+              "ToolTip": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMasters\\DigimonMasters\\CCharacter.cpp",
+              "RelativeToolTip": "DigimonMasters\\CCharacter.cpp",
+              "ViewState": "AgIAADcAAAAAAAAAAAAqwEIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-04-22T08:15:56.746Z",
+              "WhenOpened": "2025-04-24T10:05:18.089Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CPlayer.cpp",
+              "DocumentMoniker": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMasters\\DigimonMasters\\CPlayer.cpp",
+              "RelativeDocumentMoniker": "DigimonMasters\\CPlayer.cpp",
+              "ToolTip": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMasters\\DigimonMasters\\CPlayer.cpp",
+              "RelativeToolTip": "DigimonMasters\\CPlayer.cpp",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAAB0AAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-24T10:16:25.916Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CDigimon.cpp",
+              "DocumentMoniker": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMasters\\DigimonMasters\\CDigimon.cpp",
+              "RelativeDocumentMoniker": "DigimonMasters\\CDigimon.cpp",
+              "ToolTip": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMasters\\DigimonMasters\\CDigimon.cpp",
+              "RelativeToolTip": "DigimonMasters\\CDigimon.cpp",
+              "ViewState": "AgIAADAAAAAAAAAAAAAAAD4AAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-24T10:16:40.082Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MapStart.cpp",
+              "DocumentMoniker": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMasters\\DigimonMasters\\MapStart.cpp",
+              "RelativeDocumentMoniker": "DigimonMasters\\MapStart.cpp",
+              "ToolTip": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMasters\\DigimonMasters\\MapStart.cpp",
+              "RelativeToolTip": "DigimonMasters\\MapStart.cpp",
+              "ViewState": "AgIAAJ4AAAAAAAAAAAAAAKcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-24T10:12:08.762Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MapDart.cpp",
+              "DocumentMoniker": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMasters\\DigimonMasters\\MapDart.cpp",
+              "RelativeDocumentMoniker": "DigimonMasters\\MapDart.cpp",
+              "ToolTip": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMasters\\DigimonMasters\\MapDart.cpp",
+              "RelativeToolTip": "DigimonMasters\\MapDart.cpp",
+              "ViewState": "AgIAAGIAAAAAAAAAAADgv24AAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-24T11:10:56.87Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "MapWest.cpp",
+              "DocumentMoniker": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMasters\\DigimonMasters\\MapWest.cpp",
+              "RelativeDocumentMoniker": "DigimonMasters\\MapWest.cpp",
+              "ToolTip": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMasters\\DigimonMasters\\MapWest.cpp",
+              "RelativeToolTip": "DigimonMasters\\MapWest.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-24T11:24:29.623Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CPlayer.h",
+              "DocumentMoniker": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMasters\\DigimonMasters\\CPlayer.h",
+              "RelativeDocumentMoniker": "DigimonMasters\\CPlayer.h",
+              "ToolTip": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMasters\\DigimonMasters\\CPlayer.h",
+              "RelativeToolTip": "DigimonMasters\\CPlayer.h",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAAA8AAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-04-24T10:16:29.205Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "MapManager.h",
+              "DocumentMoniker": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMasters\\DigimonMasters\\MapManager.h",
+              "RelativeDocumentMoniker": "DigimonMasters\\MapManager.h",
+              "ToolTip": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMasters\\DigimonMasters\\MapManager.h",
+              "RelativeToolTip": "DigimonMasters\\MapManager.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-04-24T11:24:51.469Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "MapWest.h",
+              "DocumentMoniker": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMasters\\DigimonMasters\\MapWest.h",
+              "RelativeDocumentMoniker": "DigimonMasters\\MapWest.h",
+              "ToolTip": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMasters\\DigimonMasters\\MapWest.h",
+              "RelativeToolTip": "DigimonMasters\\MapWest.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-04-24T11:24:30.71Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Skill.cpp",
+              "DocumentMoniker": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMasters\\DigimonMasters\\Skill.cpp",
+              "RelativeDocumentMoniker": "DigimonMasters\\Skill.cpp",
+              "ToolTip": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMasters\\DigimonMasters\\Skill.cpp",
+              "RelativeToolTip": "DigimonMasters\\Skill.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-24T11:10:26.809Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 19,
               "Title": "MapManager.cpp",
-              "DocumentMoniker": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\Git\\DigimonMastersText\\DigimonMasters\\MapManager.cpp",
+              "DocumentMoniker": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMasters\\DigimonMasters\\MapManager.cpp",
               "RelativeDocumentMoniker": "DigimonMasters\\MapManager.cpp",
-              "ToolTip": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\Git\\DigimonMastersText\\DigimonMasters\\MapManager.cpp",
+              "ToolTip": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMasters\\DigimonMasters\\MapManager.cpp",
               "RelativeToolTip": "DigimonMasters\\MapManager.cpp",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-04-23T03:27:04.101Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "ObjectManager.h",
-              "DocumentMoniker": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\Git\\DigimonMastersText\\DigimonMasters\\ObjectManager.h",
-              "RelativeDocumentMoniker": "DigimonMasters\\ObjectManager.h",
-              "ToolTip": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\Git\\DigimonMastersText\\DigimonMasters\\ObjectManager.h",
-              "RelativeToolTip": "DigimonMasters\\ObjectManager.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-22T08:11:56.315Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "ObjectManager.cpp",
-              "DocumentMoniker": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\Git\\DigimonMastersText\\DigimonMasters\\ObjectManager.cpp",
-              "RelativeDocumentMoniker": "DigimonMasters\\ObjectManager.cpp",
-              "ToolTip": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\Git\\DigimonMastersText\\DigimonMasters\\ObjectManager.cpp",
-              "RelativeToolTip": "DigimonMasters\\ObjectManager.cpp",
-              "ViewState": "AgIAACoAAAAAAAAAAAAAADoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-04-22T07:07:58.349Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "CObj.h",
-              "DocumentMoniker": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\Git\\DigimonMastersText\\DigimonMasters\\CObj.h",
-              "RelativeDocumentMoniker": "DigimonMasters\\CObj.h",
-              "ToolTip": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\Git\\DigimonMastersText\\DigimonMasters\\CObj.h",
-              "RelativeToolTip": "DigimonMasters\\CObj.h",
-              "ViewState": "AgIAAAQAAAAAAAAAAAD4vxUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-22T07:10:47.039Z",
+              "WhenOpened": "2025-04-24T11:10:58.678Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 20,
-              "Title": "MapDart.h",
-              "DocumentMoniker": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\Git\\DigimonMastersText\\DigimonMasters\\MapDart.h",
-              "RelativeDocumentMoniker": "DigimonMasters\\MapDart.h",
-              "ToolTip": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\Git\\DigimonMastersText\\DigimonMasters\\MapDart.h",
-              "RelativeToolTip": "DigimonMasters\\MapDart.h",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA0AAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-22T08:15:49.126Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "Map.h",
-              "DocumentMoniker": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\Git\\DigimonMastersText\\DigimonMasters\\Map.h",
-              "RelativeDocumentMoniker": "DigimonMasters\\Map.h",
-              "ToolTip": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\Git\\DigimonMastersText\\DigimonMasters\\Map.h",
-              "RelativeToolTip": "DigimonMasters\\Map.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-22T08:01:40.563Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "CObj.cpp",
-              "DocumentMoniker": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\Git\\DigimonMastersText\\DigimonMasters\\CObj.cpp",
-              "RelativeDocumentMoniker": "DigimonMasters\\CObj.cpp",
-              "ToolTip": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\Git\\DigimonMastersText\\DigimonMasters\\CObj.cpp",
-              "RelativeToolTip": "DigimonMasters\\CObj.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-04-22T07:10:59.97Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "SkillManager.cpp",
-              "DocumentMoniker": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\Git\\DigimonMastersText\\DigimonMasters\\SkillManager.cpp",
-              "RelativeDocumentMoniker": "DigimonMasters\\SkillManager.cpp",
-              "ToolTip": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\Git\\DigimonMastersText\\DigimonMasters\\SkillManager.cpp",
-              "RelativeToolTip": "DigimonMasters\\SkillManager.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-04-22T07:50:20.327Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "SkillManager.h",
-              "DocumentMoniker": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\Git\\DigimonMastersText\\DigimonMasters\\SkillManager.h",
-              "RelativeDocumentMoniker": "DigimonMasters\\SkillManager.h",
-              "ToolTip": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\Git\\DigimonMastersText\\DigimonMasters\\SkillManager.h",
-              "RelativeToolTip": "DigimonMasters\\SkillManager.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-22T07:07:56.974Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "flags.h",
-              "DocumentMoniker": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\Git\\DigimonMastersText\\DigimonMasters\\flags.h",
-              "RelativeDocumentMoniker": "DigimonMasters\\flags.h",
-              "ToolTip": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\Git\\DigimonMastersText\\DigimonMasters\\flags.h",
-              "RelativeToolTip": "DigimonMasters\\flags.h",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAB0AAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-22T07:59:02.779Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
               "Title": "pch.h",
-              "DocumentMoniker": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\Git\\DigimonMastersText\\DigimonMasters\\pch.h",
+              "DocumentMoniker": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMasters\\DigimonMasters\\pch.h",
               "RelativeDocumentMoniker": "DigimonMasters\\pch.h",
-              "ToolTip": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\Git\\DigimonMastersText\\DigimonMasters\\pch.h",
+              "ToolTip": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMasters\\DigimonMasters\\pch.h",
               "RelativeToolTip": "DigimonMasters\\pch.h",
-              "ViewState": "AgIAACkAAAAAAAAAAAAAAEMAAAAPAAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAADgvx4AAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-22T07:43:52.233Z"
+              "WhenOpened": "2025-04-24T10:58:28.83Z",
+              "EditorCaption": ""
             }
           ]
         }

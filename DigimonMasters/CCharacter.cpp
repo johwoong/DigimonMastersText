@@ -39,3 +39,34 @@ void CCharacter::Render()
 {
 
 }
+
+bool CCharacter::Damage(int damage)
+{
+	m_tInfo.iHp -= damage;
+	if (m_tInfo.iHp <= 0)
+		return false;
+	return true;
+}
+
+void CCharacter::SetMaxHp()
+{
+	m_tInfo.iHp = m_tInfo.iHpMax;
+	m_tInfo.iDs = m_tInfo.iDsMax;
+}
+
+void CCharacter::AddExp(int exp)
+{
+	m_tInfo.iExp += exp;
+
+	while (m_tInfo.iExp >= 100)
+	{
+		m_tInfo.iExp -= 100;
+		LevelUp(1);
+	}
+}
+
+void CCharacter::LevelUp(int level)
+{
+	m_tInfo.iLevel += level;
+}
+

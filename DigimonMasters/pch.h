@@ -9,6 +9,7 @@
 
 // 여기에 미리 컴파일하려는 헤더 추가
 #include <iostream>
+#include <time.h>
 #include <unordered_map>
 #include <vector>
 #include "Windows.h"
@@ -47,6 +48,7 @@ void Safe_Delete_VecList(T& p)
 
 	p.clear();
 }
+
 
 template<typename T>
 void Safe_Delete_MapList(T& p)

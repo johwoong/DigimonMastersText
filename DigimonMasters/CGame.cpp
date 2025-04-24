@@ -9,6 +9,7 @@ DEFINITION_SINGLE(CGame)
 
 CGame::CGame()
 {
+	srand(unsigned int(NULL));
 }
 
 CGame::~CGame()

@@ -144,6 +144,8 @@
     <ClCompile Include="Map.cpp" />
     <ClCompile Include="MapDart.cpp" />
     <ClCompile Include="MapManager.cpp" />
+    <ClCompile Include="MapStart.cpp" />
+    <ClCompile Include="MapWest.cpp" />
     <ClCompile Include="ObjectManager.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
@@ -157,6 +159,7 @@
   <ItemGroup>
     <ClInclude Include="CCharacter.h" />
     <ClInclude Include="CDigimon.h" />
+    <ClInclude Include="CEnemyDigimon.h" />
     <ClInclude Include="CGame.h" />
     <ClInclude Include="CObj.h" />
     <ClInclude Include="CPlayer.h" />
@@ -165,6 +168,8 @@
     <ClInclude Include="Map.h" />
     <ClInclude Include="MapDart.h" />
     <ClInclude Include="MapManager.h" />
+    <ClInclude Include="MapStart.h" />
+    <ClInclude Include="MapWest.h" />
     <ClInclude Include="ObjectManager.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Skill.h" />

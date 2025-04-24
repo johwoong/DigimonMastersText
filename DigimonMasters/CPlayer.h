@@ -34,5 +34,7 @@ public:
     Skill* GetSkill() const { return p_skill; }
     void SetSkill(Skill* skill);
 
+ 
+
 };
 

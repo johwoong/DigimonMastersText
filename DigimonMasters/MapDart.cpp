@@ -1,8 +1,10 @@
 #include "pch.h"
 #include "MapDart.h"
+#include "MapManager.h"
 #include "ObjectManager.h"
 #include "CPlayer.h"
 #include "CDigimon.h"
+#include "Skill.h"
 
 MapDart::MapDart() 
 {
@@ -32,6 +34,7 @@ void MapDart::Update()
 				switch (OutputMap())
 				{
 				case 1:
+					GET_SINGLE(MapManager)->GetInst()->GetMapList()[1]->Update();
 					break;
 				case 2:
 					break;
@@ -53,6 +56,9 @@ void MapDart::Update()
 			system("pause");  
 			break;
 		case MENU_DIGIMONSTATIUS:
+			system("cls");
+			pPlayer->GetDigimon()->Render();
+			system("pause");
 			break;
 		case MENU_EXIT:
 			exit(0);
@@ -103,37 +109,46 @@ void MapDart::SelectDigimon()
 			pDigimon->SetCharacterInfo(10, 20, 5, 10, 100, 60, 1, 0);
 			pDigimon->SetEvalutionType(1);
 			pDigimon->SetAttributeType(3);
+			pDigimon->AddSKill(new Skill("꼬마 불꽃", 10, 20));
+			pDigimon->AddSKill(new Skill("꼬마 화염", 50, 50));
 			break;
 		case 2:
 			pDigimon->SetDigName("파피몬");
 			pDigimon->SetCharacterInfo(10, 20, 5, 10, 100, 60, 1, 0);
 			pDigimon->SetEvalutionType(1);
 			pDigimon->SetAttributeType(2);
+			pDigimon->AddSKill(new Skill("뿔 찌르기", 10, 20));
+			pDigimon->AddSKill(new Skill("푸른 불꽃", 50, 50));
 			break;
 		case 3:
 			pDigimon->SetDigName("길몬");
 			pDigimon->SetCharacterInfo(10, 20, 5, 10, 100, 60, 1, 0);
 			pDigimon->SetEvalutionType(1);
 			pDigimon->SetAttributeType(3);
+			pDigimon->AddSKill(new Skill("화염 불꽃", 10, 20));
+			pDigimon->AddSKill(new Skill("브레스", 50, 50));
 			break;
 		case 4:
 			pDigimon->SetDigName("파닥몬");
 			pDigimon->SetCharacterInfo(10, 20, 5, 10, 100, 60, 1, 0);
 			pDigimon->SetEvalutionType(1);
 			pDigimon->SetAttributeType(1);
+			pDigimon->AddSKill(new Skill("공기팡", 10, 20));
+			pDigimon->AddSKill(new Skill("공기버블", 50, 50));
 			break;
 		case 5:
 			pDigimon->SetDigName("브이몬");
 			pDigimon->SetCharacterInfo(10, 20, 5, 10, 100, 60, 1, 0);
 			pDigimon->SetEvalutionType(1);
 			pDigimon->SetAttributeType(3);
+			pDigimon->AddSKill(new Skill("박치기", 10, 20));
+			pDigimon->AddSKill(new Skill("브이 펀치", 60, 40));
 			break;
 		}
 		pPlayer->SetDigimon(pDigimon);
 		cout << pPlayer->GetDigimon()->GetDigName() << "을 선택하셨습니다." << endl;
 		pPlayer->SetIsDigimon(true);
-		system("pause");
-		break;
+		system("pause");		break;
 	}
 }
 
@@ -143,8 +158,8 @@ int MapDart::OutputMap()
 	{
 		system("cls");
 		cout << "어디로 이동하시겠습니까?" << endl;
-		cout << "1. 서부마을" << endl;
-		cout << "2. 시작의마을" << endl;
+		cout << "1. 시작의마을" << endl;
+		cout << "2. 서부마을" << endl;
 		cout << "3. 눈보라마을" << endl;
 		cout << "4. 뒤로가기" << endl;
 		cout << ">>> ";
@@ -154,3 +169,10 @@ int MapDart::OutputMap()
 		return iMenu;
 	}
 }
+
+void MapDart::Battle()
+{
+
+}
+
+

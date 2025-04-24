@@ -1,6 +1,7 @@
 #pragma once
 #include "CCharacter.h"
-#include "Skill.h"
+
+class Skill;
 class CDigimon : public CCharacter
 {
 private:
@@ -26,21 +27,24 @@ private:
 private:
 	CDigimon();
 	CDigimon(const CDigimon& digimon);
-	~CDigimon();
+	virtual ~CDigimon();
 
 private:
 	string m_strDigName;
 	EVALUTION m_eType;
 	ATTRIBUTE m_aType;
+	vector<Skill*> m_skillVec;
 
 public:
 	string GetDigName() const { return m_strDigName; }
+	const vector<Skill*>& GetSkillList() const { return m_skillVec; }
 
 public:
 	void SetDigName(string digName);
-	void SetEvalutionType(int number);
+	void SetEvalutionType(int number); 
 	void SetAttributeType(int number);
-private:
+	void AddSKill(Skill* skill);
+
 	friend class CPlayer;
 	friend class ObjectManager;
 

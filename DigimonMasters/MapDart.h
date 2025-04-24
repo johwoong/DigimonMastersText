@@ -28,5 +28,8 @@ private:
 	int OutputMenu();
 	void SelectDigimon();
 	virtual int OutputMap();
+
+public:
+	virtual void Battle();
 };
 
