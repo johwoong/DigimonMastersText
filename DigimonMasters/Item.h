@@ -13,6 +13,7 @@ protected:
 	
 private:
 	friend class ObjectManager;
+	friend class CPlayer;
 
 public:
 	virtual bool Init();

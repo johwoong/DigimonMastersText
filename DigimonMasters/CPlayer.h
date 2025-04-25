@@ -16,6 +16,7 @@ private:
     CDigimon* p_digimon;
     bool isDigimon;
     Skill* p_skill;
+    class Item* m_equip[5];
 
 private:
     friend class ObjectManager;
@@ -33,6 +34,9 @@ public:
     void SetIsDigimon(bool isDigimon) { this->isDigimon = isDigimon; }
     Skill* GetSkill() const { return p_skill; }
     void SetSkill(Skill* skill);
+public:
+    void PrintEquip();
+    void Equip(Item* item);
 
  
 

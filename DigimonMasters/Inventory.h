@@ -12,6 +12,10 @@ private:
 public:
 	bool AddInventory(Item* item);
 	void PrintItemList();
+	int SelectOption();
+	void UseItem();
+	void ThrowItem();
+	void EquipItem();
 public:
 	int GetWeight() { return iWeight; }
 	void SetWeight(int value) { iWeight = value; }
