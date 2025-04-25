@@ -15,12 +15,3 @@ CObj::~CObj()
 {
 
 }
-
-bool CObj::Init()
-{
-	return true;
-}
-
-void CObj::Render()
-{
-}

@@ -5,6 +5,8 @@
 #include "CPlayer.h"
 #include "CDigimon.h"
 #include "Skill.h"
+#include "StoreManager.h"
+#include "Inventory.h"
 
 MapDart::MapDart() 
 {
@@ -47,8 +49,10 @@ void MapDart::Update()
 				SelectDigimon();
 			break;
 		case MENU_STORE:
+			GET_SINGLE(StoreManager)->GetInst()->Update(this);
 			break;
 		case MENU_INVENTORY:
+			GET_SINGLE(Inventory)->GetInst()->Update();
 			break;
 		case MENU_STATUS:
 			system("cls");

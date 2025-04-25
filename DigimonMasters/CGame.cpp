@@ -4,6 +4,8 @@
 #include "SkillManager.h"
 #include "MapManager.h"
 #include "CPlayer.h"
+#include "StoreManager.h"
+#include "Inventory.h"
 
 DEFINITION_SINGLE(CGame)
 
@@ -28,6 +30,12 @@ bool CGame::Initialize()
 	if (!GET_SINGLE(MapManager)->Init())
 		return false;
 
+	if (!GET_SINGLE(StoreManager)->Init())
+		return false;
+
+	if (!GET_SINGLE(Inventory)->Init())
+		return false;
+
 	return true;
 }
 
@@ -47,6 +55,8 @@ void CGame::Release()
 	DESTORY_SINGLE(MapManager);
 	DESTORY_SINGLE(ObjectManager);
 	DESTORY_SINGLE(SkillManager);
+	DESTORY_SINGLE(StoreManager);
+	DESTORY_SINGLE(Inventory);
 }
 
 void CGame::SetPlayer()

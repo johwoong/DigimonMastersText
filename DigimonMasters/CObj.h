@@ -13,8 +13,8 @@ protected:
 	OBJECT_TYPE m_eType;
 
 public:
-	virtual bool Init();
-	virtual void Render();
+	virtual bool Init() = 0;
+	virtual void Render() = 0;
 	virtual CObj* Clone() = 0;
 
 public:

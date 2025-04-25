@@ -76,4 +76,14 @@ typedef struct _tagCharacterInfo
 	int iExp;
 }CHARACTERINFO;
 
+typedef struct _tagItemInfo
+{
+	ITEM_TYPE eType;
+	string strName;
+	int iPrice;
+	int iWeight;
+	string strDesc;
+
+}ITEMINFO;
+
 #endif //PCH_H

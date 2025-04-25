@@ -27,6 +27,7 @@ private:
 private:
 	CDigimon();
 	CDigimon(const CDigimon& digimon);
+public:
 	virtual ~CDigimon();
 
 private:

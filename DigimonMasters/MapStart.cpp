@@ -114,7 +114,7 @@ void MapStart::GenericAttack(CPlayer* player, CDigimon* digimon)
 	cout << digimon->GetDigName() << "이 " << player->GetDigimon()->GetDigName() << "에게 "
 		<< iDamage << " 피해를 주었습니다." << endl;
 
-	if (!player->GetDigimon()->Damage(iDamage))
+	if (!digimon->Damage(iDamage))
 	{
 		cout << digimon->GetDigName() << "을 해치웠습니다!!." << endl;
 		digimon->SetMaxHp();

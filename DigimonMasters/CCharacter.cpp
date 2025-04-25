@@ -64,7 +64,7 @@ void CCharacter::AddExp(int exp)
 		LevelUp(1);
 	}
 }
-
+ 
 void CCharacter::LevelUp(int level)
 {
 	m_tInfo.iLevel += level;

@@ -141,9 +141,15 @@
     <ClCompile Include="CObj.cpp" />
     <ClCompile Include="CPlayer.cpp" />
     <ClCompile Include="DigimonMasters.cpp" />
+    <ClCompile Include="Inventory.cpp" />
+    <ClCompile Include="Item.cpp" />
+    <ClCompile Include="ItemEgg.cpp" />
+    <ClCompile Include="ItemEquip.cpp" />
+    <ClCompile Include="ItemGeneric.cpp" />
     <ClCompile Include="Map.cpp" />
     <ClCompile Include="MapDart.cpp" />
     <ClCompile Include="MapManager.cpp" />
+    <ClCompile Include="MapSnow.cpp" />
     <ClCompile Include="MapStart.cpp" />
     <ClCompile Include="MapWest.cpp" />
     <ClCompile Include="ObjectManager.cpp" />
@@ -155,6 +161,11 @@
     </ClCompile>
     <ClCompile Include="Skill.cpp" />
     <ClCompile Include="SkillManager.cpp" />
+    <ClCompile Include="Store.cpp" />
+    <ClCompile Include="StoreEgg.cpp" />
+    <ClCompile Include="StoreEquip.cpp" />
+    <ClCompile Include="StoreGeneric.cpp" />
+    <ClCompile Include="StoreManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CCharacter.h" />
@@ -165,15 +176,26 @@
     <ClInclude Include="CPlayer.h" />
     <ClInclude Include="define.h" />
     <ClInclude Include="flags.h" />
+    <ClInclude Include="Inventory.h" />
+    <ClInclude Include="Item.h" />
+    <ClInclude Include="ItemEgg.h" />
+    <ClInclude Include="ItemEquip.h" />
+    <ClInclude Include="ItemGeneric.h" />
     <ClInclude Include="Map.h" />
     <ClInclude Include="MapDart.h" />
     <ClInclude Include="MapManager.h" />
+    <ClInclude Include="MapSnow.h" />
     <ClInclude Include="MapStart.h" />
     <ClInclude Include="MapWest.h" />
     <ClInclude Include="ObjectManager.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Skill.h" />
     <ClInclude Include="SkillManager.h" />
+    <ClInclude Include="Store.h" />
+    <ClInclude Include="StoreEgg.h" />
+    <ClInclude Include="StoreEquip.h" />
+    <ClInclude Include="StoreGeneric.h" />
+    <ClInclude Include="StoreManager.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

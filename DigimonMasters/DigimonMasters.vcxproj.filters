@@ -28,6 +28,15 @@
     <Filter Include="소스 파일\Map">
       <UniqueIdentifier>{fab493a7-5549-4c40-bfb0-e5fcc8fd6ea8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\Obj\Item">
+      <UniqueIdentifier>{a7975e10-027e-4cfa-b4f6-f1d452bb0bd6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Store">
+      <UniqueIdentifier>{44e1ef83-8c60-4af7-93bf-24314b133416}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Inventory">
+      <UniqueIdentifier>{e54471b2-a865-48fd-aaea-dc5b462abfa4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DigimonMasters.cpp">
@@ -74,6 +83,39 @@
     </ClCompile>
     <ClCompile Include="MapStart.cpp">
       <Filter>소스 파일\Map</Filter>
+    </ClCompile>
+    <ClCompile Include="MapSnow.cpp">
+      <Filter>소스 파일\Map</Filter>
+    </ClCompile>
+    <ClCompile Include="Item.cpp">
+      <Filter>소스 파일\Obj\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="ItemEquip.cpp">
+      <Filter>소스 파일\Obj\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="StoreManager.cpp">
+      <Filter>소스 파일\Store</Filter>
+    </ClCompile>
+    <ClCompile Include="Store.cpp">
+      <Filter>소스 파일\Store</Filter>
+    </ClCompile>
+    <ClCompile Include="StoreEquip.cpp">
+      <Filter>소스 파일\Store</Filter>
+    </ClCompile>
+    <ClCompile Include="StoreEgg.cpp">
+      <Filter>소스 파일\Store</Filter>
+    </ClCompile>
+    <ClCompile Include="ItemEgg.cpp">
+      <Filter>소스 파일\Obj\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="ItemGeneric.cpp">
+      <Filter>소스 파일\Obj\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="StoreGeneric.cpp">
+      <Filter>소스 파일\Store</Filter>
+    </ClCompile>
+    <ClCompile Include="Inventory.cpp">
+      <Filter>소스 파일\Inventory</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -127,6 +169,39 @@
     </ClInclude>
     <ClInclude Include="CEnemyDigimon.h">
       <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="MapSnow.h">
+      <Filter>소스 파일\Map</Filter>
+    </ClInclude>
+    <ClInclude Include="Item.h">
+      <Filter>소스 파일\Obj\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="ItemEquip.h">
+      <Filter>소스 파일\Obj\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="StoreManager.h">
+      <Filter>소스 파일\Store</Filter>
+    </ClInclude>
+    <ClInclude Include="Store.h">
+      <Filter>소스 파일\Store</Filter>
+    </ClInclude>
+    <ClInclude Include="StoreEquip.h">
+      <Filter>소스 파일\Store</Filter>
+    </ClInclude>
+    <ClInclude Include="ItemEgg.h">
+      <Filter>소스 파일\Obj\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="ItemGeneric.h">
+      <Filter>소스 파일\Obj\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="StoreEgg.h">
+      <Filter>소스 파일\Store</Filter>
+    </ClInclude>
+    <ClInclude Include="StoreGeneric.h">
+      <Filter>소스 파일\Store</Filter>
+    </ClInclude>
+    <ClInclude Include="Inventory.h">
+      <Filter>소스 파일\Inventory</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

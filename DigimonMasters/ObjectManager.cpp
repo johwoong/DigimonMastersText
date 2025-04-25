@@ -2,6 +2,8 @@
 #include "ObjectManager.h"
 #include "CPlayer.h"
 #include "CDigimon.h"
+#include "Item.h"
+
 DEFINITION_SINGLE(ObjectManager)
 
 ObjectManager::ObjectManager()
@@ -19,6 +21,7 @@ bool ObjectManager::Init()
 {
 	CDigimon* pDigimon = (CDigimon*)CreateObject("Digimon", OT_DIGIMON);
 	pDigimon = (CDigimon*)CreateObject("EnemyDigimon", OT_ENEMYDIGIMON);
+	Item* item = (Item*)CreateObject("Item", OT_ITEM);
 	return true;
 }
 
@@ -36,7 +39,8 @@ CObj* ObjectManager::CreateObject(const string& strKey, OBJECT_TYPE eType)
 	case OT_ENEMYDIGIMON:
 		pObj = new CDigimon;
 		break;
-	case OT_NPC:
+	case OT_ITEM:
+		pObj = new Item;
 		break;
 	}
 

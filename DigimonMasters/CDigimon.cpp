@@ -37,10 +37,11 @@ void CDigimon::SetAttributeType(int number)
 
 void CDigimon::AddSKill(Skill* skill)
 {
-	if (m_skillVec.size() >= 3)
+	if (m_skillVec.size() >= 15)
 		return;
 	m_skillVec.push_back(skill);
 }
+
 
 
 bool CDigimon::Init()

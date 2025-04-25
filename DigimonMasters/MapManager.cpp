@@ -3,6 +3,7 @@
 #include "MapDart.h"
 #include "MapStart.h"
 #include "MapWest.h"
+#include "MapSnow.h"
 
 DEFINITION_SINGLE(MapManager)
 
@@ -44,6 +45,7 @@ bool MapManager::CreateMap(MAP_TYPE eType)
 		pMap = new MapStart;
 		break;
 	case MT_SNOW:
+		pMap = new MapSnow;
 		break;
 	case MT_SAND:
 		pMap = new MapWest;
