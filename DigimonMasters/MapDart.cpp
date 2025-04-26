@@ -61,7 +61,10 @@ void MapDart::Update()
 			break;
 		case MENU_DIGIMONSTATIUS:
 			system("cls");
-			pPlayer->GetDigimon()->Render();
+			if (pPlayer->GetDigimon() == nullptr)
+				cout << "µðÁö¸óÀÌ Á¸ÀçÇÏÁö ¾Ê½À´Ï´Ù!!" << endl;
+			else
+				pPlayer->GetDigimon()->Render();
 			system("pause");
 			break;
 		case MENU_EXIT:
@@ -110,7 +113,7 @@ void MapDart::SelectDigimon()
 		{
 		case 1:
 			pDigimon->SetDigName("¾Æ±¸¸ó");
-			pDigimon->SetCharacterInfo(10, 20, 5, 10, 100, 60, 1, 0);
+			pDigimon->SetCharacterInfo(10, 20, 5, 10, 100, 60, 1, 0, 0, 0);
 			pDigimon->SetEvalutionType(1);
 			pDigimon->SetAttributeType(3);
 			pDigimon->AddSKill(new Skill("²¿¸¶ ºÒ²É", 10, 20));
@@ -118,7 +121,7 @@ void MapDart::SelectDigimon()
 			break;
 		case 2:
 			pDigimon->SetDigName("ÆÄÇÇ¸ó");
-			pDigimon->SetCharacterInfo(10, 20, 5, 10, 100, 60, 1, 0);
+			pDigimon->SetCharacterInfo(10, 20, 5, 10, 100, 60, 1, 0, 0, 0);
 			pDigimon->SetEvalutionType(1);
 			pDigimon->SetAttributeType(2);
 			pDigimon->AddSKill(new Skill("»Ô Âî¸£±â", 10, 20));
@@ -126,7 +129,7 @@ void MapDart::SelectDigimon()
 			break;
 		case 3:
 			pDigimon->SetDigName("±æ¸ó");
-			pDigimon->SetCharacterInfo(10, 20, 5, 10, 100, 60, 1, 0);
+			pDigimon->SetCharacterInfo(10, 20, 5, 10, 100, 60, 1, 0, 0, 0);
 			pDigimon->SetEvalutionType(1);
 			pDigimon->SetAttributeType(3);
 			pDigimon->AddSKill(new Skill("È­¿° ºÒ²É", 10, 20));
@@ -134,7 +137,7 @@ void MapDart::SelectDigimon()
 			break;
 		case 4:
 			pDigimon->SetDigName("ÆÄ´Ú¸ó");
-			pDigimon->SetCharacterInfo(10, 20, 5, 10, 100, 60, 1, 0);
+			pDigimon->SetCharacterInfo(10, 20, 5, 10, 100, 60, 1, 0, 0, 0);
 			pDigimon->SetEvalutionType(1);
 			pDigimon->SetAttributeType(1);
 			pDigimon->AddSKill(new Skill("°ø±âÆÎ", 10, 20));
@@ -142,7 +145,7 @@ void MapDart::SelectDigimon()
 			break;
 		case 5:
 			pDigimon->SetDigName("ºêÀÌ¸ó");
-			pDigimon->SetCharacterInfo(10, 20, 5, 10, 100, 60, 1, 0);
+			pDigimon->SetCharacterInfo(10, 20, 5, 10, 100, 60, 1, 0, 0, 0);
 			pDigimon->SetEvalutionType(1);
 			pDigimon->SetAttributeType(3);
 			pDigimon->AddSKill(new Skill("¹ÚÄ¡±â", 10, 20));

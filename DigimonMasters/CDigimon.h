@@ -45,6 +45,7 @@ public:
 	void SetEvalutionType(int number); 
 	void SetAttributeType(int number);
 	void AddSKill(Skill* skill);
+	void UpdateStat(int iAttack, int iArmor, int iSkillDamage);
 
 	friend class CPlayer;
 	friend class ObjectManager;

@@ -16,7 +16,7 @@ CCharacter::CCharacter(const CCharacter& character) : CObj(character)
 }
 
 
-void CCharacter::SetCharacterInfo(int iAttackMin, int iAttackMax, int iArmorMin, int iArmorMax, int iHpmax, int iDsMax, int iLevel, int iExp)
+void CCharacter::SetCharacterInfo(int iAttackMin, int iAttackMax, int iArmorMin, int iArmorMax, int iHpmax, int iDsMax, int iLevel, int iExp, int iFat, int iSpeed)
 {
 	m_tInfo.iAttackMin = iAttackMin;
 	m_tInfo.iAttackMax = iAttackMax;
@@ -28,6 +28,8 @@ void CCharacter::SetCharacterInfo(int iAttackMin, int iAttackMax, int iArmorMin,
 	m_tInfo.iDs = m_tInfo.iDsMax;
 	m_tInfo.iLevel = iLevel;
 	m_tInfo.iExp = iExp;
+	m_tInfo.iFat = iFat;
+	m_tInfo.iSpeed = iSpeed;
 }
 
 bool CCharacter::Init()
@@ -69,4 +71,6 @@ void CCharacter::LevelUp(int level)
 {
 	m_tInfo.iLevel += level;
 }
+
+
 

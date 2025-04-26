@@ -16,6 +16,7 @@ public:
 	void UseItem();
 	void ThrowItem();
 	void EquipItem();
+	void UnEquipItem();
 public:
 	int GetWeight() { return iWeight; }
 	void SetWeight(int value) { iWeight = value; }

@@ -74,6 +74,8 @@ typedef struct _tagCharacterInfo
 	int iDsMax;
 	int iLevel;
 	int iExp;
+	int iFat; // 피로도
+	int iSpeed;
 }CHARACTERINFO;
 
 typedef struct _tagItemInfo
@@ -85,5 +87,14 @@ typedef struct _tagItemInfo
 	string strDesc;
 
 }ITEMINFO;
+
+typedef struct _tagItemStatInfo
+{
+	int iAttack; // 공격 증가
+	int iArmor; // 방어 증가
+	int iDs; // DS 증가
+	int iSpeed; // 이동속도 증가
+	int iSkillDamage; // 스킬데미지 증가
+}ITEMSTAT;
 
 #endif //PCH_H

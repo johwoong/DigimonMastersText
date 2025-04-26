@@ -42,6 +42,16 @@ void CDigimon::AddSKill(Skill* skill)
 	m_skillVec.push_back(skill);
 }
 
+void CDigimon::UpdateStat(int iAttack, int iArmor, int iSkillDamage)
+{
+	m_tInfo.iAttackMin += iAttack;
+	m_tInfo.iArmorMax += iAttack;
+	m_tInfo.iArmorMin += iArmor;
+	m_tInfo.iArmorMax += iArmor;
+	GetSkillList()[0]->SetSkillDamage(GetSkillList()[0]->GetSkillDamage() + iSkillDamage);
+	GetSkillList()[1]->SetSkillDamage(GetSkillList()[0]->GetSkillDamage() + iSkillDamage);
+}
+
 
 
 bool CDigimon::Init()
@@ -57,7 +67,8 @@ void CDigimon::Render()
 	cout << "레벨 : " << m_tInfo.iLevel << "\t경험치 : " << m_tInfo.iExp << endl;
 	cout << "공격력 : " << m_tInfo.iAttackMin << " ~ " << m_tInfo.iAttackMax << endl;
 	cout << "방어력 : " << m_tInfo.iArmorMin << " ~ " << m_tInfo.iArmorMax << endl;
-	cout << "스킬 1번 : " << m_skillVec[0]->GetSkillName() << "\t스킬 2번 : " << m_skillVec[1]->GetSkillName() << endl;
+	cout << "스킬 1번 : " << m_skillVec[0]->GetSkillName() << "\t스킬 데미지 : " << m_skillVec[0]->GetSkillDamage() << endl;
+	cout << "스킬 2번 : " << m_skillVec[1]->GetSkillName() << "\t스킬 데미지 : " << m_skillVec[1]->GetSkillDamage() << endl;
 }
 
 

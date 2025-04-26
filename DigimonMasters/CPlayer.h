@@ -37,6 +37,10 @@ public:
 public:
     void PrintEquip();
     void Equip(Item* item);
+    void UnEquip(ITEM_REGION eType);
+    void ApplyEquip(Item* item);
+    void PrintItemStat(Item* item);
+ 
 
  
 

@@ -170,7 +170,7 @@ void MapStart::CreateEnemy()
 {
 	CDigimon* pDigimon = (CDigimon*)GET_SINGLE(ObjectManager)->CloneObject("EnemyDigimon");
 	pDigimon->SetDigName("滴府阁");
-	pDigimon->SetCharacterInfo(5, 10, 3, 5, 50, 30, 1, 0);
+	pDigimon->SetCharacterInfo(5, 10, 3, 5, 50, 30, 1, 0, 0, 0);
 	pDigimon->SetEvalutionType(1);
 	pDigimon->SetAttributeType(3);
 	pDigimon->AddSKill(new Skill("备港 颇扁", 10, 20));
@@ -180,7 +180,7 @@ void MapStart::CreateEnemy()
 
 	pDigimon = (CDigimon*)GET_SINGLE(ObjectManager)->CloneObject("EnemyDigimon");
 	pDigimon->SetDigName("迫阁");
-	pDigimon->SetCharacterInfo(5, 10, 3, 5, 50, 30, 1, 0);
+	pDigimon->SetCharacterInfo(5, 10, 3, 5, 50, 30, 1, 0, 0, 0);
 	pDigimon->SetEvalutionType(1);
 	pDigimon->SetAttributeType(3);
 	pDigimon->AddSKill(new Skill("谎府 盲嘛", 10, 20));

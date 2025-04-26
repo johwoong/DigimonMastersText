@@ -82,28 +82,28 @@ void CGame::SetPlayer()
 		switch (iInput)
 		{
 		case T_TAIL:
-			pPlayer->SetCharacterInfo(0, 0, 0, 0, 100, 100, 1, 0);
+			pPlayer->SetCharacterInfo(0, 0, 0, 0, 100, 100, 1, 0, 100, 0);
 			pPlayer->SetTaymerTypeAndName(T_TAIL, "신태일");
 			skill->SetSkillName("광폭화");
 			skill->SetFasiveSkillName("신태일의 용기");
 			pPlayer->SetSkill(skill);
 			break;
 		case T_METU:
-			pPlayer->SetCharacterInfo(0, 0, 0, 0, 100, 100, 1, 0);
+			pPlayer->SetCharacterInfo(0, 0, 0, 0, 100, 100, 1, 0, 100, 0);
 			pPlayer->SetTaymerTypeAndName(T_METU, "메튜");
 			skill->SetSkillName("기백");
 			skill->SetFasiveSkillName("메튜의 우정");
 			pPlayer->SetSkill(skill);
 			break;
 		case T_MINA:
-			pPlayer->SetCharacterInfo(0, 0, 0, 0, 100, 100, 1, 0);
+			pPlayer->SetCharacterInfo(0, 0, 0, 0, 100, 100, 1, 0, 100, 0);
 			pPlayer->SetTaymerTypeAndName(T_MINA, "이미나");
 			skill->SetSkillName("기원");
 			skill->SetFasiveSkillName("이미나의 순수");
 			pPlayer->SetSkill(skill);
 			break;
 		case T_LIKI:
-			pPlayer->SetCharacterInfo(0, 0, 0, 0, 100, 100, 1, 0);
+			pPlayer->SetCharacterInfo(0, 0, 0, 0, 100, 100, 1, 0, 100, 0);
 			pPlayer->SetTaymerTypeAndName(T_LIKI, "리키");
 			skill->SetSkillName("응원");
 			skill->SetFasiveSkillName("리키의 희망");

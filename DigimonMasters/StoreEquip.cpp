@@ -2,31 +2,45 @@
 #include "StoreEquip.h"
 #include "ItemEquip.h"
 
-StoreEquip::StoreEquip()
+StoreEquip::StoreEquip() : iHead(0), iShirt(0), iGlove(0), iPant(0), iShoes(0)
 {	
-	ItemEquip* item = (ItemEquip*)CreateItem("가고일 돌갑옷", IT_EQ, 2000, 3, "단단한 갑옷");
-	item->SetItemRegion(SHIRT);
-	item->SetItemStatInfo(10, 20, 30, 50, 0);
-	
-	
-	item = (ItemEquip*)CreateItem("광전사의 신발", IT_EQ, 1500, 3, "민첩성 증가");
-	item->SetItemRegion(SHOES);
-	item->SetItemStatInfo(5, 10, 15, 20, 50);
-
-	item = (ItemEquip*)CreateItem("디그다의 뿔머리", IT_EQ, 1500, 3, "민첩성 증가");
+	ItemEquip* item = (ItemEquip*)CreateItem("임프몬의 모자", IT_EQ, 2000, 3, "임프몬의 모자");
 	item->SetItemRegion(HEAD);
-	item->SetItemStatInfo(5, 10, 15, 20, 50);
+	item->SetItemStatInfo(2, 3, 10, 5, 5);	
+	item = (ItemEquip*)CreateItem("위자몬의 모자", IT_EQ, 2000, 3, "임프몬의 모자");
+	item->SetItemRegion(HEAD);
+	item->SetItemStatInfo(2, 3, 10, 5, 5);
 
-	item = (ItemEquip*)CreateItem("레오몬의 바지", IT_EQ, 1500, 3, "민첩성 증가");
+	item = (ItemEquip*)CreateItem("임프몬의 셔츠", IT_EQ, 2000, 3, "임프몬의 모자");
+	item->SetItemRegion(SHIRT);
+	item->SetItemStatInfo(2, 3, 10, 5, 5);
+	item = (ItemEquip*)CreateItem("위자몬의 셔츠", IT_EQ, 2000, 3, "임프몬의 모자");
+	item->SetItemRegion(SHIRT);
+	item->SetItemStatInfo(2, 3, 10, 5, 5);
+
+
+	item = (ItemEquip*)CreateItem("임프몬의 장갑", IT_EQ, 2000, 3, "임프몬의 모자");
+	item->SetItemRegion(GLOVE);
+	item->SetItemStatInfo(2, 3, 10, 5, 5);
+	item = (ItemEquip*)CreateItem("위자몬의 장갑", IT_EQ, 2000, 3, "임프몬의 모자");
+	item->SetItemRegion(GLOVE);
+	item->SetItemStatInfo(2, 3, 10, 5, 5);
+
+
+	item = (ItemEquip*)CreateItem("임프몬의 바지", IT_EQ, 2000, 3, "임프몬의 모자");
 	item->SetItemRegion(PANT);
-	item->SetItemStatInfo(5, 10, 15, 20, 50);
+	item->SetItemStatInfo(2, 3, 10, 5, 5);
+	item = (ItemEquip*)CreateItem("위자몬의 바지", IT_EQ, 2000, 3, "임프몬의 모자");
+	item->SetItemRegion(PANT);
+	item->SetItemStatInfo(2, 3, 10, 5, 5);
 
-	item = (ItemEquip*)CreateItem("임프몬의 신발", IT_EQ, 1500, 3, "민첩성 증가");
+
+	item = (ItemEquip*)CreateItem("임프몬의 신발", IT_EQ, 2000, 3, "임프몬의 모자");
 	item->SetItemRegion(SHOES);
-	item->SetItemStatInfo(5, 10, 15, 20, 50);
-
-
-	
+	item->SetItemStatInfo(2, 3, 10, 5, 5);
+	item = (ItemEquip*)CreateItem("위자몬의 신발", IT_EQ, 2000, 3, "임프몬의 모자");
+	item->SetItemRegion(SHOES);
+	item->SetItemStatInfo(2, 3, 10, 5, 5);
 }
 
 StoreEquip::~StoreEquip()
@@ -50,12 +64,15 @@ void StoreEquip::Update()
 			ShowShirtList();
 			break;
 		case 4:
-			ShowGloveList();
+			ShowPantList();
 			break;
 		case 5:
-			ShowShoesList();
+			ShowGloveList();
 			break;
 		case 6:
+			ShowShoesList();
+			break;
+		case 7:
 			return;
 		}
 	}
@@ -70,12 +87,13 @@ int StoreEquip::OutputMenu()
 		cout << "1. 전체보기" << endl;
 		cout << "2. 머리" << endl;
 		cout << "3. 상의" << endl;
-		cout << "4. 장갑" << endl;
-		cout << "5. 신발" << endl;
-		cout << "6. 뒤로가기" << endl;
+		cout << "4. 하의" << endl;
+		cout << "5. 장갑" << endl;
+		cout << "6. 신발" << endl;
+		cout << "7. 뒤로가기" << endl;
 		cout << ">>> ";
 		int input = Input<int>();
-		if (input > 6 || input < 1)
+		if (input > 7 || input < 1)
 			continue;
 		return input;;
 	}
@@ -89,23 +107,30 @@ void StoreEquip::ShowHeadList()
 	{
 		system("cls");
 		int j = 1;
+		vector<int> vecHeadIndex; 
+
 		for (int i = 0; i < m_vecItemList.size(); ++i)
 		{
 			ItemEquip* item = (ItemEquip*)m_vecItemList[i];
 			if (item->GetItemRegion() == HEAD)
 			{
+				vecHeadIndex.push_back(i);
 				cout << "[" << j << "] 아이템 " << endl;
 				item->Render();
 				j++;
 			}
 		}
+
 		cout << "구매하실 아이템의 번호를 입력해주세요(나가기 0번)>>> ";
 		int input = Input<int>();
-		if (input < 0 || input > m_vecItemList.size() + 1)
+
+		if (input < 0 || input >= j)
 			continue;
 		if (input == 0)
 			return;
-		Item* item = m_vecItemList[input - 1]->Clone();
+
+		int realIndex = vecHeadIndex[input - 1];
+		Item* item = m_vecItemList[realIndex]->Clone();
 		AddInventoryInItem(item);
 	}
 
@@ -117,23 +142,30 @@ void StoreEquip::ShowShirtList()
 	{
 		system("cls");
 		int j = 1;
+		vector<int> vecShirtIndex;
+
 		for (int i = 0; i < m_vecItemList.size(); ++i)
 		{
 			ItemEquip* item = (ItemEquip*)m_vecItemList[i];
 			if (item->GetItemRegion() == SHIRT)
 			{
+				vecShirtIndex.push_back(i);
 				cout << "[" << j << "] 아이템 " << endl;
 				item->Render();
 				j++;
 			}
 		}
+
 		cout << "구매하실 아이템의 번호를 입력해주세요(나가기 0번)>>> ";
 		int input = Input<int>();
-		if (input < 0 || input > m_vecItemList.size() + 1)
+
+		if (input < 0 || input >= j)
 			continue;
 		if (input == 0)
 			return;
-		Item* item = m_vecItemList[input - 1]->Clone();
+
+		int realIndex = vecShirtIndex[input - 1];
+		Item* item = m_vecItemList[realIndex]->Clone();
 		AddInventoryInItem(item);
 	}
 }
@@ -144,23 +176,64 @@ void StoreEquip::ShowGloveList()
 	{
 		system("cls");
 		int j = 1;
+		vector<int> vecGloveIndex;
+
 		for (int i = 0; i < m_vecItemList.size(); ++i)
 		{
 			ItemEquip* item = (ItemEquip*)m_vecItemList[i];
 			if (item->GetItemRegion() == GLOVE)
 			{
+				vecGloveIndex.push_back(i);
 				cout << "[" << j << "] 아이템 " << endl;
 				item->Render();
 				j++;
 			}
 		}
+
 		cout << "구매하실 아이템의 번호를 입력해주세요(나가기 0번)>>> ";
 		int input = Input<int>();
-		if (input < 0 || input > m_vecItemList.size() + 1)
+
+		if (input < 0 || input >= j)
 			continue;
 		if (input == 0)
 			return;
-		Item* item = m_vecItemList[input - 1]->Clone();
+
+		int realIndex = vecGloveIndex[input - 1];
+		Item* item = m_vecItemList[realIndex]->Clone();
+		AddInventoryInItem(item);
+	}
+}
+
+void StoreEquip::ShowPantList()
+{
+	while (true)
+	{
+		system("cls");
+		int j = 1;
+		vector<int> vecPantList;
+
+		for (int i = 0; i < m_vecItemList.size(); ++i)
+		{
+			ItemEquip* item = (ItemEquip*)m_vecItemList[i];
+			if (item->GetItemRegion() == PANT)
+			{
+				vecPantList.push_back(i);
+				cout << "[" << j << "] 아이템 " << endl;
+				item->Render();
+				j++;
+			}
+		}
+
+		cout << "구매하실 아이템의 번호를 입력해주세요(나가기 0번)>>> ";
+		int input = Input<int>();
+
+		if (input < 0 || input >= j)
+			continue;
+		if (input == 0)
+			return;
+
+		int realIndex = vecPantList[input - 1];
+		Item* item = m_vecItemList[realIndex]->Clone();
 		AddInventoryInItem(item);
 	}
 }
@@ -171,23 +244,30 @@ void StoreEquip::ShowShoesList()
 	{
 		system("cls");
 		int j = 1;
+		vector<int> vecShoesList;
+
 		for (int i = 0; i < m_vecItemList.size(); ++i)
 		{
 			ItemEquip* item = (ItemEquip*)m_vecItemList[i];
 			if (item->GetItemRegion() == SHOES)
 			{
+				vecShoesList.push_back(i);
 				cout << "[" << j << "] 아이템 " << endl;
 				item->Render();
 				j++;
 			}
 		}
+
 		cout << "구매하실 아이템의 번호를 입력해주세요(나가기 0번)>>> ";
 		int input = Input<int>();
-		if (input < 0 || input > m_vecItemList.size() + 1)
+
+		if (input < 0 || input >= j)
 			continue;
 		if (input == 0)
 			return;
-		Item* item = m_vecItemList[input - 1]->Clone();
+
+		int realIndex = vecShoesList[input - 1];
+		Item* item = m_vecItemList[realIndex]->Clone();
 		AddInventoryInItem(item);
 	}
 }

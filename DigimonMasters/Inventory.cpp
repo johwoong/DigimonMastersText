@@ -41,13 +41,14 @@ int Inventory::SelectOption()
 	while (true)
 	{
 		cout << "1. 방어구 장착" << endl;
-		cout << "2. 아이템 사용" << endl;
-		cout << "3. 아이템 삭제" << endl;
-		cout << "4. 뒤로가기" << endl;
+		cout << "2. 방어구 해제" << endl;
+		cout << "3. 아이템 사용" << endl;
+		cout << "4. 아이템 삭제" << endl;
+		cout << "5. 뒤로가기" << endl;
 		cout << "옵션을 선택해주세요 : ";
 		int input = Input<int>();
-		if (input < 0 || input > 4)
-			continue;
+		if (input < 0 || input > 5)
+			return 0;
 		return input;
 	}
 }
@@ -78,7 +79,6 @@ void Inventory::ThrowItem()
 			continue;
 		Item* item = m_Item_vec[input - 1];
 		m_Item_vec.erase(m_Item_vec.begin() + (input - 1));
-		iWeight--;
 		return;
 	}
 }
@@ -87,9 +87,15 @@ void Inventory::EquipItem()
 {
 	while (true)
 	{
+		if (m_Item_vec.size() == 0)
+		{
+			cout << "아이템이 존재하지 않습니다!!" << endl;
+			system("pause");
+			return;
+		}
 		cout << "장착할 아이템을 선택해주세요 : ";
 		int input = Input<int>();
-		if (input < 0 || input > m_Item_vec.size() + 1)
+		if (input < 0 || input > m_Item_vec.size())
 			continue;
 		ItemEquip* item = (ItemEquip*)m_Item_vec[input - 1];
 		if (item->GetItemRegion() == HEAD || item->GetItemRegion() == SHIRT || item->GetItemRegion() == GLOVE || item->GetItemRegion() == PANT || item->GetItemRegion() == SHOES)
@@ -97,13 +103,59 @@ void Inventory::EquipItem()
 			CPlayer* pPlayer = (CPlayer*)GET_SINGLE(ObjectManager)->FindObject("Player");
 			cout << item->GetItemInfo().strName << "을 " << item->GetItemRegionName() << "에 장착했습니다..." << endl;
 			pPlayer->Equip(item);
+			m_Item_vec.erase(m_Item_vec.begin() + (input - 1));
 			system("pause");
 			return;
 		}
 		else
-			cout << "장착할 수 없는 아이템입니다...." << endl; system("pause");
+		{
+			cout << "장착할 수 없는 아이템입니다...." << endl;
+			system("pause");
+			return;
+		}
 	}
 	
+}
+
+void Inventory::UnEquipItem()
+{
+	CPlayer* pPlayer = (CPlayer*)GET_SINGLE(ObjectManager)->FindObject("Player");
+	while (true)
+	{
+		system("cls");
+		pPlayer->PrintEquip();
+		cout << "어느 부위의 장비를 해제하시겠습니까?" << endl;
+		cout << "1. 머리" << endl;
+		cout << "2. 상의" << endl;
+		cout << "3. 하의" << endl;
+		cout << "4. 장갑" << endl;
+		cout << "5. 신발" << endl;
+		cout << "6. 뒤로 가기" << endl;
+		cout << ">>> ";
+		int input = Input<int>();
+		if (input < 0 || input > 6)
+			continue;
+		switch (input)
+		{
+		case 1:
+			pPlayer->UnEquip(HEAD);
+			break;
+		case 2:
+			pPlayer->UnEquip(SHIRT);
+			break;
+		case 3:
+			pPlayer->UnEquip(PANT);
+			break;
+		case 4:
+			pPlayer->UnEquip(GLOVE);
+			break;
+		case 5:
+			pPlayer->UnEquip(SHOES);
+			break;
+		case 6:
+			return;
+		}
+	}
 }
 
 
@@ -125,11 +177,15 @@ void Inventory::Update()
 			EquipItem();
 			break;
 		case 2:
+			UnEquipItem();
 			break;
 		case 3:
-			ThrowItem();
+			// 아이템 사용
 			break;
 		case 4:
+			ThrowItem();
+			break;
+		case 5:
 			return;
 		}
 	}
