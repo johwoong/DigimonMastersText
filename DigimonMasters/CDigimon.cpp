@@ -2,7 +2,7 @@
 #include "CDigimon.h"
 #include "Skill.h"
 
-CDigimon::CDigimon() : m_strDigName(""), m_aType(AT_NONE), m_eType(EV_GROW), m_strEvName("성장기")
+CDigimon::CDigimon() : m_strDigName(""), m_aType(AT_NONE), m_eType(EV_GROW), m_strEvName("성장기"), isDie(0)
 {
 
 }
@@ -226,9 +226,10 @@ void CDigimon::UpdateEnemySkill()
 	m_useSkillVec.push_back(m_skillVec[1]);
 }
 
-
-
-
+void CDigimon::MaxHp()
+{
+	m_tInfo.iHp = m_tInfo.iHpMax;
+}
 
 bool CDigimon::Init()
 {

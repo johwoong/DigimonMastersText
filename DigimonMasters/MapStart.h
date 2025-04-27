@@ -9,7 +9,7 @@ private:
 	~MapStart();
 
 private:
-	vector<class CDigimon*> m_enemyVec;
+	vector<class CEnemyDigimon*> m_enemyVec;
 	int digimonCount;
 private:
 	friend class MapManager;
@@ -25,8 +25,8 @@ public:
 	void Render();
 	int OutputBattleMenu();
 	int OutputEvoutuionMenu();
-	void GenericAttack(CPlayer* player, CDigimon* digimon);
-	void SkillAttack(CPlayer* player, CDigimon* digimon, int num);
+	void GenericAttack(CPlayer* player, CEnemyDigimon* digimon);
+	void SkillAttack(CPlayer* player, CEnemyDigimon* digimon, int num);
 
 
 

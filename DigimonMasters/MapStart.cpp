@@ -1,9 +1,13 @@
 #include "pch.h"
 #include "MapStart.h"
 #include "ObjectManager.h"
+#include "Inventory.h"
+#include "StoreManager.h"
 #include "CPlayer.h"
-#include "CDigimon.h"
+#include "CEnemyDigimon.h"
 #include "Skill.h"
+#include "ItemEgg.h"
+#include "ItemGeneric.h"
 
 
 MapStart::MapStart() : digimonCount(0)
@@ -25,18 +29,30 @@ void MapStart::Update()
 {
 	while (true)
 	{
+		CPlayer* pPlayer = (CPlayer*)GET_SINGLE(ObjectManager)->FindObject("Player");
 		switch (OutputMap())
 		{
 		case 1:
 			Battle();
 			break;
 		case 2:
+			GET_SINGLE(StoreManager)->GetInst()->Update(this);
 			break;
 		case 3:
+			GET_SINGLE(Inventory)->GetInst()->Update();
 			break;
 		case 4:
+			system("cls");
+			pPlayer->Render();
+			system("pause");
 			break;
 		case 5:
+			system("cls");
+			if (pPlayer->GetDigimon() == nullptr)
+				cout << "디지몬이 존재하지 않습니다!!" << endl;
+			else
+				pPlayer->GetDigimon()->Render();
+			system("pause");
 			break;
 		case 6:
 			return;
@@ -48,6 +64,8 @@ void MapStart::Update()
 int MapStart::OutputMap()
 {
 	CPlayer* pPlayer = (CPlayer*)GET_SINGLE(ObjectManager)->FindObject("Player");
+	pPlayer->GetDigimon()->SetIsDie(false);
+	pPlayer->GetDigimon()->MaxHp();
 	while (true)
 	{
 		system("cls");
@@ -73,6 +91,10 @@ void MapStart::Battle()
 	cout << "전투를 시작합니다. " << endl;
 	while (true)
 	{
+		if (pPlayer->GetDigimon()->GetIsDie() == true)
+		{
+			return;
+		}
 		system("cls");
 		Render();
 		m_enemyVec[random]->Render();
@@ -116,7 +138,7 @@ void MapStart::Battle()
 	}
 }
 
-void MapStart::GenericAttack(CPlayer* player, CDigimon* digimon)
+void MapStart::GenericAttack(CPlayer* player, CEnemyDigimon* digimon)
 {
 	int iDamage = player->GetDigimon()->GetDamage() - digimon->GetArmor();
 	iDamage = iDamage < 1 ? 1 : iDamage;
@@ -125,26 +147,31 @@ void MapStart::GenericAttack(CPlayer* player, CDigimon* digimon)
 	cout << player->GetDigimon()->GetDigName() << "이 " << digimon->GetDigName() << "에게 "
 		<< iDamage << " 피해를 주었습니다." << endl;
 	if (!digimon->Damage(iDamage))
-		cout << "파트너 디지몬이 쓰러졌습니다...." << endl;
-
-	iDamage = digimon->GetDamage() -player->GetDigimon()->GetArmor();
-	iDamage = iDamage < 1 ? 1 : iDamage;
-
-	cout << digimon->GetDigName() << "이 " << player->GetDigimon()->GetDigName() << "에게 "
-		<< iDamage << " 피해를 주었습니다." << endl;
-
-	if (!digimon->Damage(iDamage))
 	{
 		cout << digimon->GetDigName() << "을 해치웠습니다!!." << endl;
 		digimon->SetMaxHp();
+		digimon->DropItem();
 		player->AddExp(2);
 		player->GetDigimon()->AddExp(10);
 		return;
 	}
 
+	iDamage = player->GetDigimon()->GetDamage() - digimon->GetArmor();
+	iDamage = iDamage < 1 ? 1 : iDamage;
+
+	cout << digimon->GetDigName() << "이 " << player->GetDigimon()->GetDigName() << "에게 "
+		<< iDamage << " 피해를 주었습니다." << endl;
+
+	if (!player->GetDigimon()->Damage(iDamage))
+	{
+		player->GetDigimon()->SetIsDie(true);
+		cout << "파트너 디지몬이 쓰러졌습니다...." << endl;
+		cout << "기지로 돌아갑니다.." << endl;
+		return;
+	}
 }
 
-void MapStart::SkillAttack(CPlayer* player, CDigimon* digimon, int num)
+void MapStart::SkillAttack(CPlayer* player, CEnemyDigimon* digimon, int num)
 {
 	int skillDamage = 0;
 	switch (num)
@@ -157,10 +184,12 @@ void MapStart::SkillAttack(CPlayer* player, CDigimon* digimon, int num)
 
 		cout << player->GetDigimon()->GetDigName() << "이 " << digimon->GetDigName() << "에게 "
 			<< skillDamage << " 피해를 주었습니다." << endl;
+
 		if (!digimon->Damage(skillDamage))
 		{
 			cout << digimon->GetDigName() << "을 해치웠습니다!!." << endl;
 			digimon->SetMaxHp();
+			digimon->DropItem();
 			player->AddExp(2);
 			player->GetDigimon()->AddExp(10);
 			return;
@@ -177,6 +206,7 @@ void MapStart::SkillAttack(CPlayer* player, CDigimon* digimon, int num)
 		{
 			cout << digimon->GetDigName() << "을 해치웠습니다!!." << endl;
 			digimon->SetMaxHp();
+			digimon->DropItem();
 			player->AddExp(2);
 			player->GetDigimon()->AddExp(10);
 			return;
@@ -188,7 +218,7 @@ void MapStart::SkillAttack(CPlayer* player, CDigimon* digimon, int num)
 
 void MapStart::CreateEnemy()
 {
-	CDigimon* pDigimon = (CDigimon*)GET_SINGLE(ObjectManager)->CloneObject("EnemyDigimon");
+	CEnemyDigimon* pDigimon = (CEnemyDigimon*)GET_SINGLE(ObjectManager)->CloneObject("EnemyDigimon");
 	pDigimon->SetDigName("두리몬");
 	pDigimon->SetCharacterInfo(5, 10, 3, 5, 50, 30, 1, 0, 0, 0);
 	pDigimon->SetAttributeType(3);
@@ -197,28 +227,49 @@ void MapStart::CreateEnemy()
 	pDigimon->AddSKill(new Skill("뿔드릴", 10, 30));
 	pDigimon->UpdateEnemySkill();
 	m_enemyVec.push_back(pDigimon);
+	pDigimon->SetGold(300);
+	Item* item = new ItemEgg;
+	item->SetItemInfo(IT_EGG, "두리몬의 알", 1000, 50, "두리몬의 알");
+	pDigimon->SetItemList(item);
+	item = new ItemGeneric;
+	item->SetItemInfo(IT_GENERIC, "두리몬의 뿔", 50, 1, "재료 아이템");
+	pDigimon->SetItemList(item);
 	digimonCount++;
 
-	pDigimon = (CDigimon*)GET_SINGLE(ObjectManager)->CloneObject("EnemyDigimon");
-	pDigimon->SetDigName("팔몬");
+	pDigimon = (CEnemyDigimon*)GET_SINGLE(ObjectManager)->CloneObject("EnemyDigimon");
+	pDigimon->SetDigName("임프몬");
 	pDigimon->SetCharacterInfo(5, 10, 3, 5, 50, 30, 1, 0, 0, 0);
 	pDigimon->SetAttributeType(3);
 	pDigimon->SetEvaultionType(1);
-	pDigimon->AddSKill(new Skill("뿌리 채찍", 10, 20));
-	pDigimon->AddSKill(new Skill("흡수", 10, 20));
+	pDigimon->AddSKill(new Skill("막치기", 10, 20));
+	pDigimon->AddSKill(new Skill("데몬 펀치", 10, 30));
 	pDigimon->UpdateEnemySkill();
 	m_enemyVec.push_back(pDigimon);
+	pDigimon->SetGold(300);
+	item = new ItemEgg;
+	item->SetItemInfo(IT_EGG, "임프몬의 알", 1000, 50, "임프몬 알");
+	pDigimon->SetItemList(item);
+	item = new ItemGeneric;
+	item->SetItemInfo(IT_GENERIC, "꼬마악마의 뿔", 50, 1, "재료 아이템");
+	pDigimon->SetItemList(item);
 	digimonCount++;
 
-	pDigimon = (CDigimon*)GET_SINGLE(ObjectManager)->CloneObject("EnemyDigimon");
-	pDigimon->SetDigName("임프몬");
-	pDigimon->SetCharacterInfo(5, 10, 3, 5, 50, 30, 1, 0);
-	pDigimon->SetAttributeType(3);
-	pDigimon->SetEvaultionType(1);
-	pDigimon->AddSKill(new Skill("어둠의 불꽃", 10, 20));
-	pDigimon->AddSKill(new Skill("샤몬", 10, 20));
+	pDigimon = (CEnemyDigimon*)GET_SINGLE(ObjectManager)->CloneObject("EnemyDigimon");
+	pDigimon->SetDigName("시드라몬");
+	pDigimon->SetCharacterInfo(30, 50, 10, 15, 50, 30, 1, 0, 0, 0);
+	pDigimon->SetAttributeType(1);
+	pDigimon->SetEvaultionType(2);
+	pDigimon->AddSKill(new Skill("물의 맹세", 50, 20));
+	pDigimon->AddSKill(new Skill("웨더 볼", 20, 30));
 	pDigimon->UpdateEnemySkill();
 	m_enemyVec.push_back(pDigimon);
+	pDigimon->SetGold(300);
+	item = new ItemEgg;
+	item->SetItemInfo(IT_EGG, "베타몬의 알", 1000, 50, "베타몬의 알");
+	pDigimon->SetItemList(item);
+	item = new ItemGeneric;
+	item->SetItemInfo(IT_GENERIC, "시드라몬의 비닐", 50, 1, "재료 아이템");
+	pDigimon->SetItemList(item);
 	digimonCount++;
 }
 

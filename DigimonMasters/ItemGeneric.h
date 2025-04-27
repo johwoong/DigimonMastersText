@@ -21,6 +21,7 @@ private:
 
 private:
     friend class Store;
+    friend class MapStart;
 
 public:
     virtual bool Init();

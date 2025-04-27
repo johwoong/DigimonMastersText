@@ -1,5 +1,4 @@
 #pragma once
-#include <wincrypt.h>
 class StoreManager
 {
 	DECLARE_SINGLE(StoreManager)

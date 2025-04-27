@@ -17,6 +17,9 @@ private:
     bool isDigimon;
     Skill* p_skill;
     class Item* m_equip[5];
+    
+private:
+    static int iGold;
 
 private:
     friend class ObjectManager;

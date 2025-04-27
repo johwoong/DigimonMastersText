@@ -4,7 +4,7 @@
 class Skill;
 class CDigimon : public CCharacter
 {
-private:
+protected:
 	enum EVALUTION // 진화
 	{
 		EV_GROW, // 성장기 1
@@ -25,26 +25,29 @@ private:
 
 
 
-private:
+protected:
 	CDigimon();
 	CDigimon(const CDigimon& digimon);
 public:
 	virtual ~CDigimon();
 
 private:
-	string m_strDigName;
+	vector<Skill*> m_skillVec; // 모든 스킬 정보 저장
+	vector<EVINFO> m_evInfo;
+protected:
 	string m_strEvName;
+	string m_strDigName;
 	ATTRIBUTE m_aType;
 	EVALUTION m_eType;
-	vector<Skill*> m_skillVec; // 모든 스킬 정보 저장
 	vector<Skill*> m_useSkillVec; // 사용 스킬 저장공간
-	vector<EVINFO> m_evInfo;
-
+	bool isDie;
 
 public:
 	string GetDigName() const { return m_strDigName; }
 	const vector<Skill*>& GetUseSkillList() const { return m_useSkillVec; }
 	const vector<EVINFO>& GetEvoulutionList() const { return m_evInfo; }
+	bool GetIsDie() const { return isDie; }
+	
 
 public:
 	void SetDigName(string digName);
@@ -59,6 +62,8 @@ public:
 	void EV_Super(); //초궁극체 5
 	void UpdateSkill();
 	void UpdateEnemySkill();
+	void SetIsDie(bool isDie) { this->isDie = isDie; }
+	void MaxHp();
 
 	friend class CPlayer;
 	friend class ObjectManager;
