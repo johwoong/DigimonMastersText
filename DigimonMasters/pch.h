@@ -64,6 +64,7 @@ void Safe_Delete_MapList(T& p)
 
 typedef struct _tagCharacterInfo
 {
+	string strName;
 	int iAttackMin;
 	int iAttackMax;
 	int iArmorMin;

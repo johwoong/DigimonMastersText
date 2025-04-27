@@ -1,6 +1,8 @@
 #include "pch.h"
 #include "CDigimon.h"
 #include "Skill.h"
+#include "CPlayer.h"
+#include "ObjectManager.h"
 
 CDigimon::CDigimon() : m_strDigName(""), m_aType(AT_NONE), m_eType(EV_GROW), m_strEvName("성장기"), isDie(0)
 {
@@ -25,6 +27,19 @@ CDigimon::~CDigimon()
 }
 
 
+
+void CDigimon::SetOriginInfo()
+{
+	m_originInfo.strName = m_strDigName;
+	m_originInfo.iAttackMax = m_tInfo.iAttackMax;
+	m_originInfo.iAttackMin = m_tInfo.iAttackMin;
+	m_originInfo.iArmorMax = m_tInfo.iArmorMax;
+	m_originInfo.iArmorMin = m_tInfo.iArmorMin;
+	m_originInfo.iDsMax = m_tInfo.iDsMax;
+	m_originInfo.iDs = m_tInfo.iDs;
+	m_originInfo.iHpMax = m_tInfo.iHpMax;
+	m_originInfo.iHp = m_tInfo.iHp;
+}
 
 void CDigimon::SetDigName(string digName)
 {
@@ -72,8 +87,17 @@ void CDigimon::SetEvaultionList(string strName, int iHp, int iDs, int iAttack, i
 
 void CDigimon::Ev_Maturity()
 {
+	CPlayer* pPlayer = (CPlayer*)GET_SINGLE(ObjectManager)->FindObject("Player");
 	if (m_eType == EV_GROW)
 	{
+		if (pPlayer->GetCharacterInfo().iDs < 100)
+		{
+			pPlayer->Render();
+			cout << "테이머의 DS가 부족합니다...." << endl;
+			system("pause");
+			return;
+		}
+		SetOriginInfo();
 		system("cls");
 		cout << m_strDigName << "이 " << m_evInfo[0].strName << "으로 진화합니다..." << endl;
 		cout << "3" << endl;
@@ -82,6 +106,7 @@ void CDigimon::Ev_Maturity()
 		Sleep(1000);
 		cout << "1" << endl;
 		Sleep(1000);
+		pPlayer->MinusDs(100);
 		m_eType = EV_MATURITY;
 		m_strDigName = m_evInfo[0].strName;
 		m_strEvName = "성숙기";
@@ -103,6 +128,7 @@ void CDigimon::Ev_Integer()
 {
 	if (m_eType == EV_GROW || m_eType == EV_MATURITY)
 	{
+		SetOriginInfo();
 		system("cls");
 		cout << m_strDigName << "이 " << m_evInfo[1].strName << "  으로 진화합니다..." << endl;
 		cout << "3" << endl;
@@ -132,6 +158,7 @@ void CDigimon::Ev_Ultimat()
 {
 	if (m_eType == EV_GROW || m_eType == EV_MATURITY || m_eType == EV_INTEGER)
 	{
+		SetOriginInfo();
 		system("cls");
 		cout << m_strDigName << "이 " << m_evInfo[2].strName << "  으로 진화합니다..." << endl;
 		cout << "3" << endl;
@@ -165,6 +192,7 @@ void CDigimon::EV_Super()
 	}
 	else
 	{
+		SetOriginInfo();
 		system("cls");
 		cout << m_strDigName << "이 " << m_evInfo[3].strName << "으로 진화합니다..." << endl;
 		cout << "3" << endl;
@@ -230,6 +258,27 @@ void CDigimon::MaxHp()
 {
 	m_tInfo.iHp = m_tInfo.iHpMax;
 }
+
+void CDigimon::Unevolve()
+{
+	system("cls");
+	cout << "진화가 해제되었습니다." << endl;
+	m_eType = EV_GROW;
+	m_strDigName = m_originInfo.strName;
+	m_strEvName = "성장기";
+	m_tInfo.iHpMax = m_originInfo.iHpMax;
+	m_tInfo.iHp = m_originInfo.iHp;
+	m_tInfo.iDsMax = m_originInfo.iDsMax;
+	m_tInfo.iDs = m_originInfo.iDs;
+	m_tInfo.iAttackMax = m_originInfo.iAttackMax;
+	m_tInfo.iAttackMin = m_originInfo.iAttackMin;
+	m_tInfo.iArmorMax = m_originInfo.iArmorMax;
+	m_tInfo.iArmorMin = m_originInfo.iArmorMin;
+	UpdateSkill();
+	system("pause");
+}
+
+
 
 bool CDigimon::Init()
 {

@@ -9,13 +9,12 @@ protected:
     virtual ~CCharacter() = 0;
 
 protected:
-    CHARACTERINFO m_tInfo; 
+    CHARACTERINFO m_tInfo;
 public:
     CHARACTERINFO GetCharacterInfo() const{
         return m_tInfo;
     }
     virtual void SetCharacterInfo(int iAttackMin, int iAttackMax, int iArmorMin, int iArmorMax, int iHpmax, int iDsMax, int iLevel, int iExp, int iFat = 0, int iSpeed = 0);
-
 public:
     virtual bool Init();
     virtual void Render(); 

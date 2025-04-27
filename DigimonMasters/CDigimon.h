@@ -34,6 +34,7 @@ public:
 private:
 	vector<Skill*> m_skillVec; // 모든 스킬 정보 저장
 	vector<EVINFO> m_evInfo;
+	CHARACTERINFO m_originInfo;
 protected:
 	string m_strEvName;
 	string m_strDigName;
@@ -47,6 +48,7 @@ public:
 	const vector<Skill*>& GetUseSkillList() const { return m_useSkillVec; }
 	const vector<EVINFO>& GetEvoulutionList() const { return m_evInfo; }
 	bool GetIsDie() const { return isDie; }
+	void SetOriginInfo();
 	
 
 public:
@@ -59,12 +61,12 @@ public:
 	void Ev_Maturity(); // 성숙기 진화
 	void Ev_Integer(); // 완전체 진화
 	void Ev_Ultimat(); // 궁극체 진화
-	void EV_Super(); //초궁극체 5
+	void EV_Super(); //초궁극체 진화
+	void Unevolve(); // 진화해제
 	void UpdateSkill();
 	void UpdateEnemySkill();
 	void SetIsDie(bool isDie) { this->isDie = isDie; }
 	void MaxHp();
-
 	friend class CPlayer;
 	friend class ObjectManager;
 

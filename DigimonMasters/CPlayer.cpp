@@ -54,6 +54,11 @@ void CPlayer::SetSkill(Skill* skill)
 	p_skill = skill;
 }
 
+void CPlayer::MinusDs(int value)
+{
+	m_tInfo.iDs -= value;
+}
+
 
 
 void CPlayer::PrintEquip()

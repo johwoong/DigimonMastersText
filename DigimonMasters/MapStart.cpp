@@ -120,6 +120,9 @@ void MapStart::Battle()
 				pPlayer->GetDigimon()->EV_Super();
 				break;
 			case 5:
+				pPlayer->GetDigimon()->Unevolve();
+				break;
+			case 6:
 				return;
 			}
 			break;
@@ -305,9 +308,10 @@ int MapStart::OutputEvoutuionMenu()
 		cout << "2. ¿ÏÀüÃ¼" << endl;
 		cout << "3. ±Ã±ØÃ¼" << endl;
 		cout << "4. ÃÊ±Ã±ØÃ¼" << endl;
-		cout << "5. µÚ·Î°¡±â" << endl;
+		cout << "5. ÁøÈ­ÇØÁ¦" << endl;
+		cout << "6. µÚ·Î°¡±â" << endl;
 		int input = Input<int>();
-		if (input < 1 || input > 5)
+		if (input < 1 || input > 6)
 			continue;
 		return input;
 	}

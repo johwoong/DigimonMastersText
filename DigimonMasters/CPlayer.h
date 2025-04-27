@@ -37,6 +37,7 @@ public:
     void SetIsDigimon(bool isDigimon) { this->isDigimon = isDigimon; }
     Skill* GetSkill() const { return p_skill; }
     void SetSkill(Skill* skill);
+    void MinusDs(int value);
 public:
     void PrintEquip();
     void Equip(Item* item);
