@@ -205,7 +205,7 @@ void CPlayer::ApplyEquip(Item* item)
 	ItemEquip* pItem = (ItemEquip*)item;
 	m_tInfo.iSpeed += pItem->GetItemStat().iSpeed;
 	m_tInfo.iDs += pItem->GetItemStat().iDs;
-	p_digimon->UpdateStat(pItem->GetItemStat().iAttack, pItem->GetItemStat().iArmor, pItem->GetItemStat().iSkillDamage);
+	p_digimon->UpdateStat(pItem->GetItemStat().iAttack, pItem->GetItemStat().iArmor, pItem->GetItemStat().iSkillDamage, pItem->GetItemStat().iSkillDamage);
 }
 
 

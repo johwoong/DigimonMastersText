@@ -97,4 +97,13 @@ typedef struct _tagItemStatInfo
 	int iSkillDamage; // 스킬데미지 증가
 }ITEMSTAT;
 
+typedef struct _tagDigEvInfo
+{
+	string strName; // 진화 이름
+	int iHp; // Hp증가
+	int iDs; // Ds증가
+	int iAttack; // 공격력증가
+	int iArmor; // 방어력증가
+}EVINFO;
+
 #endif //PCH_H

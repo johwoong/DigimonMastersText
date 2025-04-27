@@ -83,14 +83,33 @@ void MapStart::Battle()
 			system("pause");
 			break;
 		case 2:
+			switch (OutputEvoutuionMenu())
+			{
+			case 1:
+				pPlayer->GetDigimon()->Ev_Maturity();
+				break;
+			case 2:
+				pPlayer->GetDigimon()->Ev_Integer();
+				break;
+			case 3:
+				pPlayer->GetDigimon()->Ev_Ultimat();
+				break;
+			case 4:
+				pPlayer->GetDigimon()->EV_Super();
+				break;
+			case 5:
+				return;
+			}
+			break;
+		case 3:
 			SkillAttack(pPlayer, m_enemyVec[random], 1);
 			system("pause");
 			break;
-		case 3:
+		case 4:
 			SkillAttack(pPlayer, m_enemyVec[random], 2);
 			system("pause");
 			break;
-		case 4:
+		case 5:
 			m_enemyVec[random]->SetMaxHp();
 			return;
 		}
@@ -132,9 +151,9 @@ void MapStart::SkillAttack(CPlayer* player, CDigimon* digimon, int num)
 	{
 	case 1:
 		// 스킬 1번 사용
-		skillDamage = player->GetDigimon()->GetSkillList()[0]->GetSkillDamage();
+		skillDamage = player->GetDigimon()->GetUseSkillList()[0]->GetSkillDamage();
 
-		cout << player->GetDigimon()->GetDigName() << "의 " << player->GetDigimon()->GetSkillList()[0]->GetSkillName() << "!!" << endl;
+		cout << player->GetDigimon()->GetDigName() << "의 " << player->GetDigimon()->GetUseSkillList()[0]->GetSkillName() << "!!" << endl;
 
 		cout << player->GetDigimon()->GetDigName() << "이 " << digimon->GetDigName() << "에게 "
 			<< skillDamage << " 피해를 주었습니다." << endl;
@@ -149,8 +168,8 @@ void MapStart::SkillAttack(CPlayer* player, CDigimon* digimon, int num)
 		break;
 	case 2:
 		// 스킬 2번 사용
-		skillDamage = player->GetDigimon()->GetSkillList()[1]->GetSkillDamage();
-		cout << player->GetDigimon()->GetDigName() << "의 " << player->GetDigimon()->GetSkillList()[1]->GetSkillName() << "!!" << endl;
+		skillDamage = player->GetDigimon()->GetUseSkillList()[1]->GetSkillDamage();
+		cout << player->GetDigimon()->GetDigName() << "의 " << player->GetDigimon()->GetUseSkillList()[1]->GetSkillName() << "!!" << endl;
 
 		cout << player->GetDigimon()->GetDigName() << "이 " << digimon->GetDigName() << "에게 "
 			<< skillDamage << " 피해를 주었습니다." << endl;
@@ -166,35 +185,39 @@ void MapStart::SkillAttack(CPlayer* player, CDigimon* digimon, int num)
 	}
 }
 
+
 void MapStart::CreateEnemy()
 {
 	CDigimon* pDigimon = (CDigimon*)GET_SINGLE(ObjectManager)->CloneObject("EnemyDigimon");
 	pDigimon->SetDigName("두리몬");
 	pDigimon->SetCharacterInfo(5, 10, 3, 5, 50, 30, 1, 0, 0, 0);
-	pDigimon->SetEvalutionType(1);
 	pDigimon->SetAttributeType(3);
+	pDigimon->SetEvaultionType(1);
 	pDigimon->AddSKill(new Skill("구멍 파기", 10, 20));
 	pDigimon->AddSKill(new Skill("뿔드릴", 10, 30));
+	pDigimon->UpdateEnemySkill();
 	m_enemyVec.push_back(pDigimon);
 	digimonCount++;
 
 	pDigimon = (CDigimon*)GET_SINGLE(ObjectManager)->CloneObject("EnemyDigimon");
 	pDigimon->SetDigName("팔몬");
 	pDigimon->SetCharacterInfo(5, 10, 3, 5, 50, 30, 1, 0, 0, 0);
-	pDigimon->SetEvalutionType(1);
 	pDigimon->SetAttributeType(3);
+	pDigimon->SetEvaultionType(1);
 	pDigimon->AddSKill(new Skill("뿌리 채찍", 10, 20));
 	pDigimon->AddSKill(new Skill("흡수", 10, 20));
+	pDigimon->UpdateEnemySkill();
 	m_enemyVec.push_back(pDigimon);
 	digimonCount++;
 
 	pDigimon = (CDigimon*)GET_SINGLE(ObjectManager)->CloneObject("EnemyDigimon");
 	pDigimon->SetDigName("임프몬");
 	pDigimon->SetCharacterInfo(5, 10, 3, 5, 50, 30, 1, 0);
-	pDigimon->SetEvalutionType(1);
 	pDigimon->SetAttributeType(3);
+	pDigimon->SetEvaultionType(1);
 	pDigimon->AddSKill(new Skill("어둠의 불꽃", 10, 20));
 	pDigimon->AddSKill(new Skill("샤몬", 10, 20));
+	pDigimon->UpdateEnemySkill();
 	m_enemyVec.push_back(pDigimon);
 	digimonCount++;
 }
@@ -211,11 +234,29 @@ int MapStart::OutputBattleMenu()
 	while (true)
 	{
 		cout << "1. 공격" << endl;
-		cout << "2. 스킬1번" << endl;
-		cout << "3. 스킬2번" << endl;
-		cout << "4. 도망" << endl;
+		cout << "2. 진화" << endl;
+		cout << "3. 스킬1번" << endl;
+		cout << "4. 스킬2번" << endl;
+		cout << "5. 도망" << endl;
 		int input = Input<int>();
-		if (input < 1 || input > 4)
+		if (input < 1 || input > 5)
+			continue;
+		return input;
+	}
+}
+
+int MapStart::OutputEvoutuionMenu()
+{
+	while (true)
+	{
+		system("cls");
+		cout << "1. 성숙기" << endl;
+		cout << "2. 완전체" << endl;
+		cout << "3. 궁극체" << endl;
+		cout << "4. 초궁극체" << endl;
+		cout << "5. 뒤로가기" << endl;
+		int input = Input<int>();
+		if (input < 1 || input > 5)
 			continue;
 		return input;
 	}

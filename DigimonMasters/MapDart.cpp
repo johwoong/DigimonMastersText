@@ -114,40 +114,54 @@ void MapDart::SelectDigimon()
 		case 1:
 			pDigimon->SetDigName("아구몬");
 			pDigimon->SetCharacterInfo(10, 20, 5, 10, 100, 60, 1, 0, 0, 0);
-			pDigimon->SetEvalutionType(1);
 			pDigimon->SetAttributeType(3);
 			pDigimon->AddSKill(new Skill("꼬마 불꽃", 10, 20));
 			pDigimon->AddSKill(new Skill("꼬마 화염", 50, 50));
+			pDigimon->SetEvaultionList("그레이몬", 30, 30, 20, 20);
+			pDigimon->AddSKill(new Skill("화염볼", 100, 150));
+			pDigimon->AddSKill(new Skill("메가 화염", 100, 100));
+			pDigimon->SetEvaultionList("메탈그레이몬", 30, 30, 20, 20);
+			pDigimon->AddSKill(new Skill("철발톱", 100, 200));
+			pDigimon->AddSKill(new Skill("인공지능 미사일", 200, 400));
+			pDigimon->SetEvaultionList("워그레이몬", 30, 30, 20, 20);
+			pDigimon->AddSKill(new Skill("용발톱", 300, 100));
+			pDigimon->AddSKill(new Skill("테라광선", 600, 100));
+			pDigimon->SetEvaultionList("오메가몬", 30, 30, 20, 20);
+			pDigimon->AddSKill(new Skill("그레이가검", 1000, 100));
+			pDigimon->AddSKill(new Skill("가루포", 2000, 500));
+			pDigimon->UpdateSkill();
 			break;
 		case 2:
 			pDigimon->SetDigName("파피몬");
 			pDigimon->SetCharacterInfo(10, 20, 5, 10, 100, 60, 1, 0, 0, 0);
-			pDigimon->SetEvalutionType(1);
 			pDigimon->SetAttributeType(2);
+			pDigimon->SetEvaultionType(1);
 			pDigimon->AddSKill(new Skill("뿔 찌르기", 10, 20));
 			pDigimon->AddSKill(new Skill("푸른 불꽃", 50, 50));
 			break;
 		case 3:
 			pDigimon->SetDigName("길몬");
 			pDigimon->SetCharacterInfo(10, 20, 5, 10, 100, 60, 1, 0, 0, 0);
-			pDigimon->SetEvalutionType(1);
 			pDigimon->SetAttributeType(3);
+			pDigimon->SetEvaultionType(1);
 			pDigimon->AddSKill(new Skill("화염 불꽃", 10, 20));
 			pDigimon->AddSKill(new Skill("브레스", 50, 50));
+
 			break;
 		case 4:
 			pDigimon->SetDigName("파닥몬");
 			pDigimon->SetCharacterInfo(10, 20, 5, 10, 100, 60, 1, 0, 0, 0);
-			pDigimon->SetEvalutionType(1);
 			pDigimon->SetAttributeType(1);
+			pDigimon->SetEvaultionType(1);
 			pDigimon->AddSKill(new Skill("공기팡", 10, 20));
 			pDigimon->AddSKill(new Skill("공기버블", 50, 50));
+
 			break;
 		case 5:
 			pDigimon->SetDigName("브이몬");
 			pDigimon->SetCharacterInfo(10, 20, 5, 10, 100, 60, 1, 0, 0, 0);
-			pDigimon->SetEvalutionType(1);
 			pDigimon->SetAttributeType(3);
+			pDigimon->SetEvaultionType(1);
 			pDigimon->AddSKill(new Skill("박치기", 10, 20));
 			pDigimon->AddSKill(new Skill("브이 펀치", 60, 40));
 			break;

@@ -1,6 +1,7 @@
 #pragma once
 #include "Map.h"
 class CPlayer;
+class CDigimon;
 class MapStart : public Map
 {
 private:
@@ -23,6 +24,7 @@ public:
 public:
 	void Render();
 	int OutputBattleMenu();
+	int OutputEvoutuionMenu();
 	void GenericAttack(CPlayer* player, CDigimon* digimon);
 	void SkillAttack(CPlayer* player, CDigimon* digimon, int num);
 

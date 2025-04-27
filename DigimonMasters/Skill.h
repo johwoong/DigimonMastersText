@@ -5,6 +5,7 @@ private:
 	Skill();
 	Skill(string m_SKillName, int skillDamage, int minusDs);
 	Skill(const Skill& skill);
+public:
 	~Skill();
 
 	string m_skillName;
