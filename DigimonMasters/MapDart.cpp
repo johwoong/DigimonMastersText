@@ -64,10 +64,42 @@ void MapDart::Update()
 		case MENU_DIGIMONSTATIUS:
 			system("cls");
 			if (pPlayer->GetDigimon() == nullptr)
+			{
 				cout << "디지몬이 존재하지 않습니다!!" << endl;
+			}
 			else
+			{
+				SetConsoleColor(14);
+				cout << "[현재 디지몬]" << endl;
 				pPlayer->GetDigimon()->Render();
+				pPlayer->RenderDigimonList();
+				ResetConsoleColor();
+			}
 			system("pause");
+			break;
+		case MENU_CHANGEDIGIMON:
+			system("cls");
+			if (pPlayer->GetDigimon() == nullptr)
+			{
+				cout << "디지몬이 존재하지 않습니다!!" << endl;
+				system("pause");
+			}
+			else
+			{
+				while (true)
+				{
+					system("cls");
+					SetConsoleColor(14);
+					cout << "[현재 디지몬]" << endl << endl;
+					pPlayer->GetDigimon()->Render();
+					pPlayer->PrintHasDigimon(); 
+					cout << "교체할 디지몬을 선택해주세요 : ";
+					int iInput = Input<int>();
+					if (iInput < 1 || iInput > pPlayer->GetDigimonVec().size())
+						continue;
+					pPlayer->ChangeDigimon(iInput - 1);
+				}
+			}
 			break;
 		case MENU_INCUBATOR:
 			pIncubator->SetEggVec();
@@ -90,8 +122,9 @@ int MapDart::OutputMenu()
 	cout << "3. 인벤토리 열기" << endl;
 	cout << "4. 캐릭터 정보창" << endl;
 	cout << "5. 디지몬 정보창" << endl;
-	cout << "6. 디지몬 인큐베이터" << endl;
-	cout << "7. 종료" << endl;
+	cout << "6. 디지몬 교체" << endl;
+	cout << "7. 디지몬 인큐베이터" << endl;
+	cout << "8. 종료" << endl;
 	int iMenu = Input<int>();
 	if (iMenu <= MENU_NONE || iMenu > MENU_EXIT)
 		return MENU_NONE;
@@ -176,7 +209,8 @@ void MapDart::SelectDigimon()
 		pPlayer->SetDigimon(pDigimon);
 		cout << pPlayer->GetDigimon()->GetDigName() << "을 선택하셨습니다." << endl;
 		pPlayer->SetIsDigimon(true);
-		system("pause");		break;
+		system("pause");
+		break;
 	}
 }
 

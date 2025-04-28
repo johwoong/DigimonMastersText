@@ -20,6 +20,20 @@ using namespace std;
 #include "define.h"
 #include "flags.h"
 
+// 색깔 설정 함수
+inline void SetConsoleColor(WORD color)
+{
+	HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+	SetConsoleTextAttribute(hConsole, color);
+}
+
+// 색깔 원래대로 리셋
+inline void ResetConsoleColor()
+{
+	HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+	SetConsoleTextAttribute(hConsole, 7); // 7 = 기본 회색
+}
+
 
 
 template<typename T>

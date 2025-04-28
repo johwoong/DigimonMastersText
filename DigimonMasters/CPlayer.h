@@ -13,7 +13,8 @@ private:
     int iTaymer;
     string m_strTayName;
     TAYMER m_tType;
-    CDigimon* p_digimon; 
+    vector<CDigimon*> m_digimonVec; // 모든 디지몬 저장
+    CDigimon* p_digimon; // 현재 디지몬 저장
     bool isDigimon;
     Skill* p_skill;
     class Item* m_equip[5];
@@ -38,6 +39,11 @@ public:
     Skill* GetSkill() const { return p_skill; }
     void SetSkill(Skill* skill);
     void MinusDs(int value);
+    void SetDigimonVector(CDigimon* digimon);
+    void RenderDigimonList();
+    void ChangeDigimon(int index); // 디지몬 교체
+    void PrintHasDigimon(); // 가지고있는 디지몬 출력
+    const vector<CDigimon*> GetDigimonVec() const { return m_digimonVec; }
 public:
     void PrintEquip();
     void Equip(Item* item);
