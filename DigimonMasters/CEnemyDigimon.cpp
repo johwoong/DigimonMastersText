@@ -47,3 +47,15 @@ CDigimon* CEnemyDigimon::Clone()
 	return new CEnemyDigimon(*this);
 }
 
+void CEnemyDigimon::Render()
+{
+	cout << "[디지몬 정보]" << endl;
+	cout << "이름 : " << GetDigName() << "\t진화 단계 : " << m_strEvName << endl;
+	cout << "체력 : " << m_tInfo.iHp << endl;
+	cout << "레벨 : " << m_tInfo.iLevel << endl;
+	cout << "공격력 : " << m_tInfo.iAttackMin << " ~ " << m_tInfo.iAttackMax << endl;
+	cout << "방어력 : " << m_tInfo.iArmorMin << " ~ " << m_tInfo.iArmorMax << endl;
+	cout << "스킬 1번 : " << m_useSkillVec[0]->GetSkillName() << "\t스킬 데미지 : " << m_useSkillVec[0]->GetSkillDamage() << endl;
+	cout << "스킬 2번 : " << m_useSkillVec[1]->GetSkillName() << "\t스킬 데미지 : " << m_useSkillVec[1]->GetSkillDamage() << endl;
+}
+

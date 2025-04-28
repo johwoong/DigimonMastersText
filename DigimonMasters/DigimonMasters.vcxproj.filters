@@ -37,6 +37,9 @@
     <Filter Include="소스 파일\Inventory">
       <UniqueIdentifier>{e54471b2-a865-48fd-aaea-dc5b462abfa4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\Incubator">
+      <UniqueIdentifier>{76cea9d7-95fd-4df4-b8fc-01e13ca774df}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DigimonMasters.cpp">
@@ -119,6 +122,9 @@
     </ClCompile>
     <ClCompile Include="CEnemyDigimon.cpp">
       <Filter>소스 파일\Obj\Character</Filter>
+    </ClCompile>
+    <ClCompile Include="Incubator.cpp">
+      <Filter>소스 파일\Incubator</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -205,6 +211,9 @@
     </ClInclude>
     <ClInclude Include="CEnemyDigimon.h">
       <Filter>소스 파일\Obj\Character</Filter>
+    </ClInclude>
+    <ClInclude Include="Incubator.h">
+      <Filter>소스 파일\Incubator</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

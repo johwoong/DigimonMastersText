@@ -13,7 +13,7 @@ private:
     int iTaymer;
     string m_strTayName;
     TAYMER m_tType;
-    CDigimon* p_digimon;
+    CDigimon* p_digimon; 
     bool isDigimon;
     Skill* p_skill;
     class Item* m_equip[5];

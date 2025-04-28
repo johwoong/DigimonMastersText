@@ -22,5 +22,6 @@ public:
     void DropItem();
 public:
     virtual CDigimon* Clone();
+    virtual void Render();
 };
 

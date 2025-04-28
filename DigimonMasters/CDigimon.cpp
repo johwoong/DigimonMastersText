@@ -4,7 +4,7 @@
 #include "CPlayer.h"
 #include "ObjectManager.h"
 
-CDigimon::CDigimon() : m_strDigName(""), m_aType(AT_NONE), m_eType(EV_GROW), m_strEvName("성장기"), isDie(0)
+CDigimon::CDigimon() : m_strDigName(""), m_aType(AT_NONE), m_eType(EV_GROW), m_strEvName("성장기"), isDie(0), iDigSize(3)
 {
 
 }
@@ -18,6 +18,7 @@ CDigimon::CDigimon(const CDigimon& digimon) : CCharacter(digimon)
 	m_skillVec = digimon.m_skillVec;
 	m_useSkillVec = digimon.m_useSkillVec;
 	m_evInfo = digimon.m_evInfo;
+	iDigSize = digimon.iDigSize;
 }
 
 CDigimon::~CDigimon()
@@ -293,6 +294,7 @@ bool CDigimon::Init()
 void CDigimon::Render()
 {
 	cout << "[디지몬 정보]" << endl;
+	cout << "크기 : " << GetDigionSize() << "성" << endl;
 	cout << "이름 : " << GetDigName() << "\t진화 단계 : " << m_strEvName << endl;
 	cout << "체력 : " << m_tInfo.iHp << "\tDS : " << m_tInfo.iDs << endl;
 	cout << "레벨 : " << m_tInfo.iLevel << "\t경험치 : " << m_tInfo.iExp << endl;

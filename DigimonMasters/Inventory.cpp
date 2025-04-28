@@ -88,6 +88,18 @@ void Inventory::ThrowItem()
 	}
 }
 
+void Inventory::DeleteItem(Item* item)
+{
+	for (auto iter = m_Item_vec.begin(); iter != m_Item_vec.end(); ++iter)
+	{
+		if (*iter == item)
+		{
+			m_Item_vec.erase(iter);
+			break;
+		}
+	}
+}
+
 void Inventory::EquipItem()
 {
 	while (true)
@@ -168,7 +180,6 @@ void Inventory::UnEquipItem()
 		}
 	}
 }
-
 
 bool Inventory::Init()
 {

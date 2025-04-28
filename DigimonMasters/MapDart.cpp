@@ -7,6 +7,7 @@
 #include "Skill.h"
 #include "StoreManager.h"
 #include "Inventory.h"
+#include "Incubator.h"
 
 MapDart::MapDart() 
 {
@@ -25,6 +26,7 @@ bool MapDart::Init()
 void MapDart::Update()
 {
 	CPlayer* pPlayer = (CPlayer*)GET_SINGLE(ObjectManager)->FindObject("Player");
+	Incubator* pIncubator = new Incubator;
 	while (true)
 	{
 		system("cls");
@@ -67,6 +69,10 @@ void MapDart::Update()
 				pPlayer->GetDigimon()->Render();
 			system("pause");
 			break;
+		case MENU_INCUBATOR:
+			pIncubator->SetEggVec();
+			pIncubator->Update();
+			break;
 		case MENU_EXIT:
 			exit(0);
 		}
@@ -84,7 +90,8 @@ int MapDart::OutputMenu()
 	cout << "3. 인벤토리 열기" << endl;
 	cout << "4. 캐릭터 정보창" << endl;
 	cout << "5. 디지몬 정보창" << endl;
-	cout << "6. 종료" << endl;
+	cout << "6. 디지몬 인큐베이터" << endl;
+	cout << "7. 종료" << endl;
 	int iMenu = Input<int>();
 	if (iMenu <= MENU_NONE || iMenu > MENU_EXIT)
 		return MENU_NONE;

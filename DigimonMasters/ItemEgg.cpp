@@ -23,7 +23,7 @@ bool ItemEgg::Init()
 void ItemEgg::Render()
 {
 	cout << "[아이템 정보] " << endl;
-	cout << "장비 이름 : " << m_tInfo.strName << endl;
+	cout << "알 이름 : " << m_tInfo.strName << endl;
 	cout << "용량 : " << m_tInfo.iWeight << "\t설명 : " << m_tInfo.strDesc << endl;
 	cout << endl << endl;
 }

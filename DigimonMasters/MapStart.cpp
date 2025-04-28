@@ -226,6 +226,7 @@ void MapStart::SkillAttack(CPlayer* player, CEnemyDigimon* digimon, int num)
 			digimon->DropItem();
 			player->AddExp(2);
 			player->GetDigimon()->AddExp(10);
+			system("pause");
 			return;
 		}
 		system("pause");

@@ -42,6 +42,7 @@ protected:
 	EVALUTION m_eType;
 	vector<Skill*> m_useSkillVec; // 사용 스킬 저장공간
 	bool isDie;
+	int iDigSize; //디지몬 크기
 
 public:
 	string GetDigName() const { return m_strDigName; }
@@ -49,6 +50,8 @@ public:
 	const vector<EVINFO>& GetEvoulutionList() const { return m_evInfo; }
 	bool GetIsDie() const { return isDie; }
 	void SetOriginInfo();
+	int GetDigionSize() const { return iDigSize; }
+	void SetDigionSize(int value) { this->iDigSize = value; }
 	
 
 public:
