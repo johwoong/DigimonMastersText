@@ -32,7 +32,12 @@ void Inventory::PrintItemList()
 	{
 		cout << endl << endl;
 		cout << "[아이템 번호 : " << i + 1 << "]" << endl;
-		m_Item_vec[i]->Render();
+		if (m_Item_vec[i] == nullptr)
+		{
+			return;
+		}
+		else
+			m_Item_vec[i]->Render();
 	}
 }
 
@@ -102,7 +107,7 @@ void Inventory::EquipItem()
 		{
 			CPlayer* pPlayer = (CPlayer*)GET_SINGLE(ObjectManager)->FindObject("Player");
 			cout << item->GetItemInfo().strName << "을 " << item->GetItemRegionName() << "에 장착했습니다..." << endl;
-			pPlayer->Equip(item);
+ 			pPlayer->Equip(item);
 			m_Item_vec.erase(m_Item_vec.begin() + (input - 1));
 			system("pause");
 			return;
@@ -122,6 +127,12 @@ void Inventory::UnEquipItem()
 	CPlayer* pPlayer = (CPlayer*)GET_SINGLE(ObjectManager)->FindObject("Player");
 	while (true)
 	{
+		if (m_Item_vec.size() == 0)
+		{
+			cout << "아이템이 존재하지 않습니다!!" << endl;
+			system("pause");
+			return;
+		}
 		system("cls");
 		pPlayer->PrintEquip();
 		cout << "어느 부위의 장비를 해제하시겠습니까?" << endl;

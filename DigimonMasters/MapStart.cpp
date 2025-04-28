@@ -128,11 +128,9 @@ void MapStart::Battle()
 			break;
 		case 3:
 			SkillAttack(pPlayer, m_enemyVec[random], 1);
-			system("pause");
 			break;
 		case 4:
 			SkillAttack(pPlayer, m_enemyVec[random], 2);
-			system("pause");
 			break;
 		case 5:
 			m_enemyVec[random]->SetMaxHp();
@@ -181,6 +179,14 @@ void MapStart::SkillAttack(CPlayer* player, CEnemyDigimon* digimon, int num)
 	{
 	case 1:
 		// 스킬 1번 사용
+		if (player->GetDigimon()->GetCharacterInfo().iDs <= 0)
+		{
+			player->GetDigimon()->SetDsZero();
+			cout << "DS가 부족합니다." << endl;
+			system("pause");
+			return;
+		}
+		player->GetDigimon()->MinusDs(player->GetDigimon()->GetUseSkillList()[0]->minusDs);
 		skillDamage = player->GetDigimon()->GetUseSkillList()[0]->GetSkillDamage();
 
 		cout << player->GetDigimon()->GetDigName() << "의 " << player->GetDigimon()->GetUseSkillList()[0]->GetSkillName() << "!!" << endl;
@@ -197,9 +203,17 @@ void MapStart::SkillAttack(CPlayer* player, CEnemyDigimon* digimon, int num)
 			player->GetDigimon()->AddExp(10);
 			return;
 		}
+		system("pause");
 		break;
 	case 2:
 		// 스킬 2번 사용
+		if (player->GetDigimon()->GetCharacterInfo().iDs <= 0)
+		{
+			player->GetDigimon()->SetDsZero();
+			cout << "DS가 부족합니다." << endl;
+			return;
+		}
+		player->GetDigimon()->MinusDs(player->GetDigimon()->GetUseSkillList()[0]->minusDs);
 		skillDamage = player->GetDigimon()->GetUseSkillList()[1]->GetSkillDamage();
 		cout << player->GetDigimon()->GetDigName() << "의 " << player->GetDigimon()->GetUseSkillList()[1]->GetSkillName() << "!!" << endl;
 
@@ -214,6 +228,7 @@ void MapStart::SkillAttack(CPlayer* player, CEnemyDigimon* digimon, int num)
 			player->GetDigimon()->AddExp(10);
 			return;
 		}
+		system("pause");
 		break;
 	}
 }

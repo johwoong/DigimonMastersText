@@ -10,6 +10,7 @@
 // 여기에 미리 컴파일하려는 헤더 추가
 #include <iostream>
 #include <time.h>
+#include <string>
 #include <unordered_map>
 #include <vector>
 #include "Windows.h"

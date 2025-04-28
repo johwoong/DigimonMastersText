@@ -259,6 +259,11 @@ void CDigimon::MaxHp()
 	m_tInfo.iHp = m_tInfo.iHpMax;
 }
 
+void CDigimon::MinusDs(int value)
+{
+	m_tInfo.iDs -= value;
+}
+
 void CDigimon::Unevolve()
 {
 	system("cls");

@@ -67,6 +67,9 @@ public:
 	void UpdateEnemySkill();
 	void SetIsDie(bool isDie) { this->isDie = isDie; }
 	void MaxHp();
+	void MinusDs(int value);
+	int GetDs() { return m_tInfo.iDs; }
+	void SetDsZero() { m_tInfo.iDs = 0; }
 	friend class CPlayer;
 	friend class ObjectManager;
 

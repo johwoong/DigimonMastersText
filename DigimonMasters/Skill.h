@@ -27,7 +27,6 @@ public:
 	int GetSkillDamage() { return skillDamage; }
 	void SetMinusDs(int value) { this->minusDs = value; }
 	int GetMinusDs() { return minusDs; }
-
 public:
 	virtual Skill* Clone();
 };
