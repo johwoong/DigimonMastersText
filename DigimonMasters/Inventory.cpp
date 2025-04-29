@@ -190,6 +190,7 @@ void Inventory::Update()
 {
 	while (true)
 	{
+		SetConsoleColor(9);
 		system("cls");
 		cout << "****************[인벤토리]****************" << endl;
 		PrintItemList();
@@ -210,5 +211,6 @@ void Inventory::Update()
 		case 5:
 			return;
 		}
+		ResetConsoleColor();
 	}
 }

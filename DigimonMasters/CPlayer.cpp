@@ -78,7 +78,9 @@ void CPlayer::ChangeDigimon(int index)
 	{
 		p_digimon->Unevolve(1);
 	}
-	// 디지몬이 성장기 상태면 진화해제 후 바꿈
+	m_digimonVec.push_back(p_digimon);
+	p_digimon = m_digimonVec[index];
+	m_digimonVec.erase(m_digimonVec.begin() + (index));
 }
 
 void CPlayer::PrintHasDigimon()

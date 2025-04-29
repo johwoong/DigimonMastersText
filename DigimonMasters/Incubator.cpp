@@ -16,6 +16,7 @@ Incubator::~Incubator()
 
 int Incubator::OutputMenu()
 {
+
 	while (true)
 	{
 		cout << "1. 용병 강화" << endl;
