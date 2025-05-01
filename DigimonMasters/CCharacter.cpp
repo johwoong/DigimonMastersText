@@ -73,14 +73,16 @@ void CCharacter::LevelUp(int level)
 	m_tInfo.iLevel += level;
 }
 
-void CCharacter::Save(FileStream& stream)
+void CCharacter::Save(FileStream* pFile)
 {
-	stream.Write(&m_tInfo, sizeof(CHARACTERINFO));
+	CObj::Save(pFile);
+	pFile->Write(&m_tInfo, sizeof(m_tInfo));
 }
 
-void CCharacter::Load(FileStream& stream)
+void CCharacter::Load(FileStream* pFile)
 {
-	stream.Read(&m_tInfo, sizeof(CHARACTERINFO));
+	CObj::Load(pFile);
+	pFile->Read(&m_tInfo, sizeof(m_tInfo));
 }
 
 

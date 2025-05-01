@@ -20,6 +20,7 @@ ObjectManager::~ObjectManager()
 
 bool ObjectManager::Init()
 {
+	CPlayer* pPlayer = (CPlayer*)GET_SINGLE(ObjectManager)->CreateObject("Player", OT_PLAYER);
 	CDigimon* pDigimon = (CDigimon*)CreateObject("Digimon", OT_DIGIMON);
 	pDigimon = (CDigimon*)CreateObject("EnemyDigimon", OT_ENEMYDIGIMON);
 	Item* item = (Item*)CreateObject("Item", OT_ITEM);

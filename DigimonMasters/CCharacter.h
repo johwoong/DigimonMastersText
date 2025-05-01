@@ -37,7 +37,8 @@ public:
     virtual void AddExp(int exp);
     virtual void LevelUp(int level);
 
-    virtual void Save(class FileStream& stream);
-    virtual void Load(class FileStream& stream);
+    virtual void Save(class FileStream* pFile);
+    virtual void Load(class FileStream* pFile);
+
 };
 

@@ -47,6 +47,7 @@ void CGame::Update()
 		system("cls");
 		CheckGameMode();
 		SetPlayer();
+
 		GET_SINGLE(MapManager)->Update();
 		system("pause");
 	}
@@ -63,8 +64,8 @@ void CGame::Release()
 
 void CGame::CheckGameMode()
 {
-	FileStream stream;
-	CPlayer* pPlayer = (CPlayer*)GET_SINGLE(ObjectManager)->CreateObject("Player", OT_PLAYER);
+	FileStream file;
+	CPlayer* pPlayer = (CPlayer*)GET_SINGLE(ObjectManager)->FindObject("Player");
 	while (true)
 	{
 		system("cls");
@@ -80,18 +81,14 @@ void CGame::CheckGameMode()
 		}
 		else if (input == 2)
 		{
-			// 불러오기
-			ResetConsoleColor();
-			if (stream.Open("save.dat", "rb"))
+			if (file.Open("playerData.sar", "rb"))
 			{
-				GET_SINGLE(Inventory)->Load(stream);  // 인벤토리 불러오기
-				stream.Close();
-				cout << "불러오기 완료되었습니다." << endl;
-				return;
+				pPlayer->Load(&file);
+				file.Close();
 			}
-			cout << "불러오기" << endl;
 		}
 		else
+
 			continue;
 		ResetConsoleColor();
 	}
@@ -104,7 +101,7 @@ void CGame::SetPlayer()
 	cout << "반갑습니다! 테이머님 이름이 무엇인가요? " << endl;
 	cout << ">>>";
 	string strName = Input<string>();
-	CPlayer* pPlayer = (CPlayer*)GET_SINGLE(ObjectManager)->CreateObject("Player", OT_PLAYER);
+	CPlayer* pPlayer = (CPlayer*)GET_SINGLE(ObjectManager)->FindObject("Player");
 	pPlayer->SetName(strName);
 	while (true)
 	{

@@ -1,15 +1,2 @@
-<<<<<<< HEAD
-﻿  Inventory.cpp
-C:\Users\조한웅\Desktop\git\DigimonMastersText\DigimonMasters\Inventory.cpp(222,16): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  (소스 파일 '/Inventory.cpp'을(를) 컴파일하는 중)
-  
-=======
-﻿  Incubator.cpp
-<<<<<<< HEAD
-=======
-  Inventory.cpp
-  MapStart.cpp
-  코드를 생성하고 있습니다...
->>>>>>> 3a820003a197a44c1dd4a8533e4e119eb8446fc7
->>>>>>> 7abc1dfa3c5aed53a603e283e2e643d3f9909695
-  DigimonMasters.vcxproj -> C:\Users\조한웅\Desktop\git\DigimonMastersText\x64\Debug\DigimonMasters.exe
+﻿  CGame.cpp
+  DigimonMasters.vcxproj -> C:\Users\조한웅\Desktop\Git\DigimonMastersText\x64\Debug\DigimonMasters.exe

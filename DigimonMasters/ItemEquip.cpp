@@ -72,10 +72,3 @@ Item* ItemEquip::Clone()
 	return new ItemEquip(*this);
 }
 
-void ItemEquip::Save(FileStream& stream)
-{
-}
-
-void ItemEquip::Load(FileStream& stream)
-{
-}

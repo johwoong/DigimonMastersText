@@ -27,8 +27,5 @@ public:
 	bool Init();
 	void Update();
 
-public:
-	void Save(class FileStream& stream);
-	void Load(class FileStream& stream);
 };
 

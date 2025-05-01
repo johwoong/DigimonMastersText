@@ -22,9 +22,9 @@ bool FileStream::Open(const char* pFileName, const char* pMode)
 
     m_bOpen = true;
 
-    if (pMode[0] == 'r')
+    if (pMode[0] == 'r' || pMode[0] == 'R')
         m_eMode = FM_READ;
-    if (pMode[0] == 'w')
+    if (pMode[0] == 'w' || pMode[0] == 'W')
         m_eMode = FM_WRITE;
 
     fseek(m_pFile, 0, SEEK_END);
@@ -82,5 +82,5 @@ bool FileStream::Write(void* pData, int iSize)
     if (!m_bOpen || m_eMode != FM_WRITE)
         return false;
     fwrite(pData, iSize, 1, m_pFile);
-    return false;
+    return true;
 }

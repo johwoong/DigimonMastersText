@@ -22,9 +22,8 @@ public:
 	string GetName() const { return strName; }
 	OBJECT_TYPE GetObjectType() const { return m_eType; }
 
-public:
-	virtual void Save(class FileStream& stream) = 0;
-	virtual void Load(class FileStream& stream) = 0;
+	virtual void Save(class FileStream* pFile);
+	virtual void Load(class FileStream* pFile);
 
 };
 

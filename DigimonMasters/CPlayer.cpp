@@ -44,6 +44,33 @@ CPlayer* CPlayer::Clone()
 	return nullptr;
 }
 
+void CPlayer::Save(FileStream* pFile)
+{
+	CCharacter::Save(pFile);
+	pFile->Write(&iTaymer, 4);
+	int iLength = m_strTayName.length();
+	pFile->Write(&iLength, 4);
+
+	pFile->Write((void*)m_strTayName.c_str(), iLength);
+}
+
+void CPlayer::Load(FileStream* pFile)
+{
+	CCharacter::Load(pFile);
+	pFile->Read(&iTaymer, 4);
+
+	int iLength = 0;
+	pFile->Read(&iLength, 4);
+
+	// 여기서 문자열 읽기 오류 발생
+	char* pName = new char[iLength + 1];
+	memset(pName, 0, iLength + 1);
+
+	pFile->Read(pName, iLength);
+	pName[iLength] = 0;
+	m_strTayName = pName;
+}
+
 void CPlayer::SetDigimon(CDigimon* digimon)
 {
 	p_digimon = new CDigimon;
@@ -266,58 +293,3 @@ void CPlayer::PrintItemStat(Item* item)
 	cout << endl;
 }
 
-void CPlayer::Save(FileStream& stream)
-{
-	// 1. 부모 클래스(CCharacter) 정보 저장
-	CCharacter::Save(stream);
-
-	// 2. 타이머 이름 저장
-	int nameLen = (int)m_strTayName.length() + 1;
-	stream.Write(&nameLen, sizeof(int));
-	stream.Write((void*)m_strTayName.c_str(), nameLen);
-
-	// 3. 타이머 타입 저장
-	stream.Write(&m_tType, sizeof(TAYMER));
-
-	// 4. 디지몬 전체 목록 저장
-	size_t digimonCount = m_digimonVec.size();
-	stream.Write(&digimonCount, sizeof(size_t));
-	for (size_t i = 0; i < digimonCount; ++i)
-	{
-		m_digimonVec[i]->Save(stream);
-	}
-
-	// 5. 현재 디지몬 저장 여부 + 저장
-	bool hasCurrent = (p_digimon != nullptr);
-	stream.Write(&hasCurrent, sizeof(bool));
-	if (hasCurrent)
-	{
-		p_digimon->Save(stream);
-	}
-
-	// 6. 현재 디지몬 상태 플래그
-	stream.Write(&isDigimon, sizeof(bool));
-
-	// 7. 스킬 저장 여부 + 저장
-	bool hasSkill = (p_skill != nullptr);
-	stream.Write(&hasSkill, sizeof(bool));
-	if (hasSkill)
-	{
-		p_skill->Save(stream);
-	}
-
-	// 8. 장비 저장
-	for (int i = 0; i < 5; ++i)
-	{
-		bool hasItem = (m_equip[i] != nullptr);
-		stream.Write(&hasItem, sizeof(bool));
-		if (hasItem)
-		{
-			m_equip[i]->Save(stream);
-		}
-	}
-}
-
-void CPlayer::Load(FileStream& stream)
-{
-}

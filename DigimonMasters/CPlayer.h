@@ -29,6 +29,8 @@ public:
     virtual bool Init();
     virtual void Render();
     virtual CPlayer* Clone();
+    virtual void Save(class FileStream* pFile);
+    virtual void Load(class FileStream* pFile);
 public:
     void SetTaymerTypeAndName(TAYMER eType, string strName) { m_tType = eType; m_strTayName = strName; }
     string GetTaymerName() const { return m_strTayName; }
@@ -51,10 +53,9 @@ public:
     void ApplyEquip(Item* item);
     void PrintItemStat(Item* item);
 
-public:
-    virtual void Save(class FileStream& stream);
-    virtual void Load(class FileStream& stream);
- 
+    
+
+
 
  
 

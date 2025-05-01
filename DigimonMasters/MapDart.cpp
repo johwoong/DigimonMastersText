@@ -28,7 +28,7 @@ void MapDart::Update()
 {
 	CPlayer* pPlayer = (CPlayer*)GET_SINGLE(ObjectManager)->FindObject("Player");
 	Incubator* pIncubator = new Incubator;
-	FileStream stream;
+	FileStream file("playerData.sar", "wb");
 	while (true)
 	{
 		system("cls");
@@ -36,20 +36,10 @@ void MapDart::Update()
 		switch (OutputMenu())
 		{
 		case MENU_SAVE:
-			if (stream.Open("save.dat", "wb")) // 저장 파일 열기
+			if (file.Open("playerData.sar", "wb"))
 			{
-				if (pPlayer)
-				{
-					pPlayer->Save(stream);
-					GET_SINGLE(Inventory)->Save(stream);  // 인벤토리 저장
-					cout << "저장 완료되었습니다." << endl;
-					system("pause");
-				}
-				stream.Close();
-			}
-			else
-			{
-				cout << "저장 파일을 열 수 없습니다." << endl;
+				pPlayer->Save(&file);
+				file.Close();
 			}
 			break;
 		case MENU_TALK:

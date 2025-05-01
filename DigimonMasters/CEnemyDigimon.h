@@ -23,8 +23,5 @@ public:
 public:
     virtual CDigimon* Clone();
     virtual void Render();
-public:
-    virtual void Save(class FileStream& stream);
-    virtual void Load(class FileStream& stream);
 };
 

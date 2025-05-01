@@ -48,13 +48,6 @@ void ItemEgg::SetDigimonInfo(const string& name, int attackMin, int attackMax, i
     p_digimon->UpdateSkill();
 }
 
-void ItemEgg::Save(FileStream& stream)
-{
-}
-
-void ItemEgg::Load(FileStream& stream)
-{
-}
 
 
 bool ItemEgg::Init()
