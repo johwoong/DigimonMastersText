@@ -17,6 +17,7 @@ private:
 	friend class CGame;
 	friend class MapDart;
 	friend class MapStart;
+	friend class ItemEgg;
 public:
 	void Render();
  	string GetSkillName() const { return m_skillName; }

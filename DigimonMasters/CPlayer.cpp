@@ -12,7 +12,7 @@ CPlayer::CPlayer() : iTaymer(0), m_strTayName(""), m_tType(T_NONE), p_digimon(nu
 
 CPlayer::CPlayer(const CPlayer& player) : CCharacter(player)
 {
-	
+	Safe_Delete_VecList(m_digimonVec);
 }
 
 CPlayer::~CPlayer()
@@ -57,6 +57,40 @@ void CPlayer::SetSkill(Skill* skill)
 void CPlayer::MinusDs(int value)
 {
 	m_tInfo.iDs -= value;
+}
+
+void CPlayer::SetDigimonVector(CDigimon* digimon)
+{
+	m_digimonVec.push_back(digimon);
+}
+
+void CPlayer::RenderDigimonList()
+{
+	for (int i = 0; i < m_digimonVec.size(); ++i)
+	{
+		m_digimonVec[i]->Render();
+	}
+}
+
+void CPlayer::ChangeDigimon(int index)
+{
+	if (p_digimon->GetEvoulutionType() != 0)
+	{
+		p_digimon->Unevolve(1);
+	}
+	m_digimonVec.push_back(p_digimon);
+	p_digimon = m_digimonVec[index];
+	m_digimonVec.erase(m_digimonVec.begin() + (index));
+}
+
+void CPlayer::PrintHasDigimon()
+{
+	cout << "현재 가지고 있는 디지몬 : " << m_digimonVec.size() << endl;
+	
+	for (int i = 0; i < m_digimonVec.size(); ++i)
+	{
+		cout << "[" << i + 1 << "]" << " 이름 : " << m_digimonVec[i]->GetDigName() << endl;
+	}
 }
 
 

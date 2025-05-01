@@ -11,6 +11,7 @@ class MapDart :
 		MENU_INVENTORY,
 		MENU_STATUS,
 		MENU_DIGIMONSTATIUS,
+		MENU_CHANGEDIGIMON,
 		MENU_INCUBATOR,
 		MENU_EXIT,
 	};
@@ -27,6 +28,7 @@ public:
 
 private:
 	int OutputMenu();
+	
 	void SelectDigimon();
 	virtual int OutputMap();
 

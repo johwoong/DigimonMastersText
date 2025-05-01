@@ -1,6 +1,8 @@
 #include "pch.h"
 #include "Incubator.h"
 #include "Inventory.h"
+#include "CPlayer.h"
+#include "ObjectManager.h"
 
 Incubator::Incubator() : m_egg(nullptr), iStage(0), isHatch(false)
 {
@@ -14,14 +16,15 @@ Incubator::~Incubator()
 
 int Incubator::OutputMenu()
 {
+
 	while (true)
 	{
-		cout << "1. 용병 생성" << endl;
+		cout << "1. 용병 강화" << endl;
 		cout << "2. 디지몬 알 해제" << endl;
 		cout << "3. 뒤로가기" << endl;
 		if (isHatch)
 		{
-			cout << "4. 디지몬 생성" << endl;
+			cout << "4. 디지몬 부화" << endl;
 			int input = Input<int>();
 			if (input < 1 || input > 4)
 				continue;
@@ -102,7 +105,6 @@ void Incubator::HatchDigimon()
 		else
 		{
 			cout << "용병 디지몬 부화가 실패했지만 파괴되지는 않았습니다." << endl;
-			iStage = 0;
 			system("pause");
 		}
 	}
@@ -125,8 +127,13 @@ void Incubator::DeleteEgg()
 void Incubator::CreateDigimon()
 {
 	cout << "디지몬을 생성합니다." << endl;
+	CPlayer* pPlayer = (CPlayer*)GET_SINGLE(ObjectManager)->FindObject("Player");
+	m_egg->GetDigimon()->SetDigionSize(iStage);
+	pPlayer->SetDigimonVector(m_egg->GetDigimon());
+	cout << m_egg->GetDigimon()->GetDigName() << "이 동료가 되었습니다!!" << endl;
 	isHatch = false;
 	m_egg = nullptr;
+	iStage = 0;
 	system("pause");
 }
 
@@ -153,6 +160,7 @@ void Incubator::Update()
 	while (true)
 	{
 		system("cls");
+		SetConsoleColor(9);
 		cout << "************* 디지몬 인큐베이터 * ************" << endl;
 		if (m_egg == nullptr)
 		{
@@ -166,6 +174,7 @@ void Incubator::Update()
 		cout << "3단계 : 50%확률(파괴확률 : 10%)" << endl;
 		cout << "4단계 : 30%확률(파괴확률 : 30%)" << endl;
 		cout << "5단계 : 20%확률(파괴확률 : 70%)" << endl << endl;
+		ResetConsoleColor();
 		if (m_egg == nullptr)
 		{
 			for (int i = 0; i < m_eggItem_vec.size(); ++i)

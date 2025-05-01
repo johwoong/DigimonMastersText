@@ -52,6 +52,7 @@ public:
 	void SetOriginInfo();
 	int GetDigionSize() const { return iDigSize; }
 	void SetDigionSize(int value) { this->iDigSize = value; }
+	EVALUTION GetEvoulutionType() { return m_eType; }
 	
 
 public:
@@ -65,7 +66,7 @@ public:
 	void Ev_Integer(); // 완전체 진화
 	void Ev_Ultimat(); // 궁극체 진화
 	void EV_Super(); //초궁극체 진화
-	void Unevolve(); // 진화해제
+	void Unevolve(int number = 0); // 진화해제
 	void UpdateSkill();
 	void UpdateEnemySkill();
 	void SetIsDie(bool isDie) { this->isDie = isDie; }
@@ -73,8 +74,12 @@ public:
 	void MinusDs(int value);
 	int GetDs() { return m_tInfo.iDs; }
 	void SetDsZero() { m_tInfo.iDs = 0; }
+
+private:
 	friend class CPlayer;
 	friend class ObjectManager;
+	friend class ItemEgg;
+	friend class MapDart;
 
 public:
 	virtual bool Init();

@@ -265,8 +265,14 @@ void CDigimon::MinusDs(int value)
 	m_tInfo.iDs -= value;
 }
 
-void CDigimon::Unevolve()
+void CDigimon::Unevolve(int number)
 {
+	if (m_eType == EV_GROW)
+	{
+		cout << "이미 진화가 해제된 상태입니다." << endl;
+		system("pause");
+		return;
+	}
 	system("cls");
 	cout << "진화가 해제되었습니다." << endl;
 	m_eType = EV_GROW;
@@ -281,7 +287,10 @@ void CDigimon::Unevolve()
 	m_tInfo.iArmorMax = m_originInfo.iArmorMax;
 	m_tInfo.iArmorMin = m_originInfo.iArmorMin;
 	UpdateSkill();
-	system("pause");
+	if (number == 0)
+	{
+		system("pause");
+	}
 }
 
 
@@ -293,6 +302,7 @@ bool CDigimon::Init()
 
 void CDigimon::Render()
 {
+	SetConsoleColor(14);
 	cout << "[디지몬 정보]" << endl;
 	cout << "크기 : " << GetDigionSize() << "성" << endl;
 	cout << "이름 : " << GetDigName() << "\t진화 단계 : " << m_strEvName << endl;
@@ -301,7 +311,8 @@ void CDigimon::Render()
 	cout << "공격력 : " << m_tInfo.iAttackMin << " ~ " << m_tInfo.iAttackMax << endl;
 	cout << "방어력 : " << m_tInfo.iArmorMin << " ~ " << m_tInfo.iArmorMax << endl;
 	cout << "스킬 1번 : " << m_useSkillVec[0]->GetSkillName() << "\t스킬 데미지 : " << m_useSkillVec[0]->GetSkillDamage() << endl;
-	cout << "스킬 2번 : " << m_useSkillVec[1]->GetSkillName() << "\t스킬 데미지 : " << m_useSkillVec[1]->GetSkillDamage() << endl;
+	cout << "스킬 2번 : " << m_useSkillVec[1]->GetSkillName() << "\t스킬 데미지 : " << m_useSkillVec[1]->GetSkillDamage() << endl << endl;
+	ResetConsoleColor();
 }
 
 
