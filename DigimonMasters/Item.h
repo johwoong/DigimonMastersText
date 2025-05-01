@@ -14,6 +14,7 @@ protected:
 private:
 	friend class ObjectManager;
 	friend class CPlayer;
+	friend class Inventory;
 
 public:
 	virtual bool Init();
@@ -23,6 +24,10 @@ public:
 public:
 	void SetItemInfo(ITEM_TYPE itemType, string strName, int iPrice, int iWeight, string strDesc);
 	ITEMINFO GetItemInfo() { return m_tInfo; }
+
+public:
+	virtual void Save(class FileStream& stream);
+	virtual void Load(class FileStream& stream);
 
 };
 

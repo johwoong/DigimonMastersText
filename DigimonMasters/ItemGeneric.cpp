@@ -31,3 +31,11 @@ Item* ItemGeneric::Clone()
 {
 	return new ItemGeneric(*this);
 }
+
+void ItemGeneric::Save(FileStream& stream)
+{
+}
+
+void ItemGeneric::Load(FileStream& stream)
+{
+}

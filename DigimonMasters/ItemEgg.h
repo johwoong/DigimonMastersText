@@ -33,5 +33,9 @@ public:
     );
 
     class CDigimon* GetDigimon() { return p_digimon; }
+
+public:
+    virtual void Save(class FileStream& stream);
+    virtual void Load(class FileStream& stream);
 };
 

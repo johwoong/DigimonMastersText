@@ -61,3 +61,11 @@ void CEnemyDigimon::Render()
 	ResetConsoleColor();
 }
 
+void CEnemyDigimon::Save(FileStream& stream)
+{
+}
+
+void CEnemyDigimon::Load(FileStream& stream)
+{
+}
+

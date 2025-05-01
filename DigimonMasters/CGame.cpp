@@ -6,6 +6,7 @@
 #include "CPlayer.h"
 #include "StoreManager.h"
 #include "Inventory.h"
+#include "FileStream.h"
 
 DEFINITION_SINGLE(CGame)
 
@@ -44,6 +45,7 @@ void CGame::Update()
 	while (true)
 	{
 		system("cls");
+		CheckGameMode();
 		SetPlayer();
 		GET_SINGLE(MapManager)->Update();
 		system("pause");
@@ -59,8 +61,45 @@ void CGame::Release()
 	DESTORY_SINGLE(Inventory);
 }
 
+void CGame::CheckGameMode()
+{
+	FileStream stream;
+	CPlayer* pPlayer = (CPlayer*)GET_SINGLE(ObjectManager)->CreateObject("Player", OT_PLAYER);
+	while (true)
+	{
+		system("cls");
+		SetConsoleColor(11);
+		cout << "*************************디지몬 마스터즈*************************" << endl;
+		cout << "1. 새 게임" << endl;
+		cout << "2. 불러오기" << endl;
+		int input = Input<int>();
+		if (input == 1)
+		{
+			ResetConsoleColor();
+			break;
+		}
+		else if (input == 2)
+		{
+			// 불러오기
+			ResetConsoleColor();
+			if (stream.Open("save.dat", "rb"))
+			{
+				GET_SINGLE(Inventory)->Load(stream);  // 인벤토리 불러오기
+				stream.Close();
+				cout << "불러오기 완료되었습니다." << endl;
+				return;
+			}
+			cout << "불러오기" << endl;
+		}
+		else
+			continue;
+		ResetConsoleColor();
+	}
+}
+
 void CGame::SetPlayer()
 {
+	system("cls");
 	cout << "******************* 디지몬 세계에 오신 걸 환영합니다. *******************" << endl;
 	cout << "반갑습니다! 테이머님 이름이 무엇인가요? " << endl;
 	cout << ">>>";
@@ -76,6 +115,7 @@ void CGame::SetPlayer()
 		cout << "2. 메튜" << endl;
 		cout << "3. 이미나" << endl;
 		cout << "4. 리키" << endl;
+		cout << "5. 뒤로가기" << endl;
 		int iInput = Input<int>();
 		if (iInput < T_NONE || iInput >= T_END)
 			continue;
@@ -109,6 +149,8 @@ void CGame::SetPlayer()
 			skill->SetFasiveSkillName("리키의 희망");
 			pPlayer->SetSkill(skill);
 			break;
+		case T_BACK:
+			return;
 		}
 		system("cls");
 		cout << pPlayer->GetTaymerName() << "을 선택하셨습니다." << endl;

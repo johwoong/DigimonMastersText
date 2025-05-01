@@ -1,5 +1,6 @@
 #include "pch.h"
 #include "CCharacter.h"
+#include "FileStream.h"
 
 CCharacter::CCharacter()
 {
@@ -70,6 +71,16 @@ void CCharacter::AddExp(int exp)
 void CCharacter::LevelUp(int level)
 {
 	m_tInfo.iLevel += level;
+}
+
+void CCharacter::Save(FileStream& stream)
+{
+	stream.Write(&m_tInfo, sizeof(CHARACTERINFO));
+}
+
+void CCharacter::Load(FileStream& stream)
+{
+	stream.Read(&m_tInfo, sizeof(CHARACTERINFO));
 }
 
 

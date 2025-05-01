@@ -8,6 +8,7 @@
 #include "StoreManager.h"
 #include "Inventory.h"
 #include "Incubator.h"
+#include "FileStream.h"
 
 MapDart::MapDart() 
 {
@@ -27,12 +28,30 @@ void MapDart::Update()
 {
 	CPlayer* pPlayer = (CPlayer*)GET_SINGLE(ObjectManager)->FindObject("Player");
 	Incubator* pIncubator = new Incubator;
+	FileStream stream;
 	while (true)
 	{
 		system("cls");
 		cout << "현재 위치 : " << strMapName << endl;
 		switch (OutputMenu())
 		{
+		case MENU_SAVE:
+			if (stream.Open("save.dat", "wb")) // 저장 파일 열기
+			{
+				if (pPlayer)
+				{
+					pPlayer->Save(stream);
+					GET_SINGLE(Inventory)->Save(stream);  // 인벤토리 저장
+					cout << "저장 완료되었습니다." << endl;
+					system("pause");
+				}
+				stream.Close();
+			}
+			else
+			{
+				cout << "저장 파일을 열 수 없습니다." << endl;
+			}
+			break;
 		case MENU_TALK:
 			if (pPlayer->GetIsDigimon())
 				switch (OutputMap())
@@ -98,6 +117,9 @@ void MapDart::Update()
 					if (iInput < 1 || iInput > pPlayer->GetDigimonVec().size())
 						continue;
 					pPlayer->ChangeDigimon(iInput - 1);
+					cout << "디지몬이 " << pPlayer->GetDigimon()->m_strDigName << "으로 교체되었습니다." << endl;
+					system("pause");
+					break;
 				}
 			}
 			break;
@@ -114,6 +136,7 @@ void MapDart::Update()
 int MapDart::OutputMenu()
 {
 	CPlayer* pPlayer = (CPlayer*)GET_SINGLE(ObjectManager)->FindObject("Player");
+	cout << "0. 저장하기" << endl;
 	if (pPlayer->GetIsDigimon())
 		cout << "1. 맵" << endl;
 	else
@@ -178,6 +201,19 @@ void MapDart::SelectDigimon()
 			pDigimon->SetEvaultionType(1);
 			pDigimon->AddSKill(new Skill("뿔 찌르기", 10, 20));
 			pDigimon->AddSKill(new Skill("푸른 불꽃", 50, 50));
+			pDigimon->SetEvaultionList("가루몬", 30, 30, 20, 20);
+			pDigimon->AddSKill(new Skill("푸른화염", 100, 150));
+			pDigimon->AddSKill(new Skill("얼음업니", 100, 100));
+			pDigimon->SetEvaultionList("워가루몬", 30, 30, 20, 20);
+			pDigimon->AddSKill(new Skill("워펀치", 100, 200));
+			pDigimon->AddSKill(new Skill("로킥", 200, 400));
+			pDigimon->SetEvaultionList("메탈가루몬", 30, 30, 20, 20);
+			pDigimon->AddSKill(new Skill("설화", 300, 100));
+			pDigimon->AddSKill(new Skill("인공지능포", 600, 100));
+			pDigimon->SetEvaultionList("오메가몬", 30, 30, 20, 20);
+			pDigimon->AddSKill(new Skill("그레이가검", 1000, 100));
+			pDigimon->AddSKill(new Skill("가루포", 2000, 500));
+			pDigimon->UpdateSkill();
 			break;
 		case 3:
 			pDigimon->SetDigName("길몬");
@@ -186,6 +222,18 @@ void MapDart::SelectDigimon()
 			pDigimon->SetEvaultionType(1);
 			pDigimon->AddSKill(new Skill("화염 불꽃", 10, 20));
 			pDigimon->AddSKill(new Skill("브레스", 50, 50));
+			pDigimon->AddSKill(new Skill("화염 킥", 100, 150));
+			pDigimon->AddSKill(new Skill("드로우", 100, 100));
+			pDigimon->SetEvaultionList("그라우몬", 30, 30, 20, 20);
+			pDigimon->AddSKill(new Skill("화염베기", 100, 200));
+			pDigimon->AddSKill(new Skill("파잉로우", 200, 400));
+			pDigimon->SetEvaultionList("메가그라우몬", 30, 30, 20, 20);
+			pDigimon->AddSKill(new Skill("창찌르기", 300, 100));
+			pDigimon->AddSKill(new Skill("성스러운방패", 600, 100));
+			pDigimon->SetEvaultionList("듀크몬", 30, 30, 20, 20);
+			pDigimon->AddSKill(new Skill("듀크검", 1000, 100));
+			pDigimon->AddSKill(new Skill("정의의 깃발", 2000, 500));
+			pDigimon->SetEvaultionList("듀크몬 크림존모드", 30, 30, 20, 20);
 
 			break;
 		case 4:
@@ -195,7 +243,18 @@ void MapDart::SelectDigimon()
 			pDigimon->SetEvaultionType(1);
 			pDigimon->AddSKill(new Skill("공기팡", 10, 20));
 			pDigimon->AddSKill(new Skill("공기버블", 50, 50));
-
+			pDigimon->AddSKill(new Skill("엔젤 펀치", 100, 150));
+			pDigimon->AddSKill(new Skill("엔젤 봉", 100, 100));
+			pDigimon->SetEvaultionList("엔젤몬", 30, 30, 20, 20);
+			pDigimon->AddSKill(new Skill("천공의 검", 100, 200));
+			pDigimon->AddSKill(new Skill("라이트 실드", 200, 400));
+			pDigimon->SetEvaultionList("홀리엔젤몬", 30, 30, 20, 20);
+			pDigimon->AddSKill(new Skill("빛의 심판", 300, 100));
+			pDigimon->AddSKill(new Skill("라이트 검", 600, 100));
+			pDigimon->SetEvaultionList("세라피몬", 30, 30, 20, 20);
+			pDigimon->AddSKill(new Skill("어둠 화살", 1000, 100));
+			pDigimon->AddSKill(new Skill("빛의 방패", 2000, 500));
+			pDigimon->SetEvaultionList("블랙 세라피몬", 30, 30, 20, 20);
 			break;
 		case 5:
 			pDigimon->SetDigName("브이몬");
@@ -204,6 +263,18 @@ void MapDart::SelectDigimon()
 			pDigimon->SetEvaultionType(1);
 			pDigimon->AddSKill(new Skill("박치기", 10, 20));
 			pDigimon->AddSKill(new Skill("브이 펀치", 60, 40));
+			pDigimon->AddSKill(new Skill("엑스 펀치", 100, 150));
+			pDigimon->AddSKill(new Skill("엑스빔", 100, 100));
+			pDigimon->SetEvaultionList("엑스브이몬", 30, 30, 20, 20);
+			pDigimon->AddSKill(new Skill("스크래취", 100, 200));
+			pDigimon->AddSKill(new Skill("무법천지", 200, 400));
+			pDigimon->SetEvaultionList("파일드라몬", 30, 30, 20, 20);
+			pDigimon->AddSKill(new Skill("기가 화염포", 300, 100));
+			pDigimon->AddSKill(new Skill("메가 블레이드", 600, 100));
+			pDigimon->SetEvaultionList("황제드라몬", 30, 30, 20, 20);
+			pDigimon->AddSKill(new Skill("오메가 블레이드", 1000, 100));
+			pDigimon->AddSKill(new Skill("샤이닝 샷", 2000, 500));
+			pDigimon->SetEvaultionList("황제드라몬 팔라딘모드", 30, 30, 20, 20);
 			break;
 		}
 		pPlayer->SetDigimon(pDigimon);

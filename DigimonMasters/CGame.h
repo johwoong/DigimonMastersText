@@ -9,7 +9,7 @@ public:
 	bool Initialize();
 	void Update();
 	void Release();
-
+	void CheckGameMode();
 	void SetPlayer();
 };
 

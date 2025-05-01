@@ -50,6 +50,10 @@ public:
     void UnEquip(ITEM_REGION eType);
     void ApplyEquip(Item* item);
     void PrintItemStat(Item* item);
+
+public:
+    virtual void Save(class FileStream& stream);
+    virtual void Load(class FileStream& stream);
  
 
  

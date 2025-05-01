@@ -51,7 +51,6 @@ bool MapManager::CreateMap(MAP_TYPE eType)
 		pMap = new MapWest;
 		break;
 	}
-
 	if (!pMap->Init())
 	{
 		SAFE_DELETE(pMap);

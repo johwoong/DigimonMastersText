@@ -2,6 +2,7 @@
 #include "Map.h"
 class CPlayer;
 class CDigimon;
+class CEnemyDigimon;
 class MapStart : public Map
 {
 private:

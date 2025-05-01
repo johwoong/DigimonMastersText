@@ -29,5 +29,9 @@ public:
     virtual void Render();
     virtual Item* Clone();
 
+public:
+    virtual void Save(class FileStream& stream);
+    virtual void Load(class FileStream& stream);
+
 };
 

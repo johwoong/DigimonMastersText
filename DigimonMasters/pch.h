@@ -16,6 +16,9 @@
 #include "Windows.h"
 using namespace std;
 
+#define _CRTDBG_MAP_ALLOC
+#include <stdlib.h>
+#include <crtdbg.h>
 // 사용자 정의 헤더
 #include "define.h"
 #include "flags.h"
@@ -25,6 +28,7 @@ inline void SetConsoleColor(WORD color)
 {
 	HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 	SetConsoleTextAttribute(hConsole, color);
+
 }
 
 // 색깔 원래대로 리셋

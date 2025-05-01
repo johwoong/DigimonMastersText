@@ -58,10 +58,8 @@ CObj* ObjectManager::CreateObject(const string& strKey, OBJECT_TYPE eType)
 CObj* ObjectManager::FindObject(const string& strKey)
 {
 	unordered_map<string, CObj*>::iterator iter = m_mapObj.find(strKey);
-
 	if (iter == m_mapObj.end())
 		return nullptr;
-
 	return iter->second;
 }
 

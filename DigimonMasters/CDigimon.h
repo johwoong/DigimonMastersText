@@ -53,7 +53,7 @@ public:
 	int GetDigionSize() const { return iDigSize; }
 	void SetDigionSize(int value) { this->iDigSize = value; }
 	EVALUTION GetEvoulutionType() { return m_eType; }
-	
+	  
 
 public:
 	void SetDigName(string digName);
@@ -64,7 +64,7 @@ public:
 	void SetEvaultionList(string strName, int iHp, int iDs, int iAttack, int iArmor);
 	void Ev_Maturity(); // 성숙기 진화
 	void Ev_Integer(); // 완전체 진화
-	void Ev_Ultimat(); // 궁극체 진화
+	void Ev_Ultimat(); // 궁극체 진화 
 	void EV_Super(); //초궁극체 진화
 	void Unevolve(int number = 0); // 진화해제
 	void UpdateSkill();
@@ -85,5 +85,8 @@ public:
 	virtual bool Init();
 	virtual void Render();
 	virtual CDigimon* Clone();
+
+	virtual void Save(class FileStream& stream);
+	virtual void Load(class FileStream& stream);
 };
 

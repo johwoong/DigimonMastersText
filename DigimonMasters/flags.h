@@ -8,6 +8,7 @@ enum TAYMER
 	T_METU,
 	T_MINA,
 	T_LIKI,
+	T_BACK,
 	T_END
 };
 

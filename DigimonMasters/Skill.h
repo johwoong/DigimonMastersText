@@ -30,5 +30,8 @@ public:
 	int GetMinusDs() { return minusDs; }
 public:
 	virtual Skill* Clone();
+public:
+	void Save(class FileStream& stream);
+	void Load(class FileStream& stream);
 };
 

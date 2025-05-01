@@ -40,6 +40,9 @@
     <Filter Include="소스 파일\Incubator">
       <UniqueIdentifier>{76cea9d7-95fd-4df4-b8fc-01e13ca774df}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\FileManager">
+      <UniqueIdentifier>{0ec05a17-20a5-4204-818f-1f939d1e892d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DigimonMasters.cpp">
@@ -125,6 +128,9 @@
     </ClCompile>
     <ClCompile Include="Incubator.cpp">
       <Filter>소스 파일\Incubator</Filter>
+    </ClCompile>
+    <ClCompile Include="FileStream.cpp">
+      <Filter>소스 파일\FileManager</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -214,6 +220,9 @@
     </ClInclude>
     <ClInclude Include="Incubator.h">
       <Filter>소스 파일\Incubator</Filter>
+    </ClInclude>
+    <ClInclude Include="FileStream.h">
+      <Filter>소스 파일\FileManager</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

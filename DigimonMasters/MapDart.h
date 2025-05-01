@@ -5,7 +5,8 @@ class MapDart :
 {
 	enum MEUU
 	{
-		MENU_NONE,
+		MENU_NONE = -1,
+		MENU_SAVE,
 		MENU_TALK,
 		MENU_STORE,
 		MENU_INVENTORY,

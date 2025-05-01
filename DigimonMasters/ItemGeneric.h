@@ -31,5 +31,8 @@ public:
 public:
     void SetItemKind(IT_KIND kind) { item_Kind = kind; }
     IT_KIND GetItemKind() const { return item_Kind; }
+public:
+    virtual void Save(class FileStream& stream);
+    virtual void Load(class FileStream& stream);
 };
 

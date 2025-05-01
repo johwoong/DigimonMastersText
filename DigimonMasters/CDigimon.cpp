@@ -3,6 +3,7 @@
 #include "Skill.h"
 #include "CPlayer.h"
 #include "ObjectManager.h"
+#include "FileStream.h"
 
 CDigimon::CDigimon() : m_strDigName(""), m_aType(AT_NONE), m_eType(EV_GROW), m_strEvName("성장기"), isDie(0), iDigSize(3)
 {
@@ -319,4 +320,42 @@ void CDigimon::Render()
 CDigimon* CDigimon::Clone()
 {
 	return new CDigimon(*this);
+}
+
+void CDigimon::Save(FileStream& stream)
+{
+	CCharacter::Save(stream);
+	int nameLen = (int)m_strDigName.length();
+	stream.Write(&nameLen, sizeof(int));
+	stream.Write((void*)m_strDigName.c_str(), nameLen);
+
+	int evNameLen = (int)m_strEvName.length();
+	stream.Write(&evNameLen, sizeof(int));
+	stream.Write((void*)m_strEvName.c_str(), evNameLen);
+
+	stream.Write(&m_aType, sizeof(int));
+	stream.Write(&m_eType, sizeof(int));
+	stream.Write(&isDie, sizeof(bool));
+	stream.Write(&iDigSize, sizeof(int));
+	stream.Write(&m_tInfo, sizeof(CHARACTERINFO));
+
+	// 저장할 스킬 개수
+	int skillCount = (int)m_useSkillVec.size();
+	stream.Write(&skillCount, sizeof(int));
+	for (int i = 0; i < skillCount; ++i)
+	{
+		m_useSkillVec[i]->Save(stream);
+	}
+
+	// 진화 정보 저장
+	int evCount = (int)m_evInfo.size();
+	stream.Write(&evCount, sizeof(int));
+	for (int i = 0; i < evCount; ++i)
+	{
+		stream.Write(&m_evInfo[i], sizeof(EVINFO));
+	}
+}
+
+void CDigimon::Load(FileStream& stream)
+{
 }
