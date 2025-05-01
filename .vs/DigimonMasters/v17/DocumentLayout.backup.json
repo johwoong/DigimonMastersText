@@ -116,8 +116,148 @@
           "SelectedChildIndex": 4,
           "Children": [
             {
+<<<<<<< HEAD
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+=======
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "ItemEgg.h",
+              "DocumentMoniker": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMastersText\\DigimonMasters\\ItemEgg.h",
+              "RelativeDocumentMoniker": "DigimonMasters\\ItemEgg.h",
+              "ToolTip": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMastersText\\DigimonMasters\\ItemEgg.h",
+              "RelativeToolTip": "DigimonMasters\\ItemEgg.h",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAB0AAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-04-28T13:00:58.765Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+<<<<<<< HEAD
+              "DocumentIndex": 9,
+              "Title": "Item.h",
+              "DocumentMoniker": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMastersText\\DigimonMasters\\Item.h",
+              "RelativeDocumentMoniker": "DigimonMasters\\Item.h",
+              "ToolTip": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMastersText\\DigimonMasters\\Item.h",
+              "RelativeToolTip": "DigimonMasters\\Item.h",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-04-25T16:32:21.079Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CPlayer.h",
+              "DocumentMoniker": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMastersText\\DigimonMasters\\CPlayer.h",
+              "RelativeDocumentMoniker": "DigimonMasters\\CPlayer.h",
+              "ToolTip": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMastersText\\DigimonMasters\\CPlayer.h",
+              "RelativeToolTip": "DigimonMasters\\CPlayer.h",
+              "ViewState": "AgIAABwAAAAAAAAAAAAAACkAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-04-25T16:31:53.592Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+=======
+>>>>>>> 3a820003a197a44c1dd4a8533e4e119eb8446fc7
+              "DocumentIndex": 2,
+              "Title": "Incubator.h",
+              "DocumentMoniker": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMastersText\\DigimonMasters\\Incubator.h",
+              "RelativeDocumentMoniker": "DigimonMasters\\Incubator.h",
+              "ToolTip": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMastersText\\DigimonMasters\\Incubator.h",
+              "RelativeToolTip": "DigimonMasters\\Incubator.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-04-29T04:21:28.922Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MapDart.cpp",
+              "DocumentMoniker": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMastersText\\DigimonMasters\\MapDart.cpp",
+              "RelativeDocumentMoniker": "DigimonMasters\\MapDart.cpp",
+              "ToolTip": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMastersText\\DigimonMasters\\MapDart.cpp",
+              "RelativeToolTip": "DigimonMasters\\MapDart.cpp",
+              "ViewState": "AgIAABAAAAAAAAAAAAAAAF0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-28T14:03:11.896Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 265,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MapStart.cpp",
+              "DocumentMoniker": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMastersText\\DigimonMasters\\MapStart.cpp",
+              "RelativeDocumentMoniker": "DigimonMasters\\MapStart.cpp",
+              "ToolTip": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMastersText\\DigimonMasters\\MapStart.cpp",
+              "RelativeToolTip": "DigimonMasters\\MapStart.cpp",
+              "ViewState": "AgIAACQBAAAAAAAAAAAAACkBAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-28T12:56:38.353Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CDigimon.cpp",
+              "DocumentMoniker": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMastersText\\DigimonMasters\\CDigimon.cpp",
+              "RelativeDocumentMoniker": "DigimonMasters\\CDigimon.cpp",
+              "ToolTip": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMastersText\\DigimonMasters\\CDigimon.cpp",
+              "RelativeToolTip": "DigimonMasters\\CDigimon.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC4BAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-28T12:56:16.09Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "pch.h",
+              "DocumentMoniker": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMastersText\\DigimonMasters\\pch.h",
+              "RelativeDocumentMoniker": "DigimonMasters\\pch.h",
+              "ToolTip": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMastersText\\DigimonMasters\\pch.h",
+              "RelativeToolTip": "DigimonMasters\\pch.h",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-04-28T12:56:02.444Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "StoreEgg.cpp",
+              "DocumentMoniker": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMastersText\\DigimonMasters\\StoreEgg.cpp",
+              "RelativeDocumentMoniker": "DigimonMasters\\StoreEgg.cpp",
+              "ToolTip": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMastersText\\DigimonMasters\\StoreEgg.cpp",
+              "RelativeToolTip": "DigimonMasters\\StoreEgg.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-28T13:21:52.718Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CPlayer.cpp",
+              "DocumentMoniker": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMastersText\\DigimonMasters\\CPlayer.cpp",
+              "RelativeDocumentMoniker": "DigimonMasters\\CPlayer.cpp",
+              "ToolTip": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMastersText\\DigimonMasters\\CPlayer.cpp",
+              "RelativeToolTip": "DigimonMasters\\CPlayer.cpp",
+              "ViewState": "AgIAAEoAAAAAAAAAAAAUwFUAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-28T12:52:07.696Z",
+              "EditorCaption": ""
+>>>>>>> 7abc1dfa3c5aed53a603e283e2e643d3f9909695
             },
             {
               "$type": "Document",
@@ -260,6 +400,356 @@
               "RelativeDocumentMoniker": "DigimonMasters\\CGame.h",
               "ToolTip": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMastersText\\DigimonMasters\\CGame.h",
               "RelativeToolTip": "DigimonMasters\\CGame.h",
+<<<<<<< HEAD
+=======
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-04-28T13:45:38.821Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "CGame.cpp",
+              "DocumentMoniker": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMastersText\\DigimonMasters\\CGame.cpp",
+              "RelativeDocumentMoniker": "DigimonMasters\\CGame.cpp",
+              "ToolTip": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMastersText\\DigimonMasters\\CGame.cpp",
+              "RelativeToolTip": "DigimonMasters\\CGame.cpp",
+              "ViewState": "AgIAAFoAAAAAAAAAAAAAAEkAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-28T12:56:34.798Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "xstring",
+              "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.43.34808\\include\\xstring",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.43.34808\\include\\xstring",
+              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.43.34808\\include\\xstring",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.43.34808\\include\\xstring",
+              "ViewState": "AgIAAKACAAAAAAAAAAASwLUCAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-04-28T13:34:52.466Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "xmemory",
+              "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.43.34808\\include\\xmemory",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.43.34808\\include\\xmemory",
+              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.43.34808\\include\\xmemory",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.43.34808\\include\\xmemory",
+              "ViewState": "AgIAAHMAAAAAAAAAAAAQwIgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-04-28T13:34:50.928Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "ItemEquip.h",
+              "DocumentMoniker": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMastersText\\DigimonMasters\\ItemEquip.h",
+              "RelativeDocumentMoniker": "DigimonMasters\\ItemEquip.h",
+              "ToolTip": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMastersText\\DigimonMasters\\ItemEquip.h",
+              "RelativeToolTip": "DigimonMasters\\ItemEquip.h",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAQwBcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-04-28T13:34:53.546Z"
+            },
+            {
+              "$type": "Document",
+<<<<<<< HEAD
+              "DocumentIndex": 35,
+              "Title": "CCharacter.h",
+              "DocumentMoniker": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMastersText\\DigimonMasters\\CCharacter.h",
+              "RelativeDocumentMoniker": "DigimonMasters\\CCharacter.h",
+              "ToolTip": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMastersText\\DigimonMasters\\CCharacter.h",
+              "RelativeToolTip": "DigimonMasters\\CCharacter.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-04-26T03:48:44.044Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "MapStart.h",
+              "DocumentMoniker": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMastersText\\DigimonMasters\\MapStart.h",
+              "RelativeDocumentMoniker": "DigimonMasters\\MapStart.h",
+              "ToolTip": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMastersText\\DigimonMasters\\MapStart.h",
+              "RelativeToolTip": "DigimonMasters\\MapStart.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-04-27T01:22:21.782Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "MapManager.h",
+              "DocumentMoniker": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMastersText\\DigimonMasters\\MapManager.h",
+              "RelativeDocumentMoniker": "DigimonMasters\\MapManager.h",
+              "ToolTip": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMastersText\\DigimonMasters\\MapManager.h",
+              "RelativeToolTip": "DigimonMasters\\MapManager.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAiwBAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-04-27T01:22:19.406Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "ItemGeneric.h",
+              "DocumentMoniker": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMastersText\\DigimonMasters\\ItemGeneric.h",
+              "RelativeDocumentMoniker": "DigimonMasters\\ItemGeneric.h",
+              "ToolTip": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMastersText\\DigimonMasters\\ItemGeneric.h",
+              "RelativeToolTip": "DigimonMasters\\ItemGeneric.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-04-27T08:38:53.486Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "define.h",
+              "DocumentMoniker": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMastersText\\DigimonMasters\\define.h",
+              "RelativeDocumentMoniker": "DigimonMasters\\define.h",
+              "ToolTip": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMastersText\\DigimonMasters\\define.h",
+              "RelativeToolTip": "DigimonMasters\\define.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-04-27T03:21:16.111Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "MapSnow.h",
+              "DocumentMoniker": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMastersText\\DigimonMasters\\MapSnow.h",
+              "RelativeDocumentMoniker": "DigimonMasters\\MapSnow.h",
+              "ToolTip": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMastersText\\DigimonMasters\\MapSnow.h",
+              "RelativeToolTip": "DigimonMasters\\MapSnow.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-04-27T01:26:10.051Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "MapSnow.cpp",
+              "DocumentMoniker": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMastersText\\DigimonMasters\\MapSnow.cpp",
+              "RelativeDocumentMoniker": "DigimonMasters\\MapSnow.cpp",
+              "ToolTip": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMastersText\\DigimonMasters\\MapSnow.cpp",
+              "RelativeToolTip": "DigimonMasters\\MapSnow.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-27T01:22:17.478Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "MapWest.h",
+              "DocumentMoniker": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMastersText\\DigimonMasters\\MapWest.h",
+              "RelativeDocumentMoniker": "DigimonMasters\\MapWest.h",
+              "ToolTip": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMastersText\\DigimonMasters\\MapWest.h",
+              "RelativeToolTip": "DigimonMasters\\MapWest.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-04-27T01:22:25.988Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "MapWest.cpp",
+              "DocumentMoniker": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMastersText\\DigimonMasters\\MapWest.cpp",
+              "RelativeDocumentMoniker": "DigimonMasters\\MapWest.cpp",
+              "ToolTip": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMastersText\\DigimonMasters\\MapWest.cpp",
+              "RelativeToolTip": "DigimonMasters\\MapWest.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-27T01:22:25.14Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "StoreEquip.h",
+              "DocumentMoniker": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMastersText\\DigimonMasters\\StoreEquip.h",
+              "RelativeDocumentMoniker": "DigimonMasters\\StoreEquip.h",
+              "ToolTip": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMastersText\\DigimonMasters\\StoreEquip.h",
+              "RelativeToolTip": "DigimonMasters\\StoreEquip.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-04-26T03:08:50.029Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 134,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Incubator.cpp",
+              "DocumentMoniker": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMastersText\\DigimonMasters\\Incubator.cpp",
+              "RelativeDocumentMoniker": "DigimonMasters\\Incubator.cpp",
+              "ToolTip": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMastersText\\DigimonMasters\\Incubator.cpp",
+              "RelativeToolTip": "DigimonMasters\\Incubator.cpp",
+              "ViewState": "AgIAAMIAAAAAAAAAAAAAAM0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-28T07:03:20.979Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "vector",
+              "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.43.34808\\include\\vector",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.43.34808\\include\\vector",
+              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.43.34808\\include\\vector",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.43.34808\\include\\vector",
+              "ViewState": "AgIAAGwHAAAAAAAAAIAywHoHAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-04-28T08:46:40.199Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "pch.h",
+              "DocumentMoniker": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMastersText\\DigimonMasters\\pch.h",
+              "RelativeDocumentMoniker": "DigimonMasters\\pch.h",
+              "ToolTip": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMastersText\\DigimonMasters\\pch.h",
+              "RelativeToolTip": "DigimonMasters\\pch.h",
+              "ViewState": "AgIAAAwAAAAAAAAAAIAywCQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-04-27T04:40:15.526Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "CPlayer.cpp",
+              "DocumentMoniker": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMastersText\\DigimonMasters\\CPlayer.cpp",
+              "RelativeDocumentMoniker": "DigimonMasters\\CPlayer.cpp",
+              "ToolTip": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMastersText\\DigimonMasters\\CPlayer.cpp",
+              "RelativeToolTip": "DigimonMasters\\CPlayer.cpp",
+              "ViewState": "AgIAADUAAAAAAAAAAIAxwHkAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-25T16:31:54.133Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ObjectManager.h",
+              "DocumentMoniker": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMastersText\\DigimonMasters\\ObjectManager.h",
+              "RelativeDocumentMoniker": "DigimonMasters\\ObjectManager.h",
+              "ToolTip": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMastersText\\DigimonMasters\\ObjectManager.h",
+              "RelativeToolTip": "DigimonMasters\\ObjectManager.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAIAywA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-04-28T05:52:36.604Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Item.cpp",
+              "DocumentMoniker": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMastersText\\DigimonMasters\\Item.cpp",
+              "RelativeDocumentMoniker": "DigimonMasters\\Item.cpp",
+              "ToolTip": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMastersText\\DigimonMasters\\Item.cpp",
+              "RelativeToolTip": "DigimonMasters\\Item.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-25T16:32:25.868Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Inventory.cpp",
+              "DocumentMoniker": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMastersText\\DigimonMasters\\Inventory.cpp",
+              "RelativeDocumentMoniker": "DigimonMasters\\Inventory.cpp",
+              "ToolTip": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMastersText\\DigimonMasters\\Inventory.cpp",
+              "RelativeToolTip": "DigimonMasters\\Inventory.cpp",
+              "ViewState": "AgIAADsAAAAAAAAAAAAlwFwAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-26T04:49:20.567Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ItemEquip.cpp",
+              "DocumentMoniker": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMastersText\\DigimonMasters\\ItemEquip.cpp",
+              "RelativeDocumentMoniker": "DigimonMasters\\ItemEquip.cpp",
+              "ToolTip": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMastersText\\DigimonMasters\\ItemEquip.cpp",
+              "RelativeToolTip": "DigimonMasters\\ItemEquip.cpp",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-25T16:32:35.425Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "MapStart.cpp",
+              "DocumentMoniker": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMastersText\\DigimonMasters\\MapStart.cpp",
+              "RelativeDocumentMoniker": "DigimonMasters\\MapStart.cpp",
+              "ToolTip": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMastersText\\DigimonMasters\\MapStart.cpp",
+              "RelativeToolTip": "DigimonMasters\\MapStart.cpp",
+              "ViewState": "AgIAANEAAAAAAAAAAIAxwOQAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-28T06:07:39.621Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "CDigimon.cpp",
+              "DocumentMoniker": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMastersText\\DigimonMasters\\CDigimon.cpp",
+              "RelativeDocumentMoniker": "DigimonMasters\\CDigimon.cpp",
+              "ToolTip": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMastersText\\DigimonMasters\\CDigimon.cpp",
+              "RelativeToolTip": "DigimonMasters\\CDigimon.cpp",
+              "ViewState": "AgIAAA4BAAAAAAAAAAAAACQBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-26T03:51:28.985Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "flags.h",
+              "DocumentMoniker": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMastersText\\DigimonMasters\\flags.h",
+              "RelativeDocumentMoniker": "DigimonMasters\\flags.h",
+              "ToolTip": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMastersText\\DigimonMasters\\flags.h",
+              "RelativeToolTip": "DigimonMasters\\flags.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-04-27T04:40:13.188Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+=======
+              "DocumentIndex": 33,
+>>>>>>> 3a820003a197a44c1dd4a8533e4e119eb8446fc7
+              "Title": "Store.cpp",
+              "DocumentMoniker": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMastersText\\DigimonMasters\\Store.cpp",
+              "RelativeDocumentMoniker": "DigimonMasters\\Store.cpp",
+              "ToolTip": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMastersText\\DigimonMasters\\Store.cpp",
+              "RelativeToolTip": "DigimonMasters\\Store.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-28T13:37:02.033Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "StoreEquip.cpp",
+              "DocumentMoniker": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMastersText\\DigimonMasters\\StoreEquip.cpp",
+              "RelativeDocumentMoniker": "DigimonMasters\\StoreEquip.cpp",
+              "ToolTip": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMastersText\\DigimonMasters\\StoreEquip.cpp",
+              "RelativeToolTip": "DigimonMasters\\StoreEquip.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-28T13:37:47.547Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "CObj.cpp",
+              "DocumentMoniker": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMastersText\\DigimonMasters\\CObj.cpp",
+              "RelativeDocumentMoniker": "DigimonMasters\\CObj.cpp",
+              "ToolTip": "C:\\Users\\\uC870\uD55C\uC6C5\\Desktop\\git\\DigimonMastersText\\DigimonMasters\\CObj.cpp",
+              "RelativeToolTip": "DigimonMasters\\CObj.cpp",
+>>>>>>> 7abc1dfa3c5aed53a603e283e2e643d3f9909695
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-05-01T12:06:44.082Z"
