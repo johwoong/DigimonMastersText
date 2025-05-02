@@ -67,3 +67,19 @@ Item* ItemEgg::Clone()
 {
     return new ItemEgg(*this);
 }
+
+void ItemEgg::Save(FileStream* pFile)
+{
+    // 현재 디지몬 정보 읽기
+    if (p_digimon == nullptr)
+        p_digimon = new CDigimon;
+    p_digimon->Save(pFile);
+}
+
+void ItemEgg::Load(FileStream* pFile)
+{
+    // 현재 디지몬 정보 읽기
+    if (p_digimon == nullptr)
+        p_digimon = new CDigimon;
+    p_digimon->Load(pFile);
+}

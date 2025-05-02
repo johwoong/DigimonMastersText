@@ -1,5 +1,6 @@
 #include "pch.h"
 #include "Item.h"
+#include "FileStream.h"
 
 Item::Item()
 {
@@ -36,6 +37,18 @@ void Item::SetItemInfo(ITEM_TYPE itemType, string strName, int iPrice, int iWeig
 	m_tInfo.iPrice = iPrice;
 	m_tInfo.iWeight = iWeight;
 	m_tInfo.strDesc = strDesc;
+}
+
+void Item::Save(FileStream* pFile)
+{
+	CObj::Save(pFile);
+	pFile->Write(&m_tInfo, sizeof(m_tInfo));
+}
+
+void Item::Load(FileStream* pFile)
+{
+	CObj::Load(pFile);
+	pFile->Read(&m_tInfo, sizeof(m_tInfo));
 }
 
 

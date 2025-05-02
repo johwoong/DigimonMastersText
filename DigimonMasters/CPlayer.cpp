@@ -3,6 +3,7 @@
 #include "Skill.h"
 #include "Item.h"
 #include "ItemEquip.h"
+#include "ItemEquip.h"
 #include "Inventory.h"
 #include "FileStream.h"
 
@@ -13,13 +14,19 @@ CPlayer::CPlayer() : iTaymer(0), m_strTayName(""), m_tType(T_NONE), p_digimon(nu
 
 CPlayer::CPlayer(const CPlayer& player) : CCharacter(player)
 {
-	Safe_Delete_VecList(m_digimonVec);
+	iTaymer = player.iTaymer;
+	m_strTayName = player.m_strTayName;
+	m_tType = player.m_tType;
+	p_digimon = player.p_digimon;
+	isDigimon = player.isDigimon;
+	p_skill = player.p_skill;
 }
 
 CPlayer::~CPlayer()
 {
 	SAFE_DELETE(p_digimon);
 	SAFE_DELETE(p_skill);
+	Safe_Delete_VecList(m_digimonVec);
 }
 
 bool CPlayer::Init()
@@ -47,11 +54,52 @@ CPlayer* CPlayer::Clone()
 void CPlayer::Save(FileStream* pFile)
 {
 	CCharacter::Save(pFile);
+
 	pFile->Write(&iTaymer, 4);
+
+	// 테이머이름 저장
 	int iLength = m_strTayName.length();
 	pFile->Write(&iLength, 4);
-
 	pFile->Write((void*)m_strTayName.c_str(), iLength);
+
+	pFile->Write(&m_tType, sizeof(m_tType));
+
+
+	// 모든 디지몬 정보 저장
+	int digimonCount = m_digimonVec.size();
+	pFile->Write(&digimonCount, sizeof(int)); 
+	for (int i = 0; i < digimonCount; ++i)
+	{
+		m_digimonVec[i]->Save(pFile);
+	}
+
+	// 현재 디지몬 정보 저장
+	if (p_digimon == nullptr)
+		p_digimon = new CDigimon;
+	p_digimon->Save(pFile);
+
+	pFile->Write(&isDigimon, sizeof(isDigimon));
+
+
+	// 현재 스킬 정보 저장
+	if (p_skill == nullptr)
+		p_skill = new Skill;
+	p_skill->Save(pFile);
+
+
+	// 장착 아이템 정보 저장
+	for (int i = 0; i < 5; i++)
+	{
+		bool hasItem = (m_equip[i] != nullptr);
+		pFile->Write(&hasItem, sizeof(bool));  // 아이템 존재 여부 저장
+
+ 		if (hasItem)
+		{
+			m_equip[i]->Save(pFile);  // 실제 아이템 저장
+		}
+	}
+
+
 }
 
 void CPlayer::Load(FileStream* pFile)
@@ -69,6 +117,50 @@ void CPlayer::Load(FileStream* pFile)
 	pFile->Read(pName, iLength);
 	pName[iLength] = 0;
 	m_strTayName = pName;
+
+	pFile->Read(&m_tType, sizeof(m_tType));
+
+	int digimonCount = 0;
+	pFile->Read(&digimonCount, sizeof(int)); // 디지몬 개수 읽기
+
+	for (int i = 0; i < digimonCount; ++i) // 모든 디지몬 정보 읽기
+	{
+		CDigimon* pDigimon = new CDigimon();
+		pDigimon->Load(pFile);
+		m_digimonVec.push_back(pDigimon);
+	}
+
+	// 현재 디지몬 정보 읽기 -- 오류
+	if (p_digimon == nullptr)
+		p_digimon = new CDigimon;
+	p_digimon->Load(pFile);
+
+
+	
+	pFile->Read(&isDigimon, sizeof(isDigimon));
+
+
+	// 현재 스킬 정보 읽기
+	if (p_skill == nullptr)
+		p_skill = new Skill;
+	p_skill->Load(pFile);
+
+	for (int i = 0; i < 5; ++i)
+	{
+		bool hasItem = false;
+		pFile->Read(&hasItem, sizeof(bool));  // 아이템 존재 여부 확인
+
+		if (hasItem)
+		{
+			m_equip[i] = new ItemEquip();  // 객체 생성
+			m_equip[i]->Load(pFile);       // 정보 불러오기
+		}
+		else
+		{
+			m_equip[i] = nullptr;  // 없을 경우 초기화
+		}
+	}
+
 }
 
 void CPlayer::SetDigimon(CDigimon* digimon)

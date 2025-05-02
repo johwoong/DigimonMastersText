@@ -370,6 +370,7 @@ void MapStart::CreateEnemy()
 	// 아이템 생성
 	item = new ItemEgg;
 	item->SetItemInfo(IT_EGG, "베타몬의 알", 1000, 50, "베타몬의 알");
+
 	// 2. 디지몬 스킬 목록 준비
 	skills = {
 		{"일렉트 쇼커", {10, 20}},

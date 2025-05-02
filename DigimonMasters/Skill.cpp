@@ -36,25 +36,44 @@ Skill* Skill::Clone()
 	return new Skill(*this);
 }
 
-void Skill::Save(FileStream& stream)
+void Skill::Save(FileStream* pFile)
 {
-    // 1. m_skillName 저장
-    int nameLen = (int)m_skillName.length() + 1;
-    stream.Write(&nameLen, sizeof(int));
-    stream.Write((void*)m_skillName.c_str(), nameLen);
+	// 스킬이름 저장
+	int iLength = m_skillName.length();
+	pFile->Write(&iLength, 4);
+	pFile->Write((void*)m_skillName.c_str(), iLength);
 
-    // 2. m_fasiveSkillName 저장
-    int fasiveLen = (int)m_fasiveSkillName.length() + 1;
-    stream.Write(&fasiveLen, sizeof(int));
-    stream.Write((void*)m_fasiveSkillName.c_str(), fasiveLen);
+	// 패시브스킬이름 저장
+	iLength = m_fasiveSkillName.length();
+	pFile->Write(&iLength, 4);
+	pFile->Write((void*)m_fasiveSkillName.c_str(), iLength);
 
-    // 3. skillDamage 저장
-    stream.Write(&skillDamage, sizeof(int));
-
-    // 4. minusDs 저장
-    stream.Write(&minusDs, sizeof(int));
+	pFile->Write(&skillDamage, sizeof(int));
+	pFile->Write(&minusDs, sizeof(int));
 }
 
-void Skill::Load(FileStream& stream)
+void Skill::Load(FileStream* pFile)
 {
+	// 스킬 이름 불러오기
+	int iLength = 0;
+	pFile->Read(&iLength, 4);
+	char* pName = new char[iLength + 1];
+	memset(pName, 0, iLength + 1);
+
+	pFile->Read(pName, iLength);
+	pName[iLength] = 0;
+	m_skillName = pName;
+
+
+	// 패시브스킬 이름 불러오기
+	iLength = 0;
+	pFile->Read(&iLength, 4);
+	pName = new char[iLength + 1];
+	memset(pName, 0, iLength + 1);
+	pFile->Read(pName, iLength);
+	pName[iLength] = 0;
+	m_fasiveSkillName = pName;
+
+	pFile->Read(&skillDamage, sizeof(int));
+	pFile->Read(&minusDs, sizeof(int));
 }

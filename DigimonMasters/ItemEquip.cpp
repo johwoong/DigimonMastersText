@@ -1,5 +1,6 @@
 #include "pch.h"
 #include "ItemEquip.h"
+#include "FileStream.h"
 
 ItemEquip::ItemEquip() : m_regionName("")
 {
@@ -70,5 +71,36 @@ void ItemEquip::Render()
 Item* ItemEquip::Clone()
 {
 	return new ItemEquip(*this);
+}
+
+void ItemEquip::Save(FileStream* pFile)
+{
+	pFile->Write(&m_itemRegionType, sizeof(m_itemRegionType));
+
+	int iLength = m_regionName.length();
+	pFile->Write(&iLength, 4);
+	pFile->Write((void*)m_regionName.c_str(), iLength);
+
+
+	pFile->Write(&m_itemStat, sizeof(m_itemStat));
+}
+
+void ItemEquip::Load(FileStream* pFile)
+{
+	pFile->Read(&m_itemRegionType, sizeof(m_itemRegionType));
+
+
+	int iLength = 0;
+	pFile->Read(&iLength, 4);
+	// 여기서 문자열 읽기 오류 발생
+	char* pName = new char[iLength + 1];
+	memset(pName, 0, iLength + 1);
+
+	pFile->Read(pName, iLength);
+	pName[iLength] = 0;
+	m_regionName = pName;
+
+
+	pFile->Read(&m_itemStat, sizeof(m_itemStat));
 }
 

@@ -5,7 +5,7 @@
 #include "ObjectManager.h"
 #include "FileStream.h"
 
-CDigimon::CDigimon() : m_strDigName(""), m_aType(AT_NONE), m_eType(EV_GROW), m_strEvName("성장기"), isDie(0), iDigSize(3)
+CDigimon::CDigimon() : m_strDigName(""), m_aType(AT_NONE), m_eType(EV_GROW), m_strEvName("성장기"), iDigSize(3), isDie(0)
 {
 
 }
@@ -320,5 +320,100 @@ void CDigimon::Render()
 CDigimon* CDigimon::Clone()
 {
 	return new CDigimon(*this);
+}
+
+void CDigimon::Save(FileStream* pFile)
+{
+	int skillCount = m_skillVec.size();
+	pFile->Write(&skillCount, sizeof(int)); // 스킬 개수 저장
+
+	for (int i = 0; i < skillCount; ++i)
+	{
+		m_skillVec[i]->Save(pFile);
+	}
+
+	int evCount = m_evInfo.size();
+	pFile->Write(&evCount, sizeof(int));
+
+	for (int i = 0; i < evCount; ++i)
+	{
+		pFile->Write(&m_evInfo[i], sizeof(m_evInfo));
+	}
+
+	pFile->Write(&m_originInfo, sizeof(m_originInfo)); 
+
+	// 진화이름 저장
+	int iLength = m_strEvName.length();
+	pFile->Write(&iLength, 4);
+	pFile->Write((void*)m_strEvName.c_str(), iLength);
+
+	// 디지몬 이름 저장
+	iLength = m_strDigName.length();
+	pFile->Write(&iLength, 4);
+	pFile->Write((void*)m_strDigName.c_str(), iLength);
+
+
+	pFile->Write(&m_aType, sizeof(m_aType));
+	pFile->Write(&m_eType, sizeof(m_eType));
+
+	skillCount = m_useSkillVec.size(); // 사용 스킬 개수 저장
+	pFile->Write(&skillCount, sizeof(int)); 
+
+	for (int i = 0; i < skillCount; ++i)
+	{
+		m_useSkillVec[i]->Save(pFile);
+	}
+
+	pFile->Write(&isDie, sizeof(isDie));
+	pFile->Write(&iDigSize, sizeof(iDigSize));
+}
+
+void CDigimon::Load(FileStream* pFile)
+{
+	int skillCount = 0;
+	pFile->Read(&skillCount, sizeof(int)); // 스킬 개수 읽기
+	 
+	for (int i = 0; i < skillCount; ++i)
+	{
+		Skill* pSkill = new Skill();
+		pSkill->Load(pFile);
+		m_skillVec.push_back(pSkill);
+	}
+
+	// 진화이름 불러오기
+	int iLength = 0;
+	pFile->Read(&iLength, 4);
+	char* pName = new char[iLength + 1];
+	memset(pName, 0, iLength + 1);
+	pFile->Read(pName, iLength);
+	pName[iLength] = 0;
+	m_strEvName = pName;
+
+
+	// 진화이름 불러오기
+	iLength = 0;
+	pFile->Read(&iLength, 4);
+	pName = new char[iLength + 1];
+	memset(pName, 0, iLength + 1);
+	pFile->Read(pName, iLength);
+	pName[iLength] = 0;
+	m_strEvName = pName;
+
+	pFile->Read(&m_aType, sizeof(m_aType));
+	pFile->Read(&m_eType, sizeof(m_eType));
+
+	skillCount = 0;
+	pFile->Read(&skillCount, sizeof(int)); // 스킬 개수 읽기
+
+	for (int i = 0; i < skillCount; ++i)
+	{
+		Skill* pSkill = new Skill();
+		pSkill->Load(pFile);
+		m_useSkillVec.push_back(pSkill);
+	}
+	
+
+	pFile->Read(&isDie, sizeof(isDie));
+	pFile->Read(&iDigSize, sizeof(iDigSize));
 }
 

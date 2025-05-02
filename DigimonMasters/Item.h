@@ -20,9 +20,16 @@ public:
 	virtual bool Init();
 	virtual void Render();
 	virtual Item* Clone();
+	virtual void Save(class FileStream* pFile);
+	virtual void Load(class FileStream* pFile);
 
 public:
 	void SetItemInfo(ITEM_TYPE itemType, string strName, int iPrice, int iWeight, string strDesc);
 	ITEMINFO GetItemInfo() { return m_tInfo; }
+
+
+
+
+
 };
 

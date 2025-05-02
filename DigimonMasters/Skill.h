@@ -18,6 +18,7 @@ private:
 	friend class MapDart;
 	friend class MapStart;
 	friend class ItemEgg;
+	friend class CDigimon;
 public:
 	void Render();
  	string GetSkillName() const { return m_skillName; }
@@ -31,7 +32,7 @@ public:
 public:
 	virtual Skill* Clone();
 public:
-	void Save(class FileStream& stream);
-	void Load(class FileStream& stream);
+	void Save(class FileStream* pFIle);
+	void Load(class FileStream* pFIle);
 };
 

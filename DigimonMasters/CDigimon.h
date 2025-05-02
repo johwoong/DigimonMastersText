@@ -23,8 +23,6 @@ protected:
 		AT_UN // ¾ð³ë¿î 4
 	};
 
-
-
 protected:
 	CDigimon();
 	CDigimon(const CDigimon& digimon);
@@ -85,6 +83,7 @@ public:
 	virtual bool Init();
 	virtual void Render();
 	virtual CDigimon* Clone();
-
+	virtual void Save(class FileStream* pFile);
+	virtual void Load(class FileStream* pFile);
 };
 

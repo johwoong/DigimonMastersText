@@ -10,7 +10,7 @@
 
 DEFINITION_SINGLE(CGame)
 
-CGame::CGame()
+CGame::CGame() : isPlayer(false)
 {
 	srand(unsigned int(NULL));
 }
@@ -46,8 +46,8 @@ void CGame::Update()
 	{
 		system("cls");
 		CheckGameMode();
-		SetPlayer();
-
+		if(!isPlayer)
+			SetPlayer();
 		GET_SINGLE(MapManager)->Update();
 		system("pause");
 	}
@@ -84,11 +84,12 @@ void CGame::CheckGameMode()
 			if (file.Open("playerData.sar", "rb"))
 			{
 				pPlayer->Load(&file);
+				isPlayer = true;
 				file.Close();
 			}
+			return;
 		}
 		else
-
 			continue;
 		ResetConsoleColor();
 	}

@@ -48,10 +48,10 @@ public:
     const vector<CDigimon*> GetDigimonVec() const { return m_digimonVec; }
 public:
     void PrintEquip();
-    void Equip(Item* item);
+    void Equip(class Item* item);
     void UnEquip(ITEM_REGION eType);
-    void ApplyEquip(Item* item);
-    void PrintItemStat(Item* item);
+    void ApplyEquip(class Item* item);
+    void PrintItemStat(class Item* item);
 
     
 

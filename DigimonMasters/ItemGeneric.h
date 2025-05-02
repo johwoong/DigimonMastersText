@@ -27,6 +27,8 @@ public:
     virtual bool Init();
     virtual void Render();
     virtual Item* Clone();
+    virtual void Save(class FileStream* pFile);
+    virtual void Load(class FileStream* pFile);
 
 public:
     void SetItemKind(IT_KIND kind) { item_Kind = kind; }

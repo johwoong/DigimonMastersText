@@ -1,5 +1,6 @@
 #include "pch.h"
 #include "ItemGeneric.h"
+#include "FileStream.h"
 
 ItemGeneric::ItemGeneric()
 {
@@ -30,4 +31,14 @@ void ItemGeneric::Render()
 Item* ItemGeneric::Clone()
 {
 	return new ItemGeneric(*this);
+}
+
+void ItemGeneric::Save(FileStream* pFile)
+{
+	pFile->Write(&item_Kind, sizeof(item_Kind));
+}
+
+void ItemGeneric::Load(FileStream* pFile)
+{
+	pFile->Read(&item_Kind, sizeof(item_Kind));
 }

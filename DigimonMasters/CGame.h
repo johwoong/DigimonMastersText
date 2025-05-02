@@ -2,6 +2,8 @@
 
 class CGame
 {
+private:
+	bool isPlayer;
 public:
 	DECLARE_SINGLE(CGame)
 

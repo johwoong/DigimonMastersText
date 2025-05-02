@@ -18,6 +18,8 @@ public:
     virtual bool Init();
     virtual void Render();
     virtual Item* Clone();
+    virtual void Save(class FileStream* pFile);
+    virtual void Load(class FileStream* pFile);
 
 
 public:
