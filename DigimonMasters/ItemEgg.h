@@ -15,6 +15,7 @@ private:
     friend class Store;
     friend class MapStart;
     friend class Inventory;
+    friend class Incubator;
 public:
     virtual bool Init();
     virtual void Render();

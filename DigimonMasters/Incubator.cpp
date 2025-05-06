@@ -3,6 +3,9 @@
 #include "Inventory.h"
 #include "CPlayer.h"
 #include "ObjectManager.h"
+#include "FileStream.h"
+
+DEFINITION_SINGLE(Incubator)
 
 Incubator::Incubator() : m_egg(nullptr), iStage(0), isHatch(false)
 {
@@ -215,4 +218,35 @@ void Incubator::Update()
 			break;
 		}
 	}
+}
+
+void Incubator::Save(FileStream* pFile)
+{
+	int itemCount = m_eggItem_vec.size();
+	pFile->Write(&itemCount, sizeof(int)); // 알 아이템 개수 저장
+
+	for (int i = 0; i < itemCount; ++i)
+	{
+		m_eggItem_vec[i]->Save(pFile);
+	}
+	m_egg->Save(pFile);
+	pFile->Write(&iStage, sizeof(iStage));
+	pFile->Write(&isHatch, sizeof(isHatch));
+}
+
+void Incubator::Load(FileStream* pFile)
+{
+	int itemCount = 0;
+	pFile->Read(&itemCount, sizeof(int));
+	for (int i = 0; i < itemCount; ++i)
+	{
+		ItemEgg* pItem = new ItemEgg;
+		pItem->Load(pFile);
+		m_eggItem_vec.push_back(pItem);
+	}
+	if (m_egg == nullptr)
+		m_egg = new ItemEgg;
+	m_egg->Load(pFile);
+	pFile->Read(&iStage, sizeof(iStage));
+	pFile->Read(&isHatch, sizeof(isHatch));
 }

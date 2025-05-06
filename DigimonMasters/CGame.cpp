@@ -7,6 +7,7 @@
 #include "StoreManager.h"
 #include "Inventory.h"
 #include "FileStream.h"
+#include "Incubator.h"
 
 DEFINITION_SINGLE(CGame)
 
@@ -37,6 +38,9 @@ bool CGame::Initialize()
 	if (!GET_SINGLE(Inventory)->Init())
 		return false;
 
+	if (!GET_SINGLE(Incubator)->Init())
+		return false;
+
 	return true;
 }
 
@@ -60,6 +64,7 @@ void CGame::Release()
 	DESTORY_SINGLE(SkillManager);
 	DESTORY_SINGLE(StoreManager);
 	DESTORY_SINGLE(Inventory);
+	DESTORY_SINGLE(Incubator);
 }
 
 void CGame::CheckGameMode()
@@ -85,6 +90,7 @@ void CGame::CheckGameMode()
 			{
 				pPlayer->Load(&file);
 				GET_SINGLE(Inventory)->Load(&file);
+				GET_SINGLE(Incubator)->Load(&file);
 				isPlayer = true;
 				file.Close();
 			}

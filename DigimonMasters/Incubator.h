@@ -2,9 +2,7 @@
 #include "ItemEgg.h"
 class Incubator
 {
-private:
-	Incubator();
-	~Incubator();
+	DECLARE_SINGLE(Incubator)
 
 private:
 	ItemEgg* m_egg; // 디지몬 알
@@ -19,9 +17,12 @@ public:
 	void CreateDigimon(); // 디지몬 생성
 private:
 	friend class MapDart;
+	friend class CGame;
 	
 public:
 	bool Init();
 	void Update();
+	void Save(class FileStream* pFile);
+	void Load(class FileStream* pFile);
  };
 

@@ -27,7 +27,6 @@ bool MapDart::Init()
 void MapDart::Update()
 {
 	CPlayer* pPlayer = (CPlayer*)GET_SINGLE(ObjectManager)->FindObject("Player");
-	Incubator* pIncubator = new Incubator;
 	FileStream file("playerData.sar", "wb");
 	while (true)
 	{
@@ -40,6 +39,7 @@ void MapDart::Update()
 			{
 				pPlayer->Save(&file);
 				GET_SINGLE(Inventory)->Save(&file);
+				GET_SINGLE(Incubator)->Save(&file);
 				file.Close();
 				cout << "저장 완료!!" << endl;
 				system("pause");
@@ -117,8 +117,8 @@ void MapDart::Update()
 			}
 			break;
 		case MENU_INCUBATOR:
-			pIncubator->SetEggVec();
-			pIncubator->Update();
+			GET_SINGLE(Incubator)->SetEggVec();
+			GET_SINGLE(Incubator)->Update();
 			break;
 		case MENU_EXIT:
 			exit(0);

@@ -385,14 +385,14 @@ void CDigimon::Load(FileStream* pFile)
 	// 2. 진화 정보 수 + 리스트
 	int evCount = 0;
 	pFile->Read(&evCount, sizeof(int));
-	m_evInfo.resize(evCount); // 카운트 까진 잘들어옴
+	m_evInfo.resize(evCount); 
 	for (int i = 0; i < evCount; ++i)
 	{
-		pFile->Read(&m_evInfo[i], sizeof(m_evInfo)); // 문자는 넣어짐,  나머진 왜 0???
+		pFile->Read(&m_evInfo[i], sizeof(m_evInfo)); 
 	}
 
 	// 3. 오리진 정보
-	pFile->Read(&m_originInfo, sizeof(m_originInfo)); // originInfo 못읽음
+	pFile->Read(&m_originInfo, sizeof(m_originInfo));
 
 	// 4. 진화 이름
 	int iLength = 0;
