@@ -75,6 +75,8 @@ Item* ItemEquip::Clone()
 
 void ItemEquip::Save(FileStream* pFile)
 {
+	Item::Save(pFile);
+
 	pFile->Write(&m_itemRegionType, sizeof(m_itemRegionType));
 
 	int iLength = m_regionName.length();
@@ -87,6 +89,7 @@ void ItemEquip::Save(FileStream* pFile)
 
 void ItemEquip::Load(FileStream* pFile)
 {
+	Item::Load(pFile);
 	pFile->Read(&m_itemRegionType, sizeof(m_itemRegionType));
 
 

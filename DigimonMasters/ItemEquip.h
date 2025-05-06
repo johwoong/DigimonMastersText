@@ -17,7 +17,7 @@ private:
 private:
     friend class Store;
     friend class CPlayer;
-
+    friend class Inventory;
 
 public:
     void SetItemRegion(ITEM_REGION eType);

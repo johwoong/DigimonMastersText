@@ -67,24 +67,30 @@ void CPlayer::Save(FileStream* pFile)
 
 	// 모든 디지몬 정보 저장
 	int digimonCount = m_digimonVec.size();
-	pFile->Write(&digimonCount, sizeof(int)); 
+	pFile->Write(&digimonCount, sizeof(int));
 	for (int i = 0; i < digimonCount; ++i)
 	{
 		m_digimonVec[i]->Save(pFile);
 	}
 
 	// 현재 디지몬 정보 저장
-	if (p_digimon == nullptr)
-		p_digimon = new CDigimon;
-	p_digimon->Save(pFile);
+	bool hasCurrentDigimon = (p_digimon != nullptr);
+	pFile->Write(&hasCurrentDigimon, sizeof(bool));
+	if (hasCurrentDigimon)
+		p_digimon->Save(pFile);
+
+
 
 	pFile->Write(&isDigimon, sizeof(isDigimon));
 
 
-	// 현재 스킬 정보 저장
-	if (p_skill == nullptr)
-		p_skill = new Skill;
-	p_skill->Save(pFile);
+	// 스킬 정보 저장
+	bool hasSkill = (p_skill != nullptr);
+	pFile->Write(&hasSkill, sizeof(bool));
+	if (hasSkill)
+		p_skill->Save(pFile);
+
+
 
 
 	// 장착 아이템 정보 저장
@@ -93,7 +99,7 @@ void CPlayer::Save(FileStream* pFile)
 		bool hasItem = (m_equip[i] != nullptr);
 		pFile->Write(&hasItem, sizeof(bool));  // 아이템 존재 여부 저장
 
- 		if (hasItem)
+		if (hasItem)
 		{
 			m_equip[i]->Save(pFile);  // 실제 아이템 저장
 		}
@@ -109,20 +115,16 @@ void CPlayer::Load(FileStream* pFile)
 
 	int iLength = 0;
 	pFile->Read(&iLength, 4);
-
-	// 여기서 문자열 읽기 오류 발생
 	char* pName = new char[iLength + 1];
 	memset(pName, 0, iLength + 1);
-
 	pFile->Read(pName, iLength);
 	pName[iLength] = 0;
-	m_strTayName = pName;
+	m_strTayName = pName;   // 테이머 이름 가져오기
 
 	pFile->Read(&m_tType, sizeof(m_tType));
 
 	int digimonCount = 0;
-	pFile->Read(&digimonCount, sizeof(int)); // 디지몬 개수 읽기
-
+	pFile->Read(&digimonCount, sizeof(int));
 	for (int i = 0; i < digimonCount; ++i) // 모든 디지몬 정보 읽기
 	{
 		CDigimon* pDigimon = new CDigimon();
@@ -130,20 +132,34 @@ void CPlayer::Load(FileStream* pFile)
 		m_digimonVec.push_back(pDigimon);
 	}
 
-	// 현재 디지몬 정보 읽기 -- 오류
-	if (p_digimon == nullptr)
-		p_digimon = new CDigimon;
-	p_digimon->Load(pFile);
 
 
-	
+	// 현재 디지몬 정보 읽기
+	bool hasCurrentDigimon = false;
+	pFile->Read(&hasCurrentDigimon, sizeof(bool));
+	if (hasCurrentDigimon) {
+		if (p_digimon == nullptr)
+			p_digimon = new CDigimon;
+		p_digimon->Load(pFile);
+	}
+
+
 	pFile->Read(&isDigimon, sizeof(isDigimon));
 
 
+
 	// 현재 스킬 정보 읽기
-	if (p_skill == nullptr)
-		p_skill = new Skill;
-	p_skill->Load(pFile);
+	bool hasSkill = false;
+	pFile->Read(&hasSkill, sizeof(bool));
+
+	if (hasSkill) {
+		if (p_skill == nullptr)
+			p_skill = new Skill;
+		p_skill->Load(pFile);
+	}
+
+
+
 
 	for (int i = 0; i < 5; ++i)
 	{
@@ -160,7 +176,6 @@ void CPlayer::Load(FileStream* pFile)
 			m_equip[i] = nullptr;  // 없을 경우 초기화
 		}
 	}
-
 }
 
 void CPlayer::SetDigimon(CDigimon* digimon)

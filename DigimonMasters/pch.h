@@ -105,7 +105,6 @@ typedef struct _tagItemInfo
 	int iPrice;
 	int iWeight;
 	string strDesc;
-
 }ITEMINFO;
 
 typedef struct _tagItemStatInfo

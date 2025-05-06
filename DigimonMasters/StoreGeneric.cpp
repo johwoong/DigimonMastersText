@@ -4,12 +4,13 @@
 
 StoreGeneric::StoreGeneric()
 {
-	ItemGeneric* item = (ItemGeneric*)CreateItem("체력 포션 ", IT_GENERIC, 10000, 20, "체력을 10 채워줌");
-	item = (ItemGeneric*)CreateItem("DS 포션 ", IT_GENERIC, 10000, 20, "DS를 10 채워줌");
+	ItemGeneric* item = (ItemGeneric*)CreateItem("체력 포션 ", IT_GENERIC, 10000, 20, "체력을 10채워줌");
+	item = (ItemGeneric*)CreateItem("DS 포션 ", IT_GENERIC, 10000, 20, "DS를 10채워줌");
 }
 
 StoreGeneric::~StoreGeneric()
 {
+
 }
 
 void StoreGeneric::Update()

@@ -5,6 +5,14 @@ class Inventory
 {
 	DECLARE_SINGLE(Inventory)
 
+private:
+	enum ITEM_CLASS_TYPE
+	{
+		ICT_BASE,
+		ICT_EGG,
+		ICT_EQUIP,
+		ICT_GENERIC
+	};
 
 private:
 	vector<Item*> m_Item_vec;
@@ -26,6 +34,7 @@ public:
 public:
 	bool Init();
 	void Update();
-
+	void Save(class FileStream* pFile);
+	void Load(class FileStream* pFile);
 };
 

@@ -324,6 +324,7 @@ CDigimon* CDigimon::Clone()
 
 void CDigimon::Save(FileStream* pFile)
 {
+	CCharacter::Save(pFile);
 	int skillCount = m_skillVec.size();
 	pFile->Write(&skillCount, sizeof(int)); // 스킬 개수 저장
 
@@ -333,14 +334,14 @@ void CDigimon::Save(FileStream* pFile)
 	}
 
 	int evCount = m_evInfo.size();
-	pFile->Write(&evCount, sizeof(int));
+	pFile->Write(&evCount, sizeof(4));
 
 	for (int i = 0; i < evCount; ++i)
 	{
 		pFile->Write(&m_evInfo[i], sizeof(m_evInfo));
 	}
 
-	pFile->Write(&m_originInfo, sizeof(m_originInfo)); 
+	pFile->Write(&m_originInfo, sizeof(m_originInfo));
 
 	// 진화이름 저장
 	int iLength = m_strEvName.length();
@@ -357,7 +358,7 @@ void CDigimon::Save(FileStream* pFile)
 	pFile->Write(&m_eType, sizeof(m_eType));
 
 	skillCount = m_useSkillVec.size(); // 사용 스킬 개수 저장
-	pFile->Write(&skillCount, sizeof(int)); 
+	pFile->Write(&skillCount, sizeof(int));
 
 	for (int i = 0; i < skillCount; ++i)
 	{
@@ -370,9 +371,10 @@ void CDigimon::Save(FileStream* pFile)
 
 void CDigimon::Load(FileStream* pFile)
 {
+	CCharacter::Load(pFile);
+	// 1. 스킬
 	int skillCount = 0;
-	pFile->Read(&skillCount, sizeof(int)); // 스킬 개수 읽기
-	 
+	pFile->Read(&skillCount, sizeof(int));
 	for (int i = 0; i < skillCount; ++i)
 	{
 		Skill* pSkill = new Skill();
@@ -380,39 +382,46 @@ void CDigimon::Load(FileStream* pFile)
 		m_skillVec.push_back(pSkill);
 	}
 
-	// 진화이름 불러오기
+	// 2. 진화 정보 수 + 리스트
+	int evCount = 0;
+	pFile->Read(&evCount, sizeof(int));
+	m_evInfo.resize(evCount); // 카운트 까진 잘들어옴
+	for (int i = 0; i < evCount; ++i)
+	{
+		pFile->Read(&m_evInfo[i], sizeof(m_evInfo)); // 문자는 넣어짐,  나머진 왜 0???
+	}
+
+	// 3. 오리진 정보
+	pFile->Read(&m_originInfo, sizeof(m_originInfo)); // originInfo 못읽음
+
+	// 4. 진화 이름
 	int iLength = 0;
 	pFile->Read(&iLength, 4);
-	char* pName = new char[iLength + 1];
-	memset(pName, 0, iLength + 1);
-	pFile->Read(pName, iLength);
-	pName[iLength] = 0;
-	m_strEvName = pName;
+	std::string temp;
+	temp.resize(iLength);
+	pFile->Read(&temp[0], iLength);
+	m_strEvName = temp;
 
-
-	// 진화이름 불러오기
-	iLength = 0;
+	// 5. 디지몬 이름
 	pFile->Read(&iLength, 4);
-	pName = new char[iLength + 1];
-	memset(pName, 0, iLength + 1);
-	pFile->Read(pName, iLength);
-	pName[iLength] = 0;
-	m_strEvName = pName;
+	temp.resize(iLength);
+	pFile->Read(&temp[0], iLength);
+	m_strDigName = temp;
 
+	// 6. 타입 정보
 	pFile->Read(&m_aType, sizeof(m_aType));
 	pFile->Read(&m_eType, sizeof(m_eType));
 
-	skillCount = 0;
-	pFile->Read(&skillCount, sizeof(int)); // 스킬 개수 읽기
-
+	// 7. 사용 스킬
+	pFile->Read(&skillCount, sizeof(int));
 	for (int i = 0; i < skillCount; ++i)
 	{
 		Skill* pSkill = new Skill();
 		pSkill->Load(pFile);
 		m_useSkillVec.push_back(pSkill);
 	}
-	
 
+	// 8. 상태 정보
 	pFile->Read(&isDie, sizeof(isDie));
 	pFile->Read(&iDigSize, sizeof(iDigSize));
 }

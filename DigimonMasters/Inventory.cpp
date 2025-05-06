@@ -4,6 +4,8 @@
 #include "ObjectManager.h"
 #include "CPlayer.h"
 #include "ItemEquip.h"
+#include "ItemEgg.h"
+#include "ItemGeneric.h"
 #include "FileStream.h"
 
 DEFINITION_SINGLE(Inventory)
@@ -213,5 +215,51 @@ void Inventory::Update()
 			return;
 		}
 		ResetConsoleColor();
+	}
+}
+
+void Inventory::Save(FileStream* pFile)
+{
+	int itemCount = m_Item_vec.size();
+	pFile->Write(&itemCount, sizeof(int));
+
+	for (auto it : m_Item_vec)
+	{
+		ITEM_CLASS_TYPE eType = ICT_BASE;
+
+		if (dynamic_cast<ItemEgg*>(it))      eType = ICT_EGG;
+		else if (dynamic_cast<ItemEquip*>(it)) eType = ICT_EQUIP;
+		else if (dynamic_cast<ItemGeneric*>(it)) eType = ICT_GENERIC;
+
+		pFile->Write(&eType, sizeof(int));
+		it->Save(pFile);
+	}
+}
+
+void Inventory::Load(FileStream* pFile)
+{
+	int itemCount = 0;
+	pFile->Read(&itemCount, sizeof(int));
+	for (int i = 0; i < itemCount; ++i)
+	{
+		int type = 0;
+		pFile->Read(&type, sizeof(int));
+
+		Item* pItem = nullptr;
+
+		switch ((ITEM_CLASS_TYPE)type)
+		{
+		case ICT_EGG:
+			pItem = new ItemEgg;
+			break;
+		case ICT_EQUIP:
+			pItem = new ItemEquip;
+			break;
+		case ICT_GENERIC:
+			pItem = new ItemGeneric;
+			break;
+		}
+		pItem->Load(pFile);
+		m_Item_vec.push_back(pItem);
 	}
 }

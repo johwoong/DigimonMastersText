@@ -84,6 +84,7 @@ void CGame::CheckGameMode()
 			if (file.Open("playerData.sar", "rb"))
 			{
 				pPlayer->Load(&file);
+				GET_SINGLE(Inventory)->Load(&file);
 				isPlayer = true;
 				file.Close();
 			}

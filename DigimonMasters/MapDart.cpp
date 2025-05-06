@@ -39,7 +39,10 @@ void MapDart::Update()
 			if (file.Open("playerData.sar", "wb"))
 			{
 				pPlayer->Save(&file);
+				GET_SINGLE(Inventory)->Save(&file);
 				file.Close();
+				cout << "저장 완료!!" << endl;
+				system("pause");
 			}
 			break;
 		case MENU_TALK:

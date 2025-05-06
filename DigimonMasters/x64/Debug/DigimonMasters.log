@@ -1,8 +1,75 @@
-﻿  CPlayer.cpp
-C:\Users\조한웅\Desktop\git\DigimonMastersText\DigimonMasters\CPlayer.cpp(61,14): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+﻿  pch.cpp
+  CCharacter.cpp
+  CDigimon.cpp
+C:\Users\조한웅\Desktop\Git\DigimonMasters\DigimonMasters\CDigimon.cpp(328,17): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 '/CDigimon.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\조한웅\Desktop\Git\DigimonMasters\DigimonMasters\CDigimon.cpp(336,14): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 '/CDigimon.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\조한웅\Desktop\Git\DigimonMasters\DigimonMasters\CDigimon.cpp(347,14): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 '/CDigimon.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\조한웅\Desktop\Git\DigimonMasters\DigimonMasters\CDigimon.cpp(352,31): warning C4267: '=': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 '/CDigimon.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\조한웅\Desktop\Git\DigimonMasters\DigimonMasters\CDigimon.cpp(360,33): warning C4267: '=': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 '/CDigimon.cpp'을(를) 컴파일하는 중)
+  
+  CEnemyDigimon.cpp
+  CGame.cpp
+  CObj.cpp
+C:\Users\조한웅\Desktop\Git\DigimonMasters\DigimonMasters\CObj.cpp(23,14): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 '/CObj.cpp'을(를) 컴파일하는 중)
+  
+  CPlayer.cpp
+C:\Users\조한웅\Desktop\Git\DigimonMasters\DigimonMasters\CPlayer.cpp(61,14): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   (소스 파일 '/CPlayer.cpp'을(를) 컴파일하는 중)
   
-C:\Users\조한웅\Desktop\git\DigimonMastersText\DigimonMasters\CPlayer.cpp(69,19): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\조한웅\Desktop\Git\DigimonMasters\DigimonMasters\CPlayer.cpp(69,19): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   (소스 파일 '/CPlayer.cpp'을(를) 컴파일하는 중)
   
-  DigimonMasters.vcxproj -> C:\Users\조한웅\Desktop\git\DigimonMastersText\x64\Debug\DigimonMasters.exe
+  DigimonMasters.cpp
+  FileStream.cpp
+C:\Users\조한웅\Desktop\Git\DigimonMasters\DigimonMasters\FileStream.cpp(74,22): warning C4267: '=': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 '/FileStream.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\조한웅\Desktop\Git\DigimonMasters\DigimonMasters\FileStream.cpp(76,27): warning C4267: '+=': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 '/FileStream.cpp'을(를) 컴파일하는 중)
+  
+  Incubator.cpp
+  Inventory.cpp
+C:\Users\조한웅\Desktop\Git\DigimonMasters\DigimonMasters\Inventory.cpp(223,16): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 '/Inventory.cpp'을(를) 컴파일하는 중)
+  
+  Item.cpp
+  ItemEgg.cpp
+  ItemEquip.cpp
+C:\Users\조한웅\Desktop\Git\DigimonMasters\DigimonMasters\ItemEquip.cpp(82,14): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 '/ItemEquip.cpp'을(를) 컴파일하는 중)
+  
+  ItemGeneric.cpp
+  Map.cpp
+  MapDart.cpp
+  MapManager.cpp
+  MapSnow.cpp
+  MapStart.cpp
+  MapWest.cpp
+  코드를 생성하고 있습니다...
+  컴파일하고 있습니다...
+  ObjectManager.cpp
+  Skill.cpp
+C:\Users\조한웅\Desktop\Git\DigimonMasters\DigimonMasters\Skill.cpp(42,14): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 '/Skill.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\조한웅\Desktop\Git\DigimonMasters\DigimonMasters\Skill.cpp(47,36): warning C4267: '=': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 '/Skill.cpp'을(를) 컴파일하는 중)
+  
+  SkillManager.cpp
+  Store.cpp
+  StoreEgg.cpp
+  StoreEquip.cpp
+  StoreGeneric.cpp
+  StoreManager.cpp
+  코드를 생성하고 있습니다...
+  DigimonMasters.vcxproj -> C:\Users\조한웅\Desktop\Git\DigimonMasters\x64\Debug\DigimonMasters.exe

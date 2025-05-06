@@ -2,6 +2,7 @@
 #include "ItemEgg.h"
 #include "CDigimon.h"
 #include "Skill.h"
+#include "FileStream.h"
 
 ItemEgg::ItemEgg()
 {
@@ -70,16 +71,23 @@ Item* ItemEgg::Clone()
 
 void ItemEgg::Save(FileStream* pFile)
 {
-    // 현재 디지몬 정보 읽기
-    if (p_digimon == nullptr)
-        p_digimon = new CDigimon;
-    p_digimon->Save(pFile);
+    Item::Save(pFile);
+    // 알에있는 디지몬 정보 저장
+    bool hasCurrentDigimon = (p_digimon != nullptr);
+    pFile->Write(&hasCurrentDigimon, sizeof(bool));
+    if (hasCurrentDigimon)
+        p_digimon->Save(pFile);
 }
 
 void ItemEgg::Load(FileStream* pFile)
 {
-    // 현재 디지몬 정보 읽기
-    if (p_digimon == nullptr)
-        p_digimon = new CDigimon;
-    p_digimon->Load(pFile);
+    Item::Load(pFile);
+    // 알에있는 디지몬 정보 읽기
+    bool hasCurrentDigimon = false;
+    pFile->Read(&hasCurrentDigimon, sizeof(bool));
+    if (hasCurrentDigimon) {
+        if (p_digimon == nullptr)
+            p_digimon = new CDigimon;
+        p_digimon->Load(pFile);
+    }
 }
