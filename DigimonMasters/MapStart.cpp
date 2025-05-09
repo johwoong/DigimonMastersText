@@ -1,22 +1,13 @@
 #include "pch.h"
 #include "MapStart.h"
-#include "ObjectManager.h"
-#include "Inventory.h"
-#include "StoreManager.h"
-#include "CPlayer.h"
-#include "CEnemyDigimon.h"
-#include "Skill.h"
-#include "ItemEgg.h"
-#include "ItemGeneric.h"
 
 
-MapStart::MapStart() : digimonCount(0)
+MapStart::MapStart()
 {
 	strMapName = "시작의 마을";
 }
 MapStart::~MapStart()
 {
-
 }
 
 bool MapStart::Init()
@@ -211,6 +202,7 @@ void MapStart::SkillAttack(CPlayer* player, CEnemyDigimon* digimon, int num)
 		{
 			player->GetDigimon()->SetDsZero();
 			cout << "DS가 부족합니다." << endl;
+			system("pause");
 			return;
 		}
 		player->GetDigimon()->MinusDs(player->GetDigimon()->GetUseSkillList()[0]->minusDs);
@@ -247,7 +239,7 @@ void MapStart::CreateEnemy()
 	pDigimon->AddSKill(new Skill("뿔드릴", 10, 30));
 	pDigimon->UpdateEnemySkill();
 	m_enemyVec.push_back(pDigimon);
-	pDigimon->SetGold(300);
+	pDigimon->SetGold(4000);
 
 	// 아이템 생성
 	Item* item = new ItemEgg;
@@ -307,7 +299,7 @@ void MapStart::CreateEnemy()
 	pDigimon->AddSKill(new Skill("소환", 10, 30));
 	pDigimon->UpdateEnemySkill();
 	m_enemyVec.push_back(pDigimon);
-	pDigimon->SetGold(300);
+	pDigimon->SetGold(4000);
 
 	// 아이템 생성
 	item = new ItemEgg;
@@ -365,7 +357,7 @@ void MapStart::CreateEnemy()
 	pDigimon->AddSKill(new Skill("수중 헤드벗", 10, 30));
 	pDigimon->UpdateEnemySkill();
 	m_enemyVec.push_back(pDigimon);
-	pDigimon->SetGold(300);
+	pDigimon->SetGold(4000);
 
 	// 아이템 생성
 	item = new ItemEgg;

@@ -7,6 +7,7 @@
 #include "Inventory.h"
 #include "FileStream.h"
 
+int CPlayer::iGold = 0;
 CPlayer::CPlayer() : iTaymer(0), m_strTayName(""), m_tType(T_NONE), p_digimon(nullptr), isDigimon(false), p_skill(nullptr)
 {
 	memset(&m_equip, 0, sizeof(m_equip));
@@ -36,7 +37,7 @@ bool CPlayer::Init()
 
 void CPlayer::Render()
 {
-	cout << "[테이머 정보]" << endl;
+	cout << "[테이머 정보]" << "\t 현재골드 : " << iGold << endl;
 	cout << "이름 : " << GetName() << "\t테이머 : " << GetTaymerName() << endl;
 	cout << "체력 : " << m_tInfo.iHp << "\tDS : " << m_tInfo.iDs << endl;
 	cout << "레벨 : " << m_tInfo.iLevel << "\t경험치 : " << m_tInfo.iExp << endl;
@@ -104,6 +105,8 @@ void CPlayer::Save(FileStream* pFile)
 			m_equip[i]->Save(pFile);  // 실제 아이템 저장
 		}
 	}
+
+	pFile->Write(&iGold, sizeof(int));
 
 
 }
@@ -176,6 +179,18 @@ void CPlayer::Load(FileStream* pFile)
 			m_equip[i] = nullptr;  // 없을 경우 초기화
 		}
 	}
+
+	pFile->Read(&iGold, sizeof(int));
+}
+
+void CPlayer::MinusGold(int value)
+{
+	iGold -= value;
+}
+
+void CPlayer::AddGold(int value)
+{
+	iGold += value;
 }
 
 void CPlayer::SetDigimon(CDigimon* digimon)

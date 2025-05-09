@@ -57,6 +57,24 @@ void CDigimon::SetAttributeType(int number)
 void CDigimon::SetEvaultionType(int number)
 {
 	m_eType = (EVALUTION)number;
+	switch (m_eType)
+	{
+	case 1:
+		m_strEvName = "성장기";
+		break;
+	case 2:
+		m_strEvName = "성숙기";
+		break;
+	case 3:
+		m_strEvName = "완전체";
+		break;
+	case 4:
+		m_strEvName = "궁극체";
+		break;
+	case 5:
+		m_strEvName = "초궁극체";
+		break;
+	}
 }
 
 void CDigimon::AddSKill(Skill* skill)
@@ -304,6 +322,7 @@ bool CDigimon::Init()
 void CDigimon::Render()
 {
 	SetConsoleColor(14);
+	cout << "현재 골드 : " << CPlayer::GetGold() << "원" << endl;
 	cout << "[디지몬 정보]" << endl;
 	cout << "크기 : " << GetDigionSize() << "성" << endl;
 	cout << "이름 : " << GetDigName() << "\t진화 단계 : " << m_strEvName << endl;

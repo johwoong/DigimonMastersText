@@ -25,6 +25,8 @@ bool MapManager::Init()
 		return false;
 	if (!CreateMap(MT_SAND))
 		return false;
+	if (!CreateMap(MT_SNOW))
+		return false;
 	return true;
 }
 

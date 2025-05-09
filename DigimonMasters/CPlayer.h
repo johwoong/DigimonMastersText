@@ -32,6 +32,9 @@ public:
     virtual void Save(class FileStream* pFile);
     virtual void Load(class FileStream* pFile);
 public:
+    static int GetGold() { return iGold; }
+    static void MinusGold(int value);
+    static void AddGold(int value);
     void SetTaymerTypeAndName(TAYMER eType, string strName) { m_tType = eType; m_strTayName = strName; }
     string GetTaymerName() const { return m_strTayName; }
     void SetDigimon(CDigimon* digimon);

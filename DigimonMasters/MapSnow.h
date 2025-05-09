@@ -1,17 +1,14 @@
 #pragma once
-#include "Map.h"
+#include "MapStart.h"
 class CPlayer;
 class MapSnow :
-    public Map
+    public MapStart
 {
 private:
 private:
 	MapSnow();
 	~MapSnow();
 
-private:
-	vector<class CDigimon*> m_enemyVec;
-	int digimonCount;
 private:
 	friend class MapManager;
 
@@ -20,12 +17,6 @@ public:
 	virtual void Update();
 public:
 	virtual int OutputMap();
-	virtual void Battle();
 	virtual void CreateEnemy();
-public:
-	void Render();
-	int OutputBattleMenu();
-	void GenericAttack(CPlayer* player, CDigimon* digimon);
-	void SkillAttack(CPlayer* player, CDigimon* digimon, int num);
 };
 

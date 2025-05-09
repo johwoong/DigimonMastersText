@@ -18,6 +18,7 @@ private:
 	vector<Item*> m_Item_vec;
 
 	int iWeight;
+	int iMaxWeight;
 public:
 	bool AddInventory(Item* item);
 	void PrintItemList();

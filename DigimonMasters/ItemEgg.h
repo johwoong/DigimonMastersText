@@ -14,6 +14,8 @@ private:
 private:
     friend class Store;
     friend class MapStart;
+    friend class MapSnow;
+    friend class MapWest;
     friend class Inventory;
     friend class Incubator;
 public:

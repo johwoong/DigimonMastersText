@@ -3,6 +3,7 @@
 #include "Skill.h"
 #include "Inventory.h"
 #include "Item.h"
+#include "CPlayer.h"
 
 
 
@@ -37,9 +38,15 @@ void CEnemyDigimon::DropItem()
 {
 	Item* item = m_dropVec[rand() % m_dropVec.size()]->Clone();
 	if (!GET_SINGLE(Inventory)->AddInventory(item))
+	{
 		cout << "ÀÎº¥Åä¸®°¡ ²Ë Ã¡½À´Ï´Ù!!" << endl;
+	}
 	else
+	{
 		cout << item->GetItemInfo().strName << "À» È¹µæÇÏ¿´½À´Ï´Ù!!" << endl;
+		cout << iGold << "¿øÀ» È¹µæÇÏ¿´½À´Ï´Ù!!" << endl;
+		CPlayer::AddGold(iGold);
+	}
 }
 
 CDigimon* CEnemyDigimon::Clone()

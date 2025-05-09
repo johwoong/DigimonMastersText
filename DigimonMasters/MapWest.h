@@ -1,11 +1,11 @@
 #pragma once
-#include "Map.h"
-class MapWest : public Map
+#include "MapStart.h"
+class MapWest : public MapStart
 {
+private:
 private:
 	MapWest();
 	~MapWest();
-
 
 private:
 	friend class MapManager;
@@ -15,6 +15,6 @@ public:
 	virtual void Update();
 public:
 	virtual int OutputMap();
-	virtual void Battle();
+	virtual void CreateEnemy();
 };
 

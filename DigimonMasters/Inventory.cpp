@@ -7,10 +7,11 @@
 #include "ItemEgg.h"
 #include "ItemGeneric.h"
 #include "FileStream.h"
+#include "CPlayer.h"
 
 DEFINITION_SINGLE(Inventory)
 
-Inventory::Inventory() : iWeight(10)
+Inventory::Inventory() : iWeight(0), iMaxWeight(30)
 {
 
 }
@@ -22,15 +23,16 @@ Inventory::~Inventory()
 
 bool Inventory::AddInventory(Item* item)
 {
-	if (m_Item_vec.size() >= iWeight)
+	if (m_Item_vec.size() >= iMaxWeight || CPlayer::GetGold() < item->GetItemInfo().iPrice)
 		return false;
 	m_Item_vec.push_back(item);
+	iWeight++;
 	return true;
 }
 
 void Inventory::PrintItemList()
 {
-	cout << "아이템 개수 : " << m_Item_vec.size() << "\t용량 : " << iWeight << endl;
+	cout << "아이템 개수 : " << m_Item_vec.size() << "\t용량 : " << iWeight << "/"  << iMaxWeight << endl;
 	for (int i = 0; i < m_Item_vec.size(); ++i)
 	{
 		cout << endl << endl;
@@ -48,6 +50,7 @@ int Inventory::SelectOption()
 {
 	while (true)
 	{
+		cout << "현재 골드 : " << CPlayer::GetGold() << "원" << endl;
 		cout << "1. 방어구 장착" << endl;
 		cout << "2. 방어구 해제" << endl;
 		cout << "3. 아이템 사용" << endl;
@@ -87,6 +90,7 @@ void Inventory::ThrowItem()
 			continue;
 		Item* item = m_Item_vec[input - 1];
 		m_Item_vec.erase(m_Item_vec.begin() + (input - 1));
+		iWeight--;
 		return;
 	}
 }
@@ -98,6 +102,7 @@ void Inventory::DeleteItem(Item* item)
 		if (*iter == item)
 		{
 			m_Item_vec.erase(iter);
+			iWeight--;
 			break;
 		}
 	}
@@ -124,6 +129,7 @@ void Inventory::EquipItem()
 			cout << item->GetItemInfo().strName << "을 " << item->GetItemRegionName() << "에 장착했습니다..." << endl;
  			pPlayer->Equip(item);
 			m_Item_vec.erase(m_Item_vec.begin() + (input - 1));
+			iWeight--;
 			system("pause");
 			return;
 		}
@@ -181,6 +187,7 @@ void Inventory::UnEquipItem()
 		case 6:
 			return;
 		}
+		iWeight++;
 	}
 }
 

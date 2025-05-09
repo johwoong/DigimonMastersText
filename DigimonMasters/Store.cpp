@@ -6,6 +6,7 @@
 #include "ItemEgg.h"
 #include "ItemGeneric.h"
 #include "Inventory.h"
+#include "CPlayer.h"
 Store::Store()
 {
 
@@ -22,6 +23,7 @@ void Store::ShowList()
 	{
 		system("cls");
 		cout << "******************* 상점 목록 *******************" << endl;
+		cout << "현재 골드 : " << CPlayer::GetGold() << "원" << endl;
 		for (int i = 0; i < m_vecItemList.size(); ++i)
 		{
 			cout << "[" << i + 1 << "] 아이템 " << endl;
@@ -29,7 +31,7 @@ void Store::ShowList()
 		}
 		cout << "구매하실 아이템의 번호를 입력해주세요(나가기 0번)>>> ";
 		int input = Input<int>();
-		if (input < 0 || input > m_vecItemList.size() + 1)
+		if (input < 0 || input > m_vecItemList.size())
 			continue;
 		if (input == 0)
 			return;
@@ -39,7 +41,7 @@ void Store::ShowList()
 }
 
 Item* Store::CreateItem(string pName, ITEM_TYPE eType, int iPrice, int iWeight, string Desc)
-{
+{ 
 	Item* pItem = nullptr;
 	switch (eType)
 	{
@@ -66,10 +68,16 @@ void Store::AddInventoryInItem(Item* item)
 {
 	if (!GET_SINGLE(Inventory)->AddInventory(item))
 	{
-		cout << "인벤토리가 꽉 찼습니다!!" << endl;
+		if (CPlayer::GetGold() < item->GetItemInfo().iPrice)
+			cout << "소지금이 부족합니다." << endl;
+		else
+			cout << "인벤토리가 꽉 찼습니다!!" << endl;
 	}
 	else
-		cout << item->GetItemInfo().strName << "을 구매하였습니다!!" << endl;
+	{
+		CPlayer::MinusGold(item->GetItemInfo().iPrice);
+		cout << item->GetItemInfo().strName << "을 " << item->GetItemInfo().iPrice << "원에 구매하였습니다!!" << endl;
+	}
 	system("pause");
 }
 

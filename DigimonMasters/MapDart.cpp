@@ -53,8 +53,10 @@ void MapDart::Update()
 					GET_SINGLE(MapManager)->GetInst()->GetMapList()[1]->Update();
 					break;
 				case 2:
+					GET_SINGLE(MapManager)->GetInst()->GetMapList()[2]->Update();
 					break;
 				case 3:
+					GET_SINGLE(MapManager)->GetInst()->GetMapList()[3]->Update();
 					break;
 				case 4:
 					break;
@@ -105,10 +107,12 @@ void MapDart::Update()
 					cout << "[현재 디지몬]" << endl << endl;
 					pPlayer->GetDigimon()->Render();
 					pPlayer->PrintHasDigimon(); 
-					cout << "교체할 디지몬을 선택해주세요 : ";
+					cout << "교체할 디지몬을 선택해주세요(나가기 : 0번) :  ";
 					int iInput = Input<int>();
-					if (iInput < 1 || iInput > pPlayer->GetDigimonVec().size())
+					if (iInput < 0 || iInput > pPlayer->GetDigimonVec().size())
 						continue;
+					if (iInput == 0)
+						break;
 					pPlayer->ChangeDigimon(iInput - 1);
 					cout << "디지몬이 " << pPlayer->GetDigimon()->m_strDigName << "으로 교체되었습니다." << endl;
 					system("pause");

@@ -1,18 +1,26 @@
 #pragma once
 #include "Map.h"
+#include "ObjectManager.h"
+#include "Inventory.h"
+#include "StoreManager.h"
+#include "CPlayer.h"
+#include "CEnemyDigimon.h"
+#include "Skill.h"
+#include "ItemEgg.h"
+#include "ItemGeneric.h"
 class CPlayer;
 class CDigimon;
 class CEnemyDigimon;
 class MapStart : public Map
 {
-private:
+protected:
 	MapStart();
-	~MapStart();
+	virtual ~MapStart();
 
-private:
+protected:
 	vector<class CEnemyDigimon*> m_enemyVec;
 	int digimonCount;
-private:
+protected:
 	friend class MapManager;
 
 public:

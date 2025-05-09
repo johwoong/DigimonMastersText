@@ -15,6 +15,7 @@ Incubator::Incubator() : m_egg(nullptr), iStage(0), isHatch(false)
 Incubator::~Incubator()
 {
 	Safe_Delete_VecList(m_eggItem_vec);
+	SAFE_DELETE(m_egg);
 }
 
 int Incubator::OutputMenu()
@@ -229,7 +230,8 @@ void Incubator::Save(FileStream* pFile)
 	{
 		m_eggItem_vec[i]->Save(pFile);
 	}
-	m_egg->Save(pFile);
+	if(m_egg != nullptr)
+		m_egg->Save(pFile);
 	pFile->Write(&iStage, sizeof(iStage));
 	pFile->Write(&isHatch, sizeof(isHatch));
 }
@@ -244,9 +246,12 @@ void Incubator::Load(FileStream* pFile)
 		pItem->Load(pFile);
 		m_eggItem_vec.push_back(pItem);
 	}
-	if (m_egg == nullptr)
-		m_egg = new ItemEgg;
+	m_egg = new ItemEgg;
 	m_egg->Load(pFile);
+	if (m_egg->p_digimon == nullptr)
+	{
+		SAFE_DELETE(m_egg);
+	}
 	pFile->Read(&iStage, sizeof(iStage));
 	pFile->Read(&isHatch, sizeof(isHatch));
 }

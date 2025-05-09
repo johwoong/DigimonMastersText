@@ -1,7 +1,7 @@
 #include "pch.h"
 #include "StoreEquip.h"
 #include "ItemEquip.h"
-
+#include "CPlayer.h"
 StoreEquip::StoreEquip() : iHead(0), iShirt(0), iGlove(0), iPant(0), iShoes(0)
 {	
 	ItemEquip* item = (ItemEquip*)CreateItem("임프몬의 모자", IT_EQ, 2000, 3, "임프몬의 모자");
@@ -108,7 +108,7 @@ void StoreEquip::ShowHeadList()
 		system("cls");
 		int j = 1;
 		vector<int> vecHeadIndex; 
-
+		cout << "현재 골드 : " << CPlayer::GetGold() << "원" << endl;
 		for (int i = 0; i < m_vecItemList.size(); ++i)
 		{
 			ItemEquip* item = (ItemEquip*)m_vecItemList[i];
@@ -143,7 +143,7 @@ void StoreEquip::ShowShirtList()
 		system("cls");
 		int j = 1;
 		vector<int> vecShirtIndex;
-
+		cout << "현재 골드 : " << CPlayer::GetGold() << "원" << endl;
 		for (int i = 0; i < m_vecItemList.size(); ++i)
 		{
 			ItemEquip* item = (ItemEquip*)m_vecItemList[i];
@@ -177,7 +177,7 @@ void StoreEquip::ShowGloveList()
 		system("cls");
 		int j = 1;
 		vector<int> vecGloveIndex;
-
+		cout << "현재 골드 : " << CPlayer::GetGold() << "원" << endl;
 		for (int i = 0; i < m_vecItemList.size(); ++i)
 		{
 			ItemEquip* item = (ItemEquip*)m_vecItemList[i];
@@ -211,7 +211,7 @@ void StoreEquip::ShowPantList()
 		system("cls");
 		int j = 1;
 		vector<int> vecPantList;
-
+		cout << "현재 골드 : " << CPlayer::GetGold() << "원" << endl;
 		for (int i = 0; i < m_vecItemList.size(); ++i)
 		{
 			ItemEquip* item = (ItemEquip*)m_vecItemList[i];
@@ -245,7 +245,7 @@ void StoreEquip::ShowShoesList()
 		system("cls");
 		int j = 1;
 		vector<int> vecShoesList;
-
+		cout << "현재 골드 : " << CPlayer::GetGold() << "원" << endl;
 		for (int i = 0; i < m_vecItemList.size(); ++i)
 		{
 			ItemEquip* item = (ItemEquip*)m_vecItemList[i];

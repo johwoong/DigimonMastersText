@@ -17,6 +17,8 @@ private:
 	friend class CGame;
 	friend class MapDart;
 	friend class MapStart;
+	friend class MapSnow;
+	friend class MapWest;
 	friend class ItemEgg;
 	friend class CDigimon;
 public:
